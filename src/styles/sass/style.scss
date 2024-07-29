@@ -1,0 +1,27 @@
+// reset
+@use "_reset.scss";
+
+// setting stuff
+@use "_vars.scss";
+@use "_mixins.scss";
+@use "_text.scss";
+
+// main layouts
+@use "_layout.scss";
+
+// page parts
+@use "_site-header.scss";
+@use "_site-footer.scss";
+
+//content types
+@use "_article.scss";
+
+// components
+@use "_images-masks.scss";
+
+//utilities
+@use "_utilities.scss";
+
+body {
+  background: var(--blue-300);
+}

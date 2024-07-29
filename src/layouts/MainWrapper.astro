@@ -1,0 +1,24 @@
+---
+
+import Head from "./Head.astro";
+import SiteFooter from "./SiteFooter.astro";
+import SiteHeader from "./SiteHeader.astro";
+
+
+---
+
+<html lang="en">
+    <Head></Head>
+    <body>
+        <div id="skip-to-nav" class="primary-layout full-width skip-nav">
+            <!-- <div > -->
+                <a href="">Main nav</a><a href="">Content</a>
+            <!-- </div> -->
+        </div>
+        <SiteHeader></SiteHeader>
+        <main class="primary-layout">
+        <slot></slot>
+        </main>
+        <SiteFooter></SiteFooter>
+    </body>
+</html>

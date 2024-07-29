@@ -1,0 +1,29 @@
+/*
+
+  Set colors 
+
+*/
+
+:root {
+  //colors
+  --black: hsl(0, 0%, 0%);
+  --white: hsl(0, 0%, 100%);
+
+  --red-500: hsl(352, 57%, 35%);
+  --red-300: hsl(352, 50%, 46%);
+  --red-100: hsl(352, 50%, 56%);
+
+  --gray-500: hsl(210, 4%, 64%);
+  --gray-300: hsl(210, 2%, 75%);
+  --gray-100: hsl(210, 2%, 85%);
+
+  --blue-500: hsl(199, 100%, 42%);
+  --blue-300: hsl(194, 45%, 76%);
+  --blue-100: hsl(194, 45%, 86%);
+
+  --gold-500: hsl(52, 94%, 47%);
+
+  --text-shadow: 0px 0px 24px var(--black);
+
+  --border-radius: 8px;
+}

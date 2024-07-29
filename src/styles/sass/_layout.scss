@@ -1,0 +1,51 @@
+.primary-layout {
+  /* user settings */
+  --padding-inline: 1rem;
+  --content-max-width: 80ch;
+  // --narrow-size-reduction: 60px;
+  // --popout-extra-distance: 60px;
+  --bleed-extra-distance: 100px;
+  --content-column-min: 600px;
+  --content-column-max: 1440px;
+  --_content-column-size: 1440px;
+  --_bleed-column-size: var(--bleed-extra-distance);
+
+  display: grid;
+  grid-template-columns:
+    [full-width-start]
+    minmax(var(--padding-inline), 1fr)
+    [bleed-start]
+    minmax(0, var(--_bleed-column-size))
+    [content-start]
+    minmax(var(--content-column-min), var(--content-column-max))
+    [content-end]
+    minmax(0, var(--_bleed-column-size))
+    [bleed-end]
+    minmax(var(--padding-inline), 1fr)
+    [full-width-end];
+}
+
+:is(.primary-layout, .full-width) > * {
+  grid-column: content;
+}
+
+:is(.primary-layout, .full-width) > .narrow {
+  grid-column: narrow;
+}
+
+:is(.primary-layout, .full-width) > .bleed {
+  grid-column: bleed;
+}
+
+:is(.primary-layout, .full-width) > .full-width {
+  display: grid;
+  grid-template-columns: inherit;
+  grid-column: full-width;
+}
+
+:where(.primary-layout, .full-width) > img {
+  width: 100%;
+  /* for demo purposes */
+  max-height: 25vh;
+  object-fit: cover;
+}

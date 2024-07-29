@@ -1,0 +1,55 @@
+/*
+Basic site reset. This isn't crazy and only takes care of the high level stuff.
+*/
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/*  border box  */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* text wrap */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+p {
+  max-width: 70ch;
+  text-wrap: pretty; // prevent orphans
+}
+
+/* responsive images/videos */
+
+img,
+picture,
+svg,
+video {
+  max-width: 100%;
+  display: block;
+  font-style: italic;
+}
+
+/* a11y resets */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 3rem;
+  }
+}
+
+/* remove bullets from uls with a class */
+ul[class] {
+  list-style: none;
+  padding: 0;
+}

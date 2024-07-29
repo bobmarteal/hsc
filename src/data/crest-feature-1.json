@@ -1,0 +1,22 @@
+[
+  {
+    "eyebrow": "Welcom to",
+    "title": "Hampden Sydney",
+    "link": [
+      {
+        "url": "somepage.html",
+        "text": "A unique college environment, designed for your success"
+      }
+    ]
+  },
+  {
+    "eyebrow": "Second item",
+    "title": "A foundational brotherhood",
+    "link": [
+      {
+        "url": "brotherhood.html",
+        "text": "Come for the tacos stay for the life"
+      }
+    ]
+  }
+]

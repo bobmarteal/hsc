@@ -1,0 +1,186 @@
+/*
+The base stylesheet for all site text styles
+- Set base families with @font-face. Self host Roboto and DM Serif
+    - 
+- Set base sizes
+    16, 20, 24, 28, 30, 36, 42, 60
+- Set base colors
+- Reset headings
+*/
+
+// Roboto Regular
+@font-face {
+  font-display: swap;
+  font-family: "Roboto Regular";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/Roboto-Regular.woff2") format("woff2");
+}
+
+// Roboto Light
+@font-face {
+  font-display: swap;
+  font-family: "Roboto Light";
+  font-style: normal;
+  font-weight: 300;
+  src: url("/fonts/Roboto-Light.woff2") format("woff2");
+}
+
+//Roboto Bold
+@font-face {
+  font-display: swap;
+  font-family: "Roboto Bold";
+  font-style: normal;
+  font-weight: 700;
+  src: url("/fonts/Roboto-Bold.woff2") format("woff2");
+}
+
+//DM Serif regular
+@font-face {
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  font-style: normal;
+  src: url("/fonts/DMSerifDisplay-Regular.woff2");
+}
+
+/* 
+
+    Create and add font size custom properties to :root 
+    
+*/
+
+:root {
+  --ff-sans-light: Roboto Light;
+  --ff-sans: Roboto Regular;
+  --ff-sans-bold: Roboto Bold;
+  --ff-serif: DM Serif Display;
+
+  --step--2: clamp(0.7813rem, 0.7747rem + 0.0326vi, 0.8rem);
+  --step--1: clamp(0.9375rem, 0.9158rem + 0.1087vi, 1rem);
+  --step-0: clamp(1.125rem, 1.0815rem + 0.2174vi, 1.25rem);
+  --step-1: clamp(1.35rem, 1.2761rem + 0.3696vi, 1.5625rem);
+  --step-2: clamp(1.62rem, 1.5041rem + 0.5793vi, 1.9531rem);
+  --step-3: clamp(1.944rem, 1.771rem + 0.8651vi, 2.4414rem);
+  --step-4: clamp(2.3328rem, 2.0827rem + 1.2504vi, 3.0518rem);
+  --step-5: clamp(2.7994rem, 2.4462rem + 1.7658vi, 3.8147rem);
+  --step-6: clamp(3.3592rem, 2.8691rem + 2.4507vi, 4.7684rem);
+  --step-7: clamp(4.0311rem, 3.36rem + 3.3555vi, 5.9605rem);
+  --step-8: clamp(4.8373rem, 3.9283rem + 4.5448vi, 7.4506rem);
+}
+
+.fs--2 {
+  font-size: var(--step--2);
+}
+.fs--1 {
+  font-size: var(--step--1);
+}
+.fs-0 {
+  font-size: var(--step-0);
+}
+.fs-1 {
+  font-size: var(--step-1);
+}
+.fs-2 {
+  font-size: var(--step-2);
+}
+.fs-3 {
+  font-size: var(--step-3);
+}
+.fs-4 {
+  font-size: var(--step-4);
+}
+.fs-5 {
+  font-size: var(--step-5);
+}
+.fs-7 {
+  font-size: var(--step-7);
+  line-height: 0.8em;
+  margin: 0.5em auto;
+}
+
+/*
+    Font-weight utility classes
+*/
+
+.fw-light {
+  font-weight: 100;
+}
+.fw-regular {
+  font-weight: 400;
+}
+.fw-bold {
+  font-weight: 800;
+}
+.fw-black {
+  font-weight: 900;
+}
+
+// change font familes for light and bold.
+
+.ff-sans:is(.fw-light) {
+  font-family: var(--ff-sans-light);
+}
+.ff-sans:is(.fw-bold, .fw-black) {
+  font-family: var(--ff-sans-bold);
+}
+
+/*
+    Set HTML level styles
+*/
+
+html {
+  font-size: var(--step-1);
+  font-family: var(--ff-sans);
+}
+
+/*
+    Paragraphs
+*/
+
+p {
+  line-height: 1.4;
+  margin-bottom: 1.5em;
+}
+
+/*
+    Headings
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.1;
+  margin: 0 0 0.75em 0;
+}
+
+/*
+    Font-weights
+*/
+
+/*
+    Font-family
+*/
+
+.ff-sans {
+  font-family: var(--ff-sans);
+}
+.ff-serif {
+  font-family: var(--ff-serif);
+}
+
+/*
+  basic links
+*/
+a {
+  color: var(--blue-500);
+}
+
+/*
+  Font decorations
+*/
+.textShadow {
+  text-shadow: var(--text-shadow);
+}

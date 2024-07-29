@@ -1,0 +1,41 @@
+/*
+
+Styles for articles
+    1. articleHero
+    2. articleCard
+    3. articleFull
+
+*/
+
+.articleHero {
+  grid-column: full-width;
+  margin: 0 auto;
+  place-items: center;
+  display: grid;
+  position: relative;
+  color: var(--white);
+  .text,
+  img {
+    grid-row: 1;
+    grid-column: 1;
+  }
+  .text {
+    z-index: 3;
+  }
+  img {
+    z-index: 1;
+  }
+  p {
+    margin: 0 auto;
+  }
+  &:after {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    content: "";
+    background-image: url(/images/theme/crest-main-1.svg),
+      linear-gradient(rgba(0, 0, 0, 0.001) 25%, rgba(0, 0, 0, 0.585));
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom, bottom;
+  }
+}

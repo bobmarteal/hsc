@@ -1,0 +1,31 @@
+/*
+    Images and masks
+    1. basic image styles
+    2. set mask base properties
+
+    disticnt masks
+    1. crest bottom
+
+*/
+
+// .mask {
+//   position: relative;
+//   &:after {
+//     position: absolute;
+//     content: "";
+//     left: 50%;
+//     margin-left: -50%;
+//     width: 100%;
+//     bottom: 0;
+//     height: 100%;
+//     object-fit: cover;
+//   }
+//   &.crest-bottom::after {
+//     mask: url(/images/theme/crest-main-1.svg);
+//     mask-position: bottom;
+//     mask-repeat: no-repeat;
+//     background: var(--gray-100);
+//     opacity: 0.6;
+//     z-index: 3;
+//   }
+// }

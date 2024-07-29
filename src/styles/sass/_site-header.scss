@@ -1,0 +1,46 @@
+/*
+    _siteHeader.scss
+    - skip nav
+    - black bar cta
+    - header -- logo and main nav
+
+*/
+
+/*
+
+    Skip-to-nav
+
+*/
+
+#skip-to-nav {
+  background: var(--red-300);
+  display: flex;
+  &:focus-within {
+    top: 0;
+  }
+  a {
+    color: var(--white);
+    margin: 0 1em;
+  }
+}
+
+// main-header
+.site-header {
+  background: var(--black);
+  color: var(--white);
+  & > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.hsc-logo {
+  background-image: url("/images/theme/hsc-logo.png");
+  background-repeat: no-repeat;
+  display: block;
+  background-size: cover;
+  width: 190px;
+  height: 70px;
+  text-indent: -9999px;
+}

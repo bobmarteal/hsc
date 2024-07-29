@@ -1,0 +1,52 @@
+---
+import { type HTMLAttributes } from "astro/types";
+
+const {tagName = "h2", classes, size = "base0", family = "sans", weight ="medium", ...rest } = Astro.props;
+
+const headingTags = {
+    h1: "h1",
+    h2: "h2",
+    h3: "h3",
+    h4: "h4",
+    h5: "h5",
+    h6: "h6",
+}
+const Tag = headingTags[tagName];
+
+
+const headingSizes = {
+    xs: "fs--2",
+    s: "fs--1",
+    base0: "fs-0",
+    base1: "fs-1",
+    base2: "fs-2",
+    base3: "fs-3",
+    base4: "fs-4",
+    base5: "fs-5", 
+    base7: "fs-7",
+};
+const headingWeights ={
+    light:  "fw-light",
+    regular: "fw-regular",
+    bold: "fw-bold",
+    black: "fw-black",
+}
+const headingFamilies = {
+    sans: "ff-sans",
+    serif: "ff-serif",
+}
+
+
+interface Props extends HTMLAttributes <keyof typeof headingTags>{
+    tagName: keyof typeof headingTags;
+    size?: keyof typeof headingSizes;
+    weight?: keyof typeof headingWeights;
+    family?: keyof typeof headingFamilies;
+    classes?: string;
+}
+
+---
+
+<Tag class:list={[headingSizes[size], headingWeights[weight], headingFamilies[family], classes]} {...rest}>
+    <slot/>
+</Tag>

@@ -1,0 +1,46 @@
+/*
+  All mixins are in this file
+
+  - set variable $widths to establish all breakpoints
+  - loop over $widths to establish each break point media query
+  - use as @import mq(medium){};
+
+*/
+
+// Width maps to build breakpoints and CPs
+
+$widths: (
+  xsmall: 320px,
+  small: 480px,
+  medium: 782px,
+  header: 900px,
+  large: 1224px,
+  xl: 1432px,
+  xxl: 1640,
+);
+
+/*
+
+  Loop over $widths to build media queries.
+
+*/
+
+@mixin mq($key) {
+  $size: map-get($widths, $key);
+  @media only screen and (min-width: $size) {
+    @content;
+  }
+}
+
+:root {
+  @each $name, $width in $widths {
+    --#{$name}: #{$width};
+  }
+}
+
+// hoverable
+@mixin hoverable() {
+  @media (hover: hover) and (pointer: fine) {
+    @content;
+  }
+}

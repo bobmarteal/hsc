@@ -1,0 +1,49 @@
+---
+import Heading from "../../components/ui/Heading.astro";
+// import crestFeature1Data from "../../data/crest-feature-1.json";
+// console.log(crestFeature1Data);
+---
+<!-- single crest feature -->
+<div class="articleHero">
+	<div class="text">
+
+		<Heading tagName="h2" size="base5" weight="regular" family="serif"  classes="align-center textShadow" id="top">Forming good men &
+good citizens since 1775.</Heading>	
+		<p class="align-center inline-center">
+			<a href="">Why Hampden Sydney?</a>
+		</p>
+	</div>
+	<img src="/images/baseball-field.jpg" alt="" />	
+	
+</div>
+<!-- <script is:inline src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<section class="full-width bg-black crest">
+	wrapper for crest bg
+	<div class=" carousel full-bleed">
+		{
+			crestFeature1Data.map(slide => 
+				<div class="slide feature-1">
+					<div class="text">
+						<p class="eyebrow align-center inline-center">{slide.eyebrow}</p>
+						<Heading tagName="h2" size="base5" weight="black" family="serif"  classes="align-center" id="top">{slide.title}</Heading>	
+						<p class="align-center inline-center">
+							{
+								slide.link.map( link => 
+									<a href={link.url}>{link.text}</a>
+								)
+							}
+						</p>
+					</div>
+					<img src="/images/Football-player.jpg" alt="" />
+				</div>
+			)
+		}	
+   </div>
+</section> -->
+
+
+<script>
+var flkty = new Flickity( '.carousel', {
+  // options
+});
+</script>
