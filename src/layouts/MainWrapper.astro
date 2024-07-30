@@ -1,19 +1,17 @@
 ---
 
-import Head from "./Head.astro";
-import SiteFooter from "./SiteFooter.astro";
-import SiteHeader from "./SiteHeader.astro";
+import Head from "@/layouts/Head.astro";
+import SiteFooter from "@/layouts/SiteFooter.astro";
+import SiteHeader from "@/layouts/SiteHeader.astro";
 
 
 ---
 
 <html lang="en">
-    <Head></Head>
+    <Head {...Astro.props}></Head>
     <body>
         <div id="skip-to-nav" class="primary-layout full-width skip-nav">
-            <!-- <div > -->
                 <a href="">Main nav</a><a href="">Content</a>
-            <!-- </div> -->
         </div>
         <SiteHeader></SiteHeader>
         <main class="primary-layout">

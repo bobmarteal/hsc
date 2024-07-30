@@ -131,6 +131,7 @@ The base stylesheet for all site text styles
 html {
   font-size: var(--step-1);
   font-family: var(--ff-sans);
+  color: var(--gray-800);
 }
 
 /*
@@ -139,7 +140,8 @@ html {
 
 p {
   line-height: 1.4;
-  margin-bottom: 1.5em;
+  margin: 0;
+  margin-block-end: 1em;
 }
 
 /*
@@ -153,7 +155,7 @@ h4,
 h5,
 h6 {
   line-height: 1.1;
-  margin: 0 0 0.75em 0;
+  margin: 0 0 0.5em 0;
 }
 
 /*
