@@ -1,0 +1,39 @@
+/*
+    _main-menu.scss
+    All the things
+    1. Main menu trigger
+*/
+
+// menuTrigger
+.menuTrigger {
+  height: 2rem;
+  width: 2rem;
+  background: var(--blue-500);
+  border-radius: 1rem;
+  text-indent: -10000px;
+  position: relative;
+  > span {
+    width: 1.1em;
+    height: 3px;
+    border-radius: 3px;
+    background: var(--white);
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 25%;
+  }
+  &::after,
+  &::before {
+    width: 1.1em;
+    height: 3px;
+    border-radius: 3px;
+    background: var(--white);
+    position: absolute;
+    left: 25%;
+    top: calc(50% - 8px);
+    content: "";
+  }
+  &::after {
+    top: calc(50% + 8px);
+  }
+}

@@ -15,12 +15,14 @@
 // page parts
 @use "_site-header.scss";
 @use "_site-footer.scss";
+@use "_main-menu.scss";
 
 //content types
 @use "_article.scss";
 
 // components
 @use "_images-masks.scss";
+@use "_searches-and-forms.scss";
 
 //utilities
 @use "_utilities.scss";

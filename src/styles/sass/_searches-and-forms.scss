@@ -1,0 +1,19 @@
+/*
+    _searches-and-forms.scss
+    The main sheet for all the following
+    1. Header search form and toggle button;
+    2. Main search form
+    3. Major and minor search
+    4. Faculty filters
+*/
+
+// site-header searh form
+.searchToggle {
+  background-image: url("/images/theme/search-white.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: unset;
+  border: none;
+  width: 0.9rem;
+  height: 0.9rem;
+}
