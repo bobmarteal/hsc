@@ -1,4 +1,6 @@
 ---
+import MainNav from "@/components/navigations/MainNav.astro";
+
 
 ---
 <!-- 
@@ -19,7 +21,7 @@
             <div >
                 <a href="" class="hsc-logo">Hampden Sydney College</a>
                 <div class="actions">
-                    <button id="searchToggle" class="searchToggle" arial-label="show search field"></button>
+                    <a href="#" id="searchToggle" class="searchToggle" arial-label="show search field"></a>
                     <span></span>
                     <div class="cta">
                         <a href="">visit</a>
@@ -27,8 +29,10 @@
                         <a href="">give</a> 
                     </div>
                     <span></span>
-                    <a href="#" class="menuTrigger">Menu<span></span></a>
+                    <a href="#" id="mainNavToggle" class="menuTrigger">Menu<span></span></a>
             </div> 
           </div>
+          
         </header>
+        <MainNav></MainNav>
     </div>
