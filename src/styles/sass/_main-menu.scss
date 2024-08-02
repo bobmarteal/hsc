@@ -12,6 +12,7 @@
   border-radius: 1rem;
   text-indent: -10000px;
   position: relative;
+  z-index: 1000;
   > span {
     width: 1.1em;
     height: 3px;
@@ -42,8 +43,30 @@
 .mainNavWrapper {
   background: var(--black);
   color: var(--gray-100);
-  height: 100vh;
+  backface-visibility: hidden;
+  background-color: #0e0e0e;
+  bottom: 0;
+  height: 0;
+  left: 0;
+  opacity: 0;
+  overflow: hidden;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transform: translate3d(0, -100%, 0);
+  transition: transform 0.4s cubic-bezier(0.52, 0.16, 0.24, 1);
+  visibility: hidden;
+  width: 100%;
+  //   z-index: 11999;
+  &.expanded {
+    height: 100%;
+    opacity: 1;
+    visibility: visible;
+    // z-index: 12001;
+    transform: translateZ(0);
+  }
 }
+// mainNav basics
 .mainNav {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -106,4 +129,8 @@
     margin-bottom: 0.5em;
     line-height: 1;
   }
+}
+// mainNav when expanded
+.mainNavWrapper.expanded .mainNav {
+  margin-top: 165px;
 }
