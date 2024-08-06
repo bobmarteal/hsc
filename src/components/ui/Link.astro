@@ -1,5 +1,5 @@
 ---
-import { Icon } from "astro-icon";
+import Icon from "astro-icon";
 
 interface Props {
   href: string;
@@ -37,15 +37,15 @@ const {
   ]}
   {...rest}
 >
-  {
+  <!-- {
     icon && icon.side === "left" && (
       <Icon name={icon.name} height="24" width="24" />
     )
-  }
-  <span><slot></slot></span>
+  } -->
+  <!-- <span><slot></slot></span>
   {
     icon && icon.side === "right" && (
       <Icon name={icon.name} height="24" width="24" />
     )
-  }
+  } -->
 </a>
