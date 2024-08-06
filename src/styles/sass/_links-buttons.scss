@@ -9,3 +9,35 @@ Links-buttons
 
     
 */
+
+//base button
+
+.button {
+  display: grid;
+  width: max-content;
+  padding: 0.5em;
+  border-radius: 4px;
+  padding: 0.8em 1em;
+  font-size: 20px;
+  font-family: var(--ff-sans-bold);
+  text-transform: uppercase;
+}
+
+// color variations
+
+.button--primary {
+  background: var(--red-500);
+  color: var(--white);
+}
+.button--secondary {
+  background: var(--white);
+  color: var(--red-500);
+}
+.button--tertiary {
+  background: var(--gray-300);
+  color: var(--red-500);
+}
+
+// with icon
+.withIcon {
+}

@@ -12,11 +12,13 @@
 
 */
 
-#skip-to-nav {
+.skipNav {
   background: var(--red-500);
   display: flex;
   height: 0.5rem;
-  transition: height 0.2s ease-in-out;
+  transition: height 0.2s eas e-in-out;
+  position: relative;
+  z-index: 10;
   &:focus-within {
     top: 0;
     height: calc-size(auto);
@@ -35,19 +37,29 @@
 
 // main-header
 
-.site-header {
+.siteHeader {
   background: var(--black);
   color: var(--white);
   font-size: var(--step--1);
-  padding: 1.25rem 0;
-  & > div {
+  position: sticky;
+  top: 0;
+  transition: transform 0.25s ease-out;
+  z-index: 10;
+  .logoActions {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 1.25em 0;
+    z-index: 10;
+    background: var(--black);
+  }
+  &.hidden {
+    transform: translateY(-200px);
   }
 }
 
 // Actions - the container for the visible top items
+
 .actions {
   display: flex;
   align-items: center;

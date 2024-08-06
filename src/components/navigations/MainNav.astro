@@ -1,8 +1,8 @@
 ---
 
 ---
-<div class="full-width mainNavWrapper" >
-    <nav class="mainNav" id="mainNav">
+<div class=" mainNavWrapper primary-layout" >
+    <nav class="mainNav content" id="mainNav">
         <section class="academics">
             <p class="header">
                 Academics
@@ -74,12 +74,20 @@
         </section>
     </nav>
 </div>      
-<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"></script>      
+<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
+
+
 <script is:inline> 
 
     $("#mainNavToggle").on({
     click: function () {
-        $(".mainNavWrapper").toggleClass("expanded");
+        var _this = $(this);
+        var _navWrapper = $(".mainNavWrapper");
+        var _mainNav = $(".mainNav");
+
+        _navWrapper.toggleClass("expanded");
+        _this.toggleClass("close");
+        return false;
     },
     
     });

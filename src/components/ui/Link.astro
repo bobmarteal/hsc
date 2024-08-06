@@ -1,15 +1,51 @@
 ---
+import { Icon } from "astro-icon";
 
-import type { HTMLAttributes } from 'astro/types';
-
-interface Props extends HTMLAttributes<"a">{
-    href: string;
-    variant?: "primary" | "secondary" | "badge";
+interface Props {
+  href: string;
+  style: "primary" | "secondary";
+  icon?: {
+    name: string;
+    side: "left" | "right";
+  };
+  isFilled?: boolean;
+  borderVisible?: boolean;
+  classes?: string;
 }
 
-const { href, variant = "primary", ...rest } = Astro.props;
-
+const {
+  href,
+  style,
+  icon,
+  isFilled = true,
+  borderVisible = false,
+  classes,
+  ...rest
+} = Astro.props as Props;
 ---
-<a href={href} class:list={["btn", variant]} {...rest}>
-    <slot/>
+
+<a
+  href={href}
+  class:list={[
+    "link",
+    classes,
+    style,
+    {
+      filled: isFilled,
+      bordered: borderVisible,
+    },
+  ]}
+  {...rest}
+>
+  {
+    icon && icon.side === "left" && (
+      <Icon name={icon.name} height="24" width="24" />
+    )
+  }
+  <span><slot></slot></span>
+  {
+    icon && icon.side === "right" && (
+      <Icon name={icon.name} height="24" width="24" />
+    )
+  }
 </a>
