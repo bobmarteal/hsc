@@ -1,0 +1,23 @@
+---
+import { Icon } from "astro-icon/components";
+
+// one input and button form
+// label, id, text
+
+const { id, label, classes, ...rest } = Astro.props;
+
+---
+<form 
+    action="" 
+    class:list={[
+        "form",
+        "form--simple",
+        "inline-center",
+        classes
+    ]}
+    {...rest}
+>
+	<label for={id} class="sr-only">{label}</label>
+	<input type="search" id={id} size="25" placeholder={label}>
+	<button type="submit"><Icon name="Search"></Icon></button>
+</form>

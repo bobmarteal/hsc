@@ -1,7 +1,11 @@
 ---
-import Icon from "astro-icon";
 
+// import components
+import {Icon} from "astro-icon/components";
+
+// set type settings 
 interface Props {
+  text: string;
   href: string;
   style: "primary" | "secondary";
   icon?: {
@@ -13,7 +17,9 @@ interface Props {
   classes?: string;
 }
 
+// deconstruct from props and set as props for typesetting
 const {
+  text,
   href,
   style,
   icon,
@@ -37,17 +43,17 @@ const {
   ]}
   {...rest}
 >
-  <!-- {
+  {
     icon && icon.side === "left" && (
-      <Icon name={icon.name} height="24" width="24" />
+      <Icon name={icon.name} height={24} width={24} />
     )
   } 
-   <span>-->
-   <slot></slot>
-  <!-- </span>
-  {
+   <span>
+   {text}
+   </span>
+ {
     icon && icon.side === "right" && (
-      <Icon name={icon.name} height="24" width="24" />
+      <Icon name={icon.name} height={24} width={24} />
     )
-  } -->
+  }
 </a>

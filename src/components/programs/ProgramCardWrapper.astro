@@ -1,0 +1,24 @@
+---
+
+// import Program Card data
+
+import programCardData from "../../data/program-cards.json";
+import ProgramCard from "./ProgramCard.astro";
+
+// set up card type
+export type programCard = {
+    name: string,
+    introText: string,
+    linkText: string,
+    image: string,
+};
+---
+
+<section>
+    <div class="grid twoCol">
+    {programCardData.map((programCard: programCard) => 
+        <ProgramCard {...programCard}></ProgramCard>
+    )}          
+    </div>
+
+</section>

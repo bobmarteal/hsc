@@ -1,12 +1,13 @@
 .primary-layout {
   /* user settings */
+  --max-width: 1920px;
   --padding-inline: 1rem;
   --content-max-width: 80ch;
   // --narrow-size-reduction: 60px;
   // --popout-extra-distance: 60px;
-  --bleed-extra-distance: 100px;
+  --bleed-extra-distance: 80px;
   --content-column-min: 600px;
-  --content-column-max: 1440px;
+  --content-column-max: 1520px;
   --_content-column-size: 1440px;
   --_bleed-column-size: var(--bleed-extra-distance);
 
@@ -23,6 +24,7 @@
     [bleed-end]
     minmax(var(--padding-inline), 1fr)
     [full-width-end];
+  // max-width: var(--max-width);
 }
 
 :is(.primary-layout, .full-width) > * {

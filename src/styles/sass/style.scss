@@ -5,25 +5,27 @@
 @use "_vars.scss";
 @use "_mixins.scss";
 
-// universal components
-@use "_text.scss";
-@use "_lists.scss";
-@use "_links-buttons.scss";
+// main text components
+@use "components/_text.scss";
+@use "components/_lists.scss";
+@use "components/_links-buttons.scss";
 
-// main layouts
-@use "_layout.scss";
+// layouts
+@use "layout/_main-layout.scss";
+@use "layout/_grids.scss";
 
 // page parts
-@use "_site-header.scss";
-@use "_site-footer.scss";
-@use "_main-menu.scss";
+@use "page/_site-header.scss";
+@use "page/_site-footer.scss";
+@use "navs/_main-menu.scss";
 
 //content types
 @use "_article.scss";
 
 // components
-@use "_images-masks.scss";
-@use "_searches-and-forms.scss";
+@use "components/_images-masks.scss";
+@use "forms/_forms.scss";
+@use "forms/_searches-and-forms.scss";
 
 //utilities
 @use "_utilities.scss";

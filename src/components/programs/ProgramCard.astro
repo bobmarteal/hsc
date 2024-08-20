@@ -1,0 +1,19 @@
+---
+// import components
+import { Image } from "astro:assets";
+import Heading from "../../components/ui/Heading.astro";
+import Link from "@ui/Link.astro";
+
+// pricingCard props
+const{name, introText, linkText, image} = Astro.props;
+---
+<div class="card">
+    <div class="image">
+        <Image src={image} alt="" width={900} height={600}></Image>
+    </div>
+    <div class="cardContent">
+        <Heading tagName="h3" size="base2" family="serif">{name}</Heading>
+        <p class="description">{introText}</p>
+        <Link style="primary" href="/text"  classes="button button--tertiary" text={linkText} icon={{name:"arrow-right", side:"right"}}></Link>
+    </div>
+</div>

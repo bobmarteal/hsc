@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Majors and Minors",
+    "introText": "27 majors, 26 minors, 4 remarkable years.",
+    "linkText": "Learn more",
+    "image": "/images/baseball-field.jpg"
+  },
+  {
+    "name": "The Rhetoric Program",
+    "introText": "Learn how to effectively commu icate. For life.",
+    "linkText": "Learn more",
+    "image": "/images/baseball-field.jpg"
+  },
+  {
+    "name": "Beyond the Classroom",
+    "introText": "You'll learn outside of the box. And Farmville",
+    "linkText": "Learn more",
+    "image": "/images/baseball-field.jpg"
+  },
+  {
+    "name": "Help along the way",
+    "introText": "You're her to gro. Our advisers are here to help with that.",
+    "linkText": "Learn more",
+    "image": "/images/baseball-field.jpg"
+  }
+]

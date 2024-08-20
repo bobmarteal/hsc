@@ -1,18 +1,17 @@
 ---
+
+// import components
 import Heading from "../../components/ui/Heading.astro";
 import Link from "@ui/Link.astro";
+
 // import crestFeature1Data from "../../data/crest-feature-1.json";
 // console.log(crestFeature1Data);
 ---
 <!-- single crest feature -->
 <div class="articleHero">
 	<div class="text">
-
 		<Heading tagName="h2" size="base6" weight="regular" family="serif"  classes="align-center textShadow" id="top">Forming good men & good citizens since 1775.</Heading>	
-		<p class="align-center ">
-			<Link style="primary" href="/text"  classes="button button--primary inline-center">Why Hampden-Sydney?</Link>
-
-		</p>
+		<Link style="primary" href="/text"  classes="button button--primary inline-center" text="Why Hampden-Sydney?" icon={{name:"arrow-right", side:"right"}}></Link>
 	</div>
 	<img src="/images/baseball-field.jpg" alt="" />	
 	

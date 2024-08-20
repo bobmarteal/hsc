@@ -1,10 +1,15 @@
 ---
+// layout
 import MainWrapper from "../layouts/MainWrapper.astro";
 
 // components
 import CrestFeature1 from "../components/carousels/CrestFeature1.astro";
+import SimpleForm from "@/components/forms/SimpleForm.astro";
+import ProgramCardWrapper from "@/components/programs/ProgramCardWrapper.astro";
 ---
 
 <MainWrapper>
 	<CrestFeature1></CrestFeature1>
+	<SimpleForm id="search-majors" label="What would you like to study?" classes="with-lines"></SimpleForm>
+	 <ProgramCardWrapper></ProgramCardWrapper>
 </MainWrapper>

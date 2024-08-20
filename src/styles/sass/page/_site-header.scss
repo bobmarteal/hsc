@@ -52,6 +52,16 @@
     padding: 1.25em 0;
     z-index: 10;
     background: var(--black);
+    container-name: logo-actions;
+    container-type: inline-size;
+  }
+  .actions > :not(.menuTrigger) {
+    display: none;
+  }
+  @container logo-actions (width > 70ch) {
+    .actions > :not(.menuTrigger) {
+      display: inherit;
+    }
   }
   &.hidden {
     transform: translateY(-200px);

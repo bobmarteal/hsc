@@ -1,0 +1,10 @@
+/*
+    Main grids
+*/
+.grid {
+  display: grid;
+  gap: 2em;
+  &.twoCol {
+    grid-template-columns: 1fr 1fr;
+  }
+}
