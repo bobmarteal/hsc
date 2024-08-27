@@ -6,9 +6,13 @@ Styles for articles
     3. articleFull
 
 */
+@use "_mixins.scss" as *;
 
 .articleHero {
-  grid-column: bleed;
+  grid-column: full-width;
+  @include mq(large) {
+    grid-column: bleed;
+  }
   margin: 0 auto;
   place-items: center;
   display: grid;
@@ -19,16 +23,19 @@ Styles for articles
     grid-row: 1;
     grid-column: 1;
   }
+
   .text {
     z-index: 3;
-    margin-top: 2rem;
   }
   img {
     z-index: 1;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    @include mq(small) {
+      aspect-ratio: auto;
+    }
   }
-  p {
-    margin: 0 auto;
-  }
+
   &:after {
     position: absolute;
     inset: 0;

@@ -165,8 +165,9 @@ select[multiple] {
 .form--simple {
   background: var(--gray-100);
   border-radius: 2em;
-  padding: 0.25em 0.25em 0.25em 1em;
+  // padding: 0.25em 0.25em 0.25em 1em;
   margin-block: 4rem;
+  display: flex;
   position: relative;
   button {
     overflow: visible;
@@ -183,13 +184,13 @@ select[multiple] {
   &.with-lines {
     &::after,
     &::before {
-      position: absolute;
-      content: "";
-      width: 50%;
-      height: 5px;
-      background: var(--black);
-      top: 50%;
-      border-radius: 2px;
+      // position: absolute;
+      // content: "";
+      // width: 25%;
+      // height: 5px;
+      // background: var(--black);
+      // top: 50%;
+      // border-radius: 2px;
     }
     &::before {
       left: calc(-50% - 1em);

@@ -1,10 +1,13 @@
 /*
     Main grids
 */
+@use "../_mixins.scss" as *;
 .grid {
   display: grid;
   gap: 2em;
   &.twoCol {
-    grid-template-columns: 1fr 1fr;
+    @include mq(medium) {
+      grid-template-columns: 1fr 1fr;
+    }
   }
 }

@@ -11,27 +11,26 @@
     Skip-to-nav
 
 */
+@use "../_mixins.scss" as *;
 
 .skipNav {
   background: var(--red-500);
-  display: flex;
-  height: 0.5rem;
-  transition: height 0.2s eas e-in-out;
-  position: relative;
+  padding: 0.25rem 0;
   z-index: 10;
-  &:focus-within {
-    top: 0;
-    height: calc-size(auto);
-    height: auto;
-    a {
-      color: white;
-    }
-  }
+  font-size: 0;
+  position: relative;
+}
+.skipLinks {
+  transition: height 0.2s eas e-in-out;
+  display: flex;
   a {
     color: var(--white);
     margin: 0 1em;
-    color: transparent;
+    color: var(--white);
     transition: color 0.2s ease-in;
+  }
+  &:focus-within {
+    font-size: var(--step--2);
   }
 }
 
@@ -43,29 +42,28 @@
   font-size: var(--step--1);
   position: sticky;
   top: 0;
-  transition: transform 0.25s ease-out;
+  transition: transform 0.25s ease-out, font-size 0.25s ease-out,
+    height 0.25s ease-out;
   z-index: 10;
-  .logoActions {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.25em 0;
-    z-index: 10;
-    background: var(--black);
-    container-name: logo-actions;
-    container-type: inline-size;
+}
+.logoActions {
+  display: flex;
+  // display: none;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: 1.25em 0;
+  z-index: 10;
+  container-name: logo-actions;
+  container-type: inline-size;
+  // transition: font-size 0.5s;
+  grid-column: bleed;
+  @include mq(large) {
+    grid-column: content;
   }
-  .actions > :not(.menuTrigger) {
-    display: none;
-  }
-  @container logo-actions (width > 70ch) {
-    .actions > :not(.menuTrigger) {
-      display: inherit;
-    }
-  }
-  &.hidden {
-    transform: translateY(-200px);
-  }
+}
+.actions > :not(.menuTrigger) {
+  display: none;
 }
 
 // Actions - the container for the visible top items
@@ -74,6 +72,7 @@
   display: flex;
   align-items: center;
   gap: 2rem;
+
   > span {
     height: 1.8em;
     width: 3px;
@@ -81,7 +80,7 @@
   }
   // CTA
   .cta {
-    display: inline-flex;
+    // display: inline-flex;
     gap: 1.5em;
     a {
       text-transform: uppercase;
@@ -92,11 +91,36 @@
 }
 
 .hsc-logo {
-  background-image: url("/images/theme/hsc-logo.png");
-  background-repeat: no-repeat;
   display: block;
-  background-size: cover;
-  width: 233px;
-  height: 96px;
-  text-indent: -9999px;
+  .logo--small {
+    height: auto;
+    @include mq(medium) {
+      height: 0;
+    }
+  }
+  .logo--large {
+    height: 0;
+    @include mq(medium) {
+      height: auto;
+      opacity: 1;
+    }
+  }
+}
+
+.siteHeader.scrolled {
+  transition: font-size 0.25s ease-out;
+
+  .logoActions {
+    margin: 0.5em 0;
+    font-size: var(--step--2);
+  }
+}
+
+// container queries
+
+@container logo-actions (width > 70ch) {
+  .actions > :not(.menuTrigger) {
+    display: inherit;
+    transition: font-size 0.25s ease-out;
+  }
 }

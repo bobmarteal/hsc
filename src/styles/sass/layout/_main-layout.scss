@@ -1,12 +1,12 @@
 .primary-layout {
   /* user settings */
   --max-width: 1920px;
-  --padding-inline: 0;
+  --padding-inline: 1em;
   --content-max-width: 80ch;
   // --narrow-size-reduction: 60px;
   // --popout-extra-distance: 60px;
   --bleed-extra-distance: 80px;
-  --content-column-min: 600px;
+  --content-column-min: calc(370px - 2em);
   --content-column-max: 1520px;
   --_content-column-size: 1440px;
   --_bleed-column-size: var(--bleed-extra-distance);

@@ -19,20 +19,25 @@ import MainNav from "@/components/navigations/MainNav.astro";
 
         <header class="primary-layout siteHeader" id="siteHeader">
             <div id="skip-to-nav" class="skipNav full-width">
+                <div class="skipLinks">
                 <a href="">Main nav</a><a href="">Content</a>
-            </div>            
-            <div class="logoActions">
-                <a href="" class="hsc-logo">Hampden Sydney College</a>
-                <div class="actions">
-                <a href="#" id="searchToggle" class="searchToggle" arial-label="show search field"></a>
-                <span></span>
-                <div class="cta">
-                <a href="">visit</a>
-                <a href="">apply</a>
-                <a href="">give</a> 
                 </div>
-                <span></span>
-                <a href="#" id="mainNavToggle" class="menuTrigger" aria-label="Open main navigation">Menu <span></span><span></span><span></span><span></span></a>
+            </div>                
+            <div class="logoActions">
+                <a href="" class="hsc-logo">
+                    <img src="/images/theme/hsc-logo-two-line.png" class="logo logo--small" alt="Hampden Sydney College"/>
+                    <img src="/images/theme/hsc-logo.png"  class="logo logo--large" alt="Hampden Sydney College"/><span class="sr-only">Hampden Sydney College</span>
+                </a>
+                <div class="actions">
+                    <a href="#" id="searchToggle" class="searchToggle" arial-label="show search field"></a>
+                    <span></span>
+                    <div class="cta">
+                        <a href="">visit</a>
+                        <a href="">apply</a>
+                        <a href="">give</a> 
+                    </div>
+                    <span></span>
+                    <a href="#" id="mainNavToggle" class="menuTrigger" aria-label="Open main navigation">Menu <span></span><span></span><span></span><span></span></a>
                 </div> 
             </div>
           
@@ -41,48 +46,56 @@ import MainNav from "@/components/navigations/MainNav.astro";
         
     <!-- </div> -->
 
-<!-- <script is:inline src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script is:inline src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 
-<script is:inline  src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>       -->
+<script is:inline  src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 
 <script is:inline>
 /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
-    {
-        const siteHeader = document.querySelector(".siteHeader");
-        const navWraper = document.querySelector(".mainNavWrapper");
-        let lastScrollY = window.scrollY;
+    // {
+    //     const siteHeader = document.querySelector(".siteHeader");
+    //     const navWraper = document.querySelector(".mainNavWrapper");
+    //     let lastScrollY = window.scrollY;
 
 
 
-        window.addEventListener("scroll", () => {
-            if (window.scrollY > 300){
-                if (lastScrollY < window.scrollY){
-                    siteHeader.classList.add("hidden");
-                    navWraper.classList.add("hidden");
-                } else {
-                    siteHeader.classList.remove("hidden");
-                    navWraper.classList.remove("hidden");
-                }
-                lastScrollY = window.scrollY;      
-            }
-        })
-    }
-    // var actionNav = gsap.to('.siteHeader', {y:'-=200', duration:0.5, ease:'power2.in', paused:true});
+    //     window.addEventListener("scroll", () => {
+    //         if (window.scrollY > 300){
+    //             if (lastScrollY < window.scrollY){
+    //                 siteHeader.classList.add("scrolled");
+    //                 navWraper.classList.add("scrolled");
+    //             } else {
+    //                 siteHeader.classList.remove("scrolled");
+    //                 navWraper.classList.remove("scrolled");
+    //             }
+    //             lastScrollY = window.scrollY;      
+    //         }
+    //     })
+    // }
+    // var actionNav = 
+    //     gsap.to('.siteHeader', {height: "75px", duration:0.5, ease:'power2.in', paused:true})
+    //     ;
 
     // ScrollTrigger.create({
-    // trigger: ".siteHeader",
-    // start: "bottom 100px",
-    // end: "bottom 0px",
-    // markers: true,
-    // onUpdate: ({progress, direction, isActive}) => {
-    //     if (direction == -1) {
-    //     actionNav.reverse()
-    //     } if (direction == 1 ) {
-    //     actionNav.play()
-    //     } else if (direction == 1 && isActive == true) {
-    //     actionNav.play()
-    //     }
-    // }
-    // });
 
+
+
+    // });
+    let mm = gsap.matchMedia();
+
+    mm.add("(min-width: 800px)", () => {
+        gsap.defaults({ease: "none", duration: 0.25})
+        gsap.timeline({scrollTrigger:{
+            trigger: ".siteHeader",
+            start: "top -100px",
+            end: "bottom 0px",
+            // scrub: true,
+            // markers: true,
+            toggleActions: "play play reverse reverse"
+        }})
+        // .to('.logo--large', { opacity: 0, duration: 0.75})
+        .to('.logo--large', {height: 0})
+        .to('.logo--small', {height: "auto"})
+        .to('.logoActions', {fontSize: "16px"}, 0)
+    });
 </script>

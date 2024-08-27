@@ -2,8 +2,8 @@
 @use "_reset.scss";
 
 // setting stuff
+@use "_mixins.scss" as *;
 @use "_vars.scss";
-@use "_mixins.scss";
 
 // main text components
 @use "components/_text.scss";
