@@ -72,29 +72,21 @@ import MainNav from "@/components/navigations/MainNav.astro";
     //         }
     //     })
     // }
-    // var actionNav = 
-    //     gsap.to('.siteHeader', {height: "75px", duration:0.5, ease:'power2.in', paused:true})
-    //     ;
 
-    // ScrollTrigger.create({
-
-
-
-    // });
     let mm = gsap.matchMedia();
 
     mm.add("(min-width: 800px)", () => {
         gsap.defaults({ease: "none", duration: 0.25})
         gsap.timeline({scrollTrigger:{
             trigger: ".siteHeader",
-            start: "top -100px",
-            end: "bottom 0px",
+            start: "10px -100px",
+            end: "bottom top",
             // scrub: true,
             // markers: true,
-            toggleActions: "play play reverse reverse"
+            toggleActions: "play none reverse none"
         }})
-        // .to('.logo--large', { opacity: 0, duration: 0.75})
-        .to('.logo--large', {height: 0})
+       
+        .to('.logo--large', {height: "0px"})
         .to('.logo--small', {height: "auto"})
         .to('.logoActions', {fontSize: "16px"}, 0)
     });

@@ -165,10 +165,13 @@ select[multiple] {
 .form--simple {
   background: var(--gray-100);
   border-radius: 2em;
-  // padding: 0.25em 0.25em 0.25em 1em;
+  padding: 0.5em 0.5em 0.5em 1em;
   margin-block: 4rem;
   display: flex;
   position: relative;
+  input {
+    width: 15em;
+  }
   button {
     overflow: visible;
     width: auto;
