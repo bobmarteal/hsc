@@ -4,20 +4,24 @@ import { Icon } from "astro-icon/components";
 // one input and button form
 // label, id, text
 
-const { id, label, classes, ...rest } = Astro.props;
-
+const { id, label, classes, sidelines, ...rest } = Astro.props;
+console.log(sidelines);
 ---
-<form 
-    action="" 
-    class:list={[
-        "form",
-        "form--simple",
-        "inline-center",
-        classes
-    ]}
-    {...rest}
->
-	<label for={id} class="sr-only">{label}</label>
-	<input type="search" id={id} size="25" placeholder={label}>
-	<button type="submit"><Icon name="Search"></Icon></button>
-</form>
+<div class="form-wrapper">
+    { sidelines && <div class="sideline"></div>}
+    <form 
+        action="" 
+        class:list={[
+            "form",
+            "form--simple",
+            "inline-center",
+            classes
+        ]}
+        {...rest}
+    >
+        <label for={id} class="sr-only">{label}</label>
+        <input type="search" id={id} size="25" placeholder={label}>
+        <button type="submit"><Icon name="Search"></Icon></button>
+    </form>    
+    { sidelines && <div class="sideline"></div>}
+</div>

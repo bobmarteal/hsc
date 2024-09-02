@@ -19,7 +19,7 @@ A couple of things to watch out for:
 - By turning off ::-webkit-search-decoration, it removes the extra whitespace on the left on search inputs
 
 ----------------------------------------------------------------------------------------------------*/
-
+@use "../_mixins.scss" as *;
 input,
 label,
 select,
@@ -38,7 +38,7 @@ textarea {
 ::placeholder {
   color: var(--black);
   opacity: 1; /* Firefox */
-  padding-right: 2rem;
+  padding-right: 1em;
 }
 
 ::-ms-input-placeholder {
@@ -162,15 +162,44 @@ select[multiple] {
   vertical-align: top;
 }
 
+/*
+  Forms
+*/
+// simple form ala the What would you like to study.
+// can have decorative lines or not dictated on the class of the form
+
+.form-wrapper {
+  display: grid;
+  margin-block: 3em;
+  grid-column: full-width;
+  @include mq(medium) {
+    grid-column: content;
+    margin-block: 4em;
+    &:has(.sideline) {
+      grid-template-columns: 1fr 4fr 1fr;
+      gap: 0.5em;
+      align-items: center;
+      justify-content: center;
+    }
+    .sideline {
+      width: 100%;
+      height: 2px;
+      background: var(--black);
+      display: block;
+    }
+  }
+}
+
 .form--simple {
   background: var(--gray-100);
   border-radius: 2em;
   padding: 0.5em 0.5em 0.5em 1em;
-  margin-block: 4rem;
+  width: calc(100% - 1.5em);
   display: flex;
-  position: relative;
+  justify-content: space-between;
   input {
     width: 15em;
+    min-width: 0;
   }
   button {
     overflow: visible;
@@ -183,23 +212,5 @@ select[multiple] {
   }
   svg {
     margin: 0 auto;
-  }
-  &.with-lines {
-    &::after,
-    &::before {
-      // position: absolute;
-      // content: "";
-      // width: 25%;
-      // height: 5px;
-      // background: var(--black);
-      // top: 50%;
-      // border-radius: 2px;
-    }
-    &::before {
-      left: calc(-50% - 1em);
-    }
-    &::after {
-      left: calc(100% + 1em);
-    }
   }
 }
