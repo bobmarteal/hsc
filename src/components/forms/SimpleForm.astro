@@ -7,6 +7,7 @@ import { Icon } from "astro-icon/components";
 const { id, label, classes, sidelines, ...rest } = Astro.props;
 console.log(sidelines);
 ---
+<!-- start form-wrapper -->
 <div class="form-wrapper">
     { sidelines && <div class="sideline"></div>}
     <form 
@@ -25,3 +26,4 @@ console.log(sidelines);
     </form>    
     { sidelines && <div class="sideline"></div>}
 </div>
+<!-- end form-wrapper -->
