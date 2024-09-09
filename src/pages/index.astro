@@ -6,10 +6,23 @@ import MainWrapper from "../layouts/MainWrapper.astro";
 import CrestFeature1 from "../components/carousels/CrestFeature1.astro";
 import SimpleForm from "@/components/forms/SimpleForm.astro";
 import ProgramCardWrapper from "@/components/programs/ProgramCardWrapper.astro";
+import TextLinks from "@/components/page-block/TextLinks.astro";
+
+//ui items
+import Heading from "@/components/ui/Heading.astro";
+import { Icon } from "astro-icon/components";
+import { Image } from "astro:assets";
+import Link from "@ui/Link.astro";
+import TextLinkGray from "@/components/page-block/TextLinkGray.astro";
+
+//images
+
 ---
 
 <MainWrapper>
 	<CrestFeature1></CrestFeature1>
 	<SimpleForm id="search-majors" label="What would you like to study?" classes="with-lines" sidelines="true"></SimpleForm>
+	<Heading tagName="h3" size="base6" family="serif" class="align-center">Scholarly Pursuits</Heading>
 	 <ProgramCardWrapper></ProgramCardWrapper>
+	<TextLinkGray></TextLinkGray>
 </MainWrapper>

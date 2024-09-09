@@ -20,3 +20,14 @@ ol {
     list-style-type: lower-alpha;
   }
 }
+
+// for lists of buttons
+.buttons {
+  margin-bottom: 0;
+  li:last-of-type {
+    margin-bottom: 0;
+  }
+  a {
+    width: 100%;
+  }
+}

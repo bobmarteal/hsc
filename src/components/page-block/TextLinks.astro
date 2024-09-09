@@ -1,0 +1,9 @@
+---
+const{classes} = Astro.props;
+---
+<section class="full-width" {{classes}}>
+    <div class="textLiniks grid three-one">
+        <slot name="text1">slot one</slot>
+		<slot name="text2">slot two</slot>
+    </div>
+</section>

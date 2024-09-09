@@ -1,22 +1,19 @@
 ---
 
-//import components
+
 import MainNav from "@/components/navigations/MainNav.astro";
 
-
 ---
-<!-- 
-    siteHeader.astro
-    - CTA/Black bar at top
-        - cta links
-        - search
-    - header 
-        - logo
-        - main nav
- -->
+        <!-- 
 
-    <!-- <div class="primary-layout"> -->
+            - CTA/Black bar at top
 
+            - cta links
+                - search
+            - header 
+                - logo
+                - main nav
+        -->
         <header class="primary-layout siteHeader" id="siteHeader">
             <div id="skip-to-nav" class="skipNav full-width">
                 <div class="skipLinks">
@@ -44,31 +41,27 @@ import MainNav from "@/components/navigations/MainNav.astro";
         </header>
         <MainNav></MainNav>
         
-    <!-- </div> -->
 
-<script is:inline src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+        <script is:inline src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 
-<script is:inline  src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+        <script is:inline  src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 
-<script is:inline>
-/* When the user scrolls down, logo changes to smaller layout, text size is smaller, reverse on scroll back in */
+        <script is:inline>
+        /* When the user scrolls down, logo changes to smaller layout, text size is smaller, reverse on scroll back in */
+            let mm = gsap.matchMedia();
 
-
-    let mm = gsap.matchMedia();
-
-    mm.add("(min-width: 800px)", () => {
-        gsap.defaults({ease: "none", duration: 0.25})
-        gsap.timeline({scrollTrigger:{
-            trigger: ".siteHeader",
-            start: "10px -100px",
-            end: "bottom top",
-            // scrub: true,
-            // markers: true,
-            toggleActions: "play none reverse none"
-        }})
-       
-        .to('.logo--large', {height: "0px"})
-        .to('.logo--small', {height: "auto"})
-        .to('.logoActions', {fontSize: "16px"}, 0)
-    });
-</script>
+            mm.add("(min-width: 800px)", () => {
+                gsap.defaults({ease: "none", duration: 0.15})
+                gsap.timeline({scrollTrigger:{
+                trigger: ".siteHeader",
+                start: "10px -100px",
+                end: "bottom top",
+                // scrub: true,
+                // markers: true,
+                toggleActions: "play none reverse none"
+            }})
+            .to('.logo--large', {height: "0px"})
+            .to('.logo--small', {height: "auto"})
+            .to('.logoActions', {fontSize: "16px"}, 0)
+            });
+        </script>

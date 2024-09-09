@@ -26,7 +26,8 @@
 @use "components/_images-masks.scss";
 @use "forms/_forms.scss";
 @use "forms/_searches-and-forms.scss";
-@use "components/programCard";
+@use "components/_program-card.scss";
+@use "components/_text-links.scss";
 
 //utilities
 @use "_utilities.scss";

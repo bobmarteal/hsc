@@ -1,0 +1,15 @@
+/*
+
+    blocks with a block of text and a list of links
+
+*/
+
+.text-links {
+  &.simple {
+    align-items: center;
+    padding: 3em 0;
+    > p {
+      margin-bottom: 0;
+    }
+  }
+}
