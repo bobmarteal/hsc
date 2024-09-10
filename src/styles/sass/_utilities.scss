@@ -1,5 +1,9 @@
 /*
     Utility classes
+    1. sr-only
+    2. centering
+    3. background colors
+    4. margins
 */
 .inline-center {
   margin-inline: auto;
@@ -27,4 +31,20 @@
 .centered-text *,
 .align-center {
   text-align: center;
+}
+
+// main slices with background colors
+.gray-bg {
+  background: var(--gray-300);
+}
+
+// margin utility classes
+.m-bottom-2 {
+  margin-bottom: 2rem;
+}
+.m-bottom-3 {
+  margin-bottom: 3rem;
+}
+.m-bottom-4 {
+  margin-bottom: 4rem;
 }

@@ -14,11 +14,10 @@ export type programCard = {
 };
 ---
 
-<section>
+<section class="m-bottom-3">
     <div class="grid two-col">
     {programCardData.map((programCard: programCard) => 
         <ProgramCard {...programCard}></ProgramCard>
     )}          
     </div>
-
 </section>

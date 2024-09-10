@@ -1,3 +1,13 @@
+/*
+
+  1. primary-layout -- horizontal slices
+  2. .narrow, .bleed, .full-width -- how wide the contained elements are
+  3. special classes for the contained elements
+    - color backgrounds
+    - margins-bottoms
+
+*/
+
 .primary-layout {
   /* user settings */
   --max-width: 1920px;
@@ -50,9 +60,4 @@
   /* for demo purposes */
   max-height: 25vh;
   object-fit: cover;
-}
-
-// main slices with background colors
-.gray-bg {
-  background: var(--gray-300);
 }
