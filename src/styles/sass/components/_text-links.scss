@@ -5,11 +5,14 @@
 */
 
 .text-links {
-  &.simple {
+  &.v-center {
     align-items: center;
     padding: 3em 0;
     > p {
       margin-bottom: 0;
     }
+  }
+  &.v-bottom {
+    align-items: flex-end;
   }
 }

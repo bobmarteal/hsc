@@ -10,19 +10,19 @@ import Football from "../../assets/Football-player.jpg";
 import Heading from "../ui/Heading.astro";
 
 ---
-<section class="full-bleed m-bottom-3">
-	
-    <div class="text-links simple grid three-one-background">
-		<Image src={Football} width={1600} alt=""></Image>
-        <div class="text-content">
-			<Heading tagName="h2" size="base3" family="serif">You made it this far.We’ll make you go further.</Heading>
-			<p>STUDENT LIFE THAT LASTS A LIFETIME</p>
+<section class="full-width text-over-image m-bottom-3">
+	<Image src={Football} width={1600} alt="" class="full-width"></Image>
+    <div class="text-links grid three-one ">
+		
+        <div class="text-content ">
+			<Heading tagName="h2" size="base4" family="serif">You made it this far. We’ll make you go further.</Heading>
+			<p><strong>STUDENT LIFE THAT LASTS A LIFETIME</strong></p>
 			<p>At H-SC, you’ll get more than a degree. You’ll experience brotherhood—a deep feeling of connection with other future leaders. You’ll get small classrooms to focus and 1,300 acres to roam free. And in the end you’ll gain confidence, character and the capability to achieve success.</p>	
 		</div>
 		<ul class="buttons">
-			<li><Link style="primary" href="/text"  classes="button button--primary" text="Apply to H-SC" icon={{name:"arrow-right", side:"right"}}></Link></li>
-			<li><Link style="primary" href="/text"  classes="button button--primary" text="Schedule a visit" icon={{name:"arrow-right", side:"right"}}></Link></li>
-			<li><Link style="primary" href="/text"  classes="button button--primary" text="Contact us" icon={{name:"arrow-right", side:"right"}}></Link></li>
+			<li><Link style="primary" href="/text"  classes="button button--secondary" text="Apply to H-SC" icon={{name:"arrow-right", side:"right"}}></Link></li>
+			<li><Link style="primary" href="/text"  classes="button button--secondary" text="Schedule a visit" icon={{name:"arrow-right", side:"right"}}></Link></li>
+			<li><Link style="primary" href="/text"  classes="button button--secondary" text="Contact us" icon={{name:"arrow-right", side:"right"}}></Link></li>
 		</ul>
     </div>
 </section>

@@ -15,19 +15,64 @@
       grid-template-columns: 3fr 1fr;
     }
   }
-  &.three-one-background {
+}
+
+/*
+
+for those instances where you need to put a text block over an image
+
+*/
+
+.text-over-image {
+  @include mq(header) {
+    align-items: end;
+  }
+  @include mq(header) {
     grid-template-columns: 3fr 1fr;
-    img {
-      grid-column: 1 / -1;
-      grid-row: 1 / -2;
+  }
+
+  grid-column: full-width;
+  position: relative;
+
+  img {
+    grid-column: content;
+    grid-row: 1;
+    width: 100%;
+    aspect-ratio: 5 / 4;
+    object-fit: cover;
+    z-index: 2;
+  }
+  .text-links {
+    grid-column: content;
+    grid-row: 1;
+    align-items: center;
+    margin-top: 10em;
+    // @include mq(medium) {
+    margin-bottom: 3rem;
+    // }
+    //
+    color: var(--white);
+    z-index: 3;
+  }
+  > ul {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  &:after {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    content: "";
+    background-image: linear-gradient(rgb(0, 0, 0) 25% 0%, rgb(0, 0, 0) 50%);
+    @include mq(medium) {
+      z-index: 2;
+      background-image: linear-gradient(
+        rgba(0, 0, 0, 0.102) 25% 0%,
+        rgba(0, 0, 0, 0.71) 70%
+      );
     }
-    .text-content {
-      grid-column: 1;
-      grid-row: 2;
-    }
-    > ul {
-      grid-column: 2;
-      grid-row: 2;
-    }
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
   }
 }
