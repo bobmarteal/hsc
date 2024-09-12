@@ -13,8 +13,6 @@
   --max-width: 1920px;
   --padding-inline: 1em;
   --content-max-width: 80ch;
-  // --narrow-size-reduction: 60px;
-  // --popout-extra-distance: 60px;
   --bleed-extra-distance: 80px;
   --content-column-min: calc(370px - 2em);
   --content-column-max: 1520px;
@@ -34,7 +32,6 @@
     [bleed-end]
     minmax(var(--padding-inline), 1fr)
     [full-width-end];
-  // max-width: var(--max-width);
 }
 
 :is(.primary-layout, .full-width) > * {
@@ -57,7 +54,5 @@
 
 :where(.primary-layout, .full-width) > img {
   width: 100%;
-  /* for demo purposes */
-  // max-height: 25vh;
   object-fit: cover;
 }

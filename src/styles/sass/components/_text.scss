@@ -89,6 +89,7 @@ The base stylesheet for all site text styles
 }
 .fs-5 {
   font-size: var(--step-5);
+  line-height: 1;
 }
 .fs-6 {
   font-size: var(--step-6);
@@ -185,6 +186,9 @@ a {
 }
 strong {
   font-family: var(--ff-sans-bold);
+}
+em {
+  font-style: italic;
 }
 .caps {
   text-transform: uppercase;

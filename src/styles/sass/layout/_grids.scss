@@ -5,7 +5,7 @@
 .grid {
   display: grid;
   gap: 2em;
-  &.two-col {
+  &.one-one {
     @include mq(medium) {
       grid-template-columns: 1fr 1fr;
     }
