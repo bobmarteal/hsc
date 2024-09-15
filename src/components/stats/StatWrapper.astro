@@ -1,0 +1,18 @@
+---
+// stat wrapper
+import statCardData from "../../data/stats.json";
+import Stat from "./Stat.astro";
+
+export type statCard = {
+    stat: string,
+    text: string,
+};
+---
+<section class="full-width gray-bg">
+    <div class="stat-wrapper">
+     {statCardData.map((statCard:statCard) =>
+        <Stat {...statCard}></Stat>)
+    }       
+    </div>
+
+</section>
