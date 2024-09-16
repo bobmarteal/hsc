@@ -7,25 +7,63 @@
     1. crest bottom
 
 */
+@use "../_mixins.scss" as *;
+.crest-overlay {
+  position: relative;
+  &:after {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    content: "";
+    background-image: url(/images/theme/crest-main-1.svg),
+      linear-gradient(rgba(0, 0, 0, 0.001) 25%, rgba(0, 0, 0, 0.585));
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom, bottom;
+    background-size: contain, cover;
+  }
+  &.crest-transparent {
+    &:after {
+      opacity: 0.6;
+    }
+  }
+}
 
-// .mask {
-//   position: relative;
-//   &:after {
-//     position: absolute;
-//     content: "";
-//     left: 50%;
-//     margin-left: -50%;
-//     width: 100%;
-//     bottom: 0;
-//     height: 100%;
-//     object-fit: cover;
-//   }
-//   &.crest-bottom::after {
-//     mask: url(/images/theme/crest-main-1.svg);
-//     mask-position: bottom;
-//     mask-repeat: no-repeat;
-//     background: var(--gray-100);
-//     opacity: 0.6;
-//     z-index: 3;
-//   }
-// }
+.light-dark-fade {
+  position: relative;
+  &:after {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    content: "";
+    background-image: linear-gradient(rgb(0, 0, 0) 25% 0%, rgb(0, 0, 0) 50%);
+    @include mq(medium) {
+      z-index: 2;
+      background-image: linear-gradient(
+        rgba(0, 0, 0, 0.102) 25% 0%,
+        rgba(0, 0, 0, 0.71) 70%
+      );
+    }
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+  }
+}
+
+.white-tiger {
+  position: relative;
+  padding: 2rem 0;
+  > * {
+    position: relative;
+    z-index: 1;
+  }
+  &:before {
+    position: absolute;
+    inset: 0;
+    content: "";
+    background-image: url(/images/theme/white-tiger.svg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+    opacity: 0.6;
+  }
+}

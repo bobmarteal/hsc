@@ -34,8 +34,12 @@
 // centered alinged text blocks
 
 .centered-text *,
-.align-center {
+.centered-text {
   text-align: center;
+}
+.align-center,
+.align-center * {
+  margin-inline: auto;
 }
 
 // main slices with background colors

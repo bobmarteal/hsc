@@ -8,7 +8,7 @@ Styles for articles
 */
 @use "_mixins.scss" as *;
 
-.articleHero {
+.article-hero {
   grid-column: full-width;
   @include mq(large) {
     grid-column: bleed;
@@ -16,7 +16,6 @@ Styles for articles
   margin: 0 auto;
   place-items: center;
   display: grid;
-  position: relative;
   color: var(--white);
   .text,
   img {
@@ -34,17 +33,5 @@ Styles for articles
     @include mq(small) {
       aspect-ratio: auto;
     }
-  }
-
-  &:after {
-    position: absolute;
-    inset: 0;
-    z-index: 2;
-    content: "";
-    background-image: url(/images/theme/crest-main-1.svg),
-      linear-gradient(rgba(0, 0, 0, 0.001) 25%, rgba(0, 0, 0, 0.585));
-    background-repeat: no-repeat, no-repeat;
-    background-position: bottom, bottom;
-    background-size: contain, cover;
   }
 }

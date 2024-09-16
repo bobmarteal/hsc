@@ -54,7 +54,7 @@ The base stylesheet for all site text styles
   --ff-sans: Roboto Regular;
   --ff-sans-bold: Roboto Bold;
   --ff-serif: DM Serif Display;
-
+  --step--3: clamp(0.4rem, 0.5rem + 0.0326vi, 0.6rem);
   --step--2: clamp(0.6rem, 0.65rem + 0.0326vi, 0.7rem);
   --step--1: clamp(0.9375rem, 0.8158rem + 0.1087vi, 0.85rem);
   --step-0: clamp(1.125rem, 1.0815rem + 0.2174vi, 1.25rem);
@@ -63,9 +63,12 @@ The base stylesheet for all site text styles
   --step-3: clamp(1.944rem, 1.771rem + 0.8651vi, 2.4414rem);
   --step-4: clamp(2.3328rem, 2.0827rem + 1.2504vi, 3.0518rem);
   --step-5: clamp(2.7994rem, 2.4462rem + 1.7658vi, 3.8147rem);
-  --step-6: clamp(1rem, 1.8691rem + 2.4507vi, 4.7684rem);
+  --step-6: clamp(3rem, 3.8691rem + 3.4507vi, 4.7684rem);
 }
 
+.fs--3 {
+  font-size: var(--step--3);
+}
 .fs--2 {
   font-size: var(--step--2);
 }
@@ -181,7 +184,7 @@ a {
 /*
   Font decorations
 */
-.textShadow {
+.text-shadow {
   text-shadow: var(--text-shadow);
 }
 strong {
@@ -192,5 +195,4 @@ em {
 }
 .caps {
   text-transform: uppercase;
-  font-family: var(--ff-sans-bold);
 }

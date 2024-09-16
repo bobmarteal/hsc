@@ -23,12 +23,9 @@ for those instances where you need to put a text block over an image
 
 */
 
-.text-over-image {
+.text-bottom-image {
   @include mq(header) {
     align-items: end;
-  }
-  @include mq(header) {
-    grid-template-columns: 3fr 1fr;
   }
 
   grid-column: full-width;
@@ -58,21 +55,22 @@ for those instances where you need to put a text block over an image
     grid-column: 2;
     grid-row: 1;
   }
-  &:after {
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-    content: "";
-    background-image: linear-gradient(rgb(0, 0, 0) 25% 0%, rgb(0, 0, 0) 50%);
-    @include mq(medium) {
-      z-index: 2;
-      background-image: linear-gradient(
-        rgba(0, 0, 0, 0.102) 25% 0%,
-        rgba(0, 0, 0, 0.71) 70%
-      );
-    }
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: cover;
+}
+
+.text-centered-image {
+  display: grid;
+  color: var(--white);
+  * {
+    grid-row: 1 / -1;
+    grid-column: 1 / -1;
+    align-content: center;
+  }
+  .text {
+    text-align: center;
+    z-index: 3;
+  }
+  h3 {
+    align-self: center;
+    color: var(--white);
   }
 }
