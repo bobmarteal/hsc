@@ -1,0 +1,50 @@
+/*
+    image-grid
+    layout square images 
+    **tag-card is the special hashtag.
+*/
+@use "../_mixins.scss" as *;
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10em, 1fr));
+  gap: 0.5em;
+  img {
+    aspect-ratio: 1 / 1;
+    border-radius: var(--border-radius-large);
+  }
+}
+.hashtag {
+  background: var(--gray-300);
+  border-radius: var(--border-radius-large);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+  position: relative;
+  &:after {
+    position: absolute;
+    content: "";
+    height: 3px;
+    background: var(--blue-500);
+    width: 40%;
+    left: 30%;
+    @include mq(medium) {
+      width: calc(100% + 1em);
+      left: -0.5em;
+    }
+    border-radius: var(--border-radius-small);
+    transform: rotate(-45deg);
+    top: 50%;
+    transform-origin: center;
+  }
+  .tag {
+    color: var(--red-500);
+  }
+  .shield {
+    background-image: url(/images/theme/sheild-red-small.svg);
+    width: 61px;
+    height: 78px;
+    display: block;
+    align-self: flex-end;
+  }
+}
