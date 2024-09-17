@@ -1,0 +1,51 @@
+/*
+
+    event-card
+    set up base card.
+    Set card width when in a carousel
+
+*/
+@use "../../_mixins.scss" as *;
+.event-card-wrapper {
+  h3 {
+    color: var(--white);
+  }
+  //   display: grid;
+  //   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  //   gap: 0.5em;
+  //   padding: 3em 0;
+}
+
+.event-card {
+  padding: 1em 0.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--white);
+  border-radius: var(--border-radius-large);
+  .month {
+    font-family: var(--ff-sans);
+  }
+  .date {
+    font-size: var(--step-5);
+    font-family: var(--ff-serif);
+    color: var(--blue-500);
+  }
+  a {
+    color: var(--black);
+  }
+}
+
+/*
+    Aticle cards in a carousel
+*/
+.carousel {
+  .event-card {
+    width: 50%;
+    margin: 0 0.25em;
+    @include mq(medium) {
+      width: 25%;
+    }
+  }
+}

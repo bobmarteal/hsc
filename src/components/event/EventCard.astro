@@ -1,0 +1,12 @@
+---
+import Heading from "../ui/Heading.astro";
+
+const {title, month, date} = Astro.props;
+
+---
+
+<div class="event-card">
+    <span class="month">{month}</span>
+    <span class="date m-block-2">{date}</span>
+    <Heading tagName="h2" size="base0" weight="light"><a href="">{title}</a></Heading>
+</div>
