@@ -1,0 +1,40 @@
+---
+// ArticleCardCarousel
+
+//components
+import Heading from "../ui/Heading.astro";
+
+import ArticleCard from "./ArticleCard.astro";
+import Link from "@ui/Link.astro";
+
+//data
+import articleCardData from "../../data/article-cards.json";
+
+
+// typesetting
+export type articleCard = {
+    headline: string,
+    date: string,
+    imageSrc: string
+};
+---
+<section class="content article-card-wrapper m-bottom-3">
+    <Heading tagName="h3" size="base6" family="serif" class="align-center centered-text">News</Heading>
+    <div class="carousel m-bottom-3">
+        {articleCardData.map((articleCard:articleCard) => <ArticleCard {...articleCard}></ArticleCard>
+        )} 
+    </div>
+    <Link style="primary" href="/text"  classes="button button--primary inline-center" text="H-SC News in full" icon={{name:"arrow-right", side:"right"}}></Link>
+    
+</section>
+
+<script is:inline src=" https://cdn.jsdelivr.net/npm/flickity@3.0.0/dist/flickity.pkgd.min.js "></script>
+
+<script is:inline>
+var flkty = new Flickity( '.carousel', {
+  // options
+  wrapAround: true,
+  imagesLoaded: true,
+  pageDots: false,
+});
+</script>

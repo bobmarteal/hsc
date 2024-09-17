@@ -1,13 +1,13 @@
 ---
 //ui
 import Link from "@ui/Link.astro";
-
+import Heading from "../ui/Heading.astro";
 //astro
 import { Image } from "astro:assets";
 
 // images
 import Football from "../../assets/Football-player.jpg";
-import Heading from "../ui/Heading.astro";
+
 
 ---
 <div class="full-width crest-overlay text-centered-image">
@@ -16,12 +16,12 @@ import Heading from "../ui/Heading.astro";
 		<Heading tagName="h3" size="base6" weight="regular" family="serif" classes="text-shadow caps">Athletics</Heading>		
 	</div>
 </div>
-<div class="full-width gray-bg">
+<div class="full-width gray-bg  m-bottom-3">
 	<div class="narrow centered-text align-center m-block-4 white-tiger">
 		<Heading tagName="h2" size="base4" family="serif">Forming Good Men & Good Sportsmen</Heading>
 		<p>At other schools, athletics can be an exclusive pursuit, reserved for the elite. And while we pride ourselves on the 56 Conference Championships and 185 All-Americans we’ve produced, we’re also proud of how many of our students don’t just spectate, they participate. Over a third of our student body is part of intercollegiate sports, intramurals and clubs. Enjoy competition, camaraderie and grow in your sportsmanship at H-SC.</p>	
 		<p>
-					<Link style="primary" href="/text"  classes="button button--primary inline-center" text="Hampden-Sydney Athletics" icon={{name:"arrow-right", side:"right"}}></Link>
+			<Link style="primary" href="/text"  classes="button button--primary inline-center" text="Hampden-Sydney Athletics" icon={{name:"arrow-right", side:"right"}}></Link>
 		</p>
 	</div>
 </div>

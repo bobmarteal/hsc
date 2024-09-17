@@ -1,0 +1,30 @@
+/*
+
+    article-card
+    set up base card.
+    Set card width when in a carousel
+
+*/
+@use "../../_mixins.scss" as *;
+.article-card-wrapper {
+  //   display: grid;
+  //   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  //   gap: 0.5em;
+  //   padding: 3em 0;
+}
+.article-card {
+  width: 50%;
+  @include mq(medium) {
+    width: 33%;
+  }
+
+  padding: 0 0.25rem;
+  img {
+    border-radius: var(--border-radius-large);
+  }
+  .pubDate {
+    font-size: var(--step-1);
+    font-family: var(--ff-serif);
+    color: var(--red-500);
+  }
+}

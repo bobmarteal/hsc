@@ -6,7 +6,7 @@ Styles for articles
     3. articleFull
 
 */
-@use "_mixins.scss" as *;
+@use "../../_mixins.scss" as *;
 
 .article-hero {
   grid-column: full-width;

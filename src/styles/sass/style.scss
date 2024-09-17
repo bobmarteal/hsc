@@ -20,7 +20,8 @@
 @use "navs/_main-menu.scss";
 
 //content types
-@use "_article.scss";
+@use "content-types/article/_article.scss";
+@use "content-types/article/article-cards.scss";
 
 // components
 @use "components/_images-masks.scss";
@@ -31,6 +32,7 @@
 @use "components/stats.scss";
 @use "components/image-grid";
 @use "components/_text-links.scss";
+@use "components/_carousels.scss";
 
 //utilities
 @use "_utilities.scss";
