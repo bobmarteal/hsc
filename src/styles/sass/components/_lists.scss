@@ -28,6 +28,7 @@ ol {
 */
 .flat {
   display: flex;
+  flex-wrap: wrap;
   gap: 1em;
 }
 .centered-list {

@@ -38,7 +38,7 @@
   text-align: center;
 }
 .align-center,
-.align-center * {
+.align-center > * {
   margin-inline: auto;
 }
 
@@ -54,6 +54,9 @@
 }
 
 // margin-block-end classes give margin bottom
+.m-bottom-1 {
+  margin-block-end: 1rem;
+}
 .m-bottom-2 {
   margin-block-end: 2rem;
 }

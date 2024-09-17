@@ -1,9 +1,42 @@
 ---
-
+import Link from "@ui/Link.astro";
 ---
 
-    <div class="site-footer full-width">
-        <footer class="breakout">
-            footer stuff
-        </footer>
-    </div>
+<section class="site-footer primary-layout">
+    <footer class="bleed">
+
+        <ul class="footer-audience">
+            <li><a href="">Current Students</a></li>
+            <li><a href="">Faculty & Staff</a></li>
+            <li><a href="">Parents & Families</a></li>
+            <li><a href="">Prospective Students</a></li>
+            <li><a href="">Alumni</a></li>
+        </ul>             
+        <ul class="footer-cta buttons">
+            <li><Link style="primary" href="/text"  classes="button button--secondary" text="Alumni" icon={{name:"arrow-right", side:"right"}}></Link></li>
+            <li><Link style="primary" href="/text"  classes="button button--secondary" text="Hire a Tiger" icon={{name:"arrow-right", side:"right"}}></Link></li>
+            <li><Link style="primary" href="/text"  classes="button button--secondary" text="Support H-SC" icon={{name:"arrow-right", side:"right"}}></Link></li>
+        </ul>
+        <ul class="social-media">
+            <li><a href="">Facebook</a></li>
+            <li><a href="">Instagram</a></li>
+            <li><a href="">Linkedin</a></li>
+            <li><a href="">Youtube</a></li>
+            <li><a href="">X</a></li>
+        </ul>
+        <img src="/images/theme/hsc-logo.png"/>
+        <p class="footer-address">
+           <span> Hampden-Sydney College</span><br />
+            Hampden-Sydney, VA 23943<br />
+            (434) 223-6000
+        </p>           
+        <ul class="footer-resources">
+            <li><a href="">Campus Map</a></li>
+            <li><a href="">Academic Calendar</a></li>
+            <li><a href="">Campus Store</a></li>
+            <li><a href="">Library</a></li>
+            <li><a href="">Tiger Web</a></li>
+        </ul>        
+        <p class="footer-copyright">&copy;2024 Hampden-Sydney College <a href="">Policies</a> <a href="">Emergencies</a></p>
+    </footer>
+</section>
