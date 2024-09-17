@@ -21,6 +21,19 @@ ol {
   }
 }
 
+/*
+
+  list utility classes
+
+*/
+.flat {
+  display: flex;
+  gap: 1em;
+}
+.centered-list {
+  justify-content: center;
+}
+
 // for lists of buttons
 .buttons {
   margin-bottom: 0;

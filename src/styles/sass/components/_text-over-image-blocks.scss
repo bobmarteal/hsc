@@ -1,0 +1,78 @@
+/*
+
+for those instances where you need to put a text block over an image
+
+*/
+@use "../_mixins.scss" as *;
+
+.text-bottom-image {
+  @include mq(header) {
+    align-items: end;
+  }
+
+  grid-column: full-width;
+  position: relative;
+  .image {
+    grid-row: 1;
+  }
+  img {
+    width: 100%;
+    aspect-ratio: 5 / 4;
+    object-fit: cover;
+    z-index: 2;
+  }
+  .text {
+    grid-column: content;
+    grid-row: 1;
+    align-items: center;
+    color: var(--white);
+    z-index: 3;
+  }
+  > ul {
+    grid-column: 2;
+    grid-row: 1;
+  }
+}
+
+.text-centered-image {
+  display: grid;
+  color: var(--white);
+  * {
+    grid-row: 1 / -1;
+    grid-column: 1 / -1;
+    align-content: center;
+  }
+  .text {
+    text-align: center;
+    z-index: 3;
+  }
+  h3 {
+    align-self: center;
+    color: var(--white);
+  }
+}
+
+/*
+for blocks with the red tag in the top center
+*/
+.section-tag {
+  background: var(--red-500);
+  background-image: url(/images/theme/shield-white-small.svg);
+  background-repeat: no-repeat;
+  border-radius: 0 0 var(--border-radius-large) var(--border-radius-large);
+  color: var(--white);
+  padding: 1em;
+  padding-top: 1em;
+  font-family: var(--ff-sans);
+  text-align: center;
+  text-transform: uppercase;
+  grid-row: 1;
+  z-index: 3;
+  align-self: flex-start;
+  width: max-content;
+  justify-self: center;
+  background-size: 1em;
+  background-position-x: 50%;
+  background-position-y: 0.75em;
+  padding: 2.5em 0.5em 0.5em;
+}

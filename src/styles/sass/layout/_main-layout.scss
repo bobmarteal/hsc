@@ -72,6 +72,11 @@
   grid-template-columns: inherit;
   grid-column: full-width;
 }
+:is(.primary-layout, .content) > .content {
+  display: grid;
+  // grid-template-columns: inherit;
+  grid-column: content;
+}
 
 :where(.primary-layout, .full-width) > img {
   width: 100%;
