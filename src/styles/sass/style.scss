@@ -17,8 +17,10 @@
 // page parts
 @use "page/_site-header.scss";
 @use "page/_site-footer.scss";
-@use "navs/_main-menu.scss";
 
+// navs
+@use "navs/_main-menu.scss";
+@use "navs/breadcrumbs.scss";
 //content types
 @use "content-types/article/_article.scss";
 @use "content-types/article/article-cards.scss";

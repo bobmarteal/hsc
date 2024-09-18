@@ -83,3 +83,22 @@
   grid-column: full-width;
   object-fit: cover;
 }
+
+/*
+
+  main-layout will build all of the contnet pages
+
+*/
+
+.basic-page-layout {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  column-gap: 2rem;
+  padding-top: 3rem;
+  .title {
+    grid-column: 1 / -1;
+  }
+  .breadcrumbs {
+    grid-column: 1 / -1;
+  }
+}

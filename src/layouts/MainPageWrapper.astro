@@ -1,0 +1,16 @@
+---
+import Head from "@/layouts/Head.astro";
+import SiteFooter from "@/layouts/SiteFooter.astro";
+import SiteHeader from "@/layouts/SiteHeader.astro";
+---
+
+<html lang="en">
+  <Head {...Astro.props} />
+  <body>
+    <SiteHeader />
+    <main class="primary-layout">
+      <slot />
+    </main>
+    <SiteFooter />
+  </body>
+</html>
