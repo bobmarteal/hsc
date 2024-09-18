@@ -18,17 +18,20 @@
   img {
     border-radius: var(--border-radius-large);
   }
-  .pubDate {
+  .pub-date {
     font-size: var(--step-1);
     font-family: var(--ff-serif);
     color: var(--red-500);
+  }
+  a {
+    color: var(--black);
   }
 }
 
 /*
     Aticle cards in a carousel
 */
-.carousel {
+.carousel-standard {
   .article-card {
     width: 50%;
     @include mq(medium) {

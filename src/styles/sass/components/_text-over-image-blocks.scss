@@ -50,6 +50,14 @@ for those instances where you need to put a text block over an image
     align-self: center;
     color: var(--white);
   }
+  img {
+    z-index: 1;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    @include mq(small) {
+      aspect-ratio: auto;
+    }
+  }
 }
 
 /*

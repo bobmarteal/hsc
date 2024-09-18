@@ -18,9 +18,9 @@ export type articleCard = {
     imageSrc: string
 };
 ---
-<section class="content article-card-wrapper m-bottom-3">
+<section class="content  m-bottom-3">
     <Heading tagName="h3" size="base6" family="serif" class="align-center centered-text">News</Heading>
-    <div class="article-card-carousel carousel m-bottom-3">
+    <div class="article-card-carousel carousel-standard carousel m-bottom-3">
         {articleCardData.map((articleCard:articleCard) => <ArticleCard {...articleCard}></ArticleCard>
         )} 
     </div>
@@ -31,7 +31,7 @@ export type articleCard = {
 <script is:inline src=" https://cdn.jsdelivr.net/npm/flickity@3.0.0/dist/flickity.pkgd.min.js "></script>
 
 <script is:inline>
-var flktyArticles = new Flickity( '.article-card-carousel', {
+var flktyArticles = new Flickity( '.carousel-standard', {
   // options
   wrapAround: true,
   imagesLoaded: true,

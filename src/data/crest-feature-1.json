@@ -1,21 +1,34 @@
 [
   {
-    "eyebrow": "Welcom to",
-    "title": "Hampden Sydney",
+    "eyebrow": "Welcome to",
+    "title": "Welcome to Hampden Sydney",
+    "imageName": "Football",
     "link": [
       {
         "url": "somepage.html",
-        "text": "A unique college environment, designed for your success"
+        "text": "Why Hampden-Sydney?"
       }
     ]
   },
   {
     "eyebrow": "Second item",
     "title": "A foundational brotherhood",
+    "imageName": "BaseballField",
     "link": [
       {
         "url": "brotherhood.html",
-        "text": "Come for the tacos stay for the life"
+        "text": "What does brotherhood mean to you?"
+      }
+    ]
+  },
+  {
+    "eyebrow": "Second item",
+    "title": "Forming good men & good citizens since 1775",
+    "imageName": "PlayingPool",
+    "link": [
+      {
+        "url": "brotherhood.html",
+        "text": "Great tacos and fishing."
       }
     ]
   }

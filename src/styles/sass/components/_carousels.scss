@@ -1,9 +1,17 @@
 /*
     Flickity.css
+
+    There are two main layouts for carousels
+    .carousel-standard - generally flat card type lists
+    .carousel-feature - the big boy at the top of the homepage 
+      -buttons in the middle, 
+      -one big slide at a time
+      -fancy page dots / numbers
 */
-/*! Flickity v3.0.0
-https://flickity.metafizzy.co
----------------------------------------------- */
+
+@use "../_mixins.scss" as *;
+
+/*  Base Flicity container */
 
 .flickity-enabled {
   position: relative;
@@ -127,57 +135,119 @@ https://flickity.metafizzy.co
 
 .flickity-prev-next-button .flickity-button-icon {
   position: absolute;
-  left: 20%;
-  top: 20%;
-  width: 60%;
-  height: 60%;
-}
-
-/* ---- page dots ---- */
-
-.flickity-page-dots {
   position: absolute;
-  width: 100%;
-  bottom: -25px;
-  z-index: 1; /* above viewport */
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  left: 0.5em;
+  top: 0.5em;
+  width: 1em;
+  height: 1em;
 }
 
-.flickity-rtl .flickity-page-dots {
-  direction: rtl;
-}
+/*
 
-.flickity-page-dot {
-  position: relative;
-  display: block;
-  width: 10px;
-  height: 10px;
-  padding: 0;
-  margin: 0 8px;
-  background: hsl(0, 0%, 20%, 25%);
-  border-radius: 50%;
-  cursor: pointer;
-  appearance: none;
-  border: none;
-  text-indent: -9999px;
-  overflow: hidden;
-}
+  Feature carousel
 
-.flickity-rtl .flickity-page-dot {
-  text-indent: 9999px;
-}
+*/
 
-.flickity-page-dot:hover {
-  background: hsla(0, 0%, 20%, 75%);
-}
+.carousel-feature {
+  grid-column: bleed;
+  display: grid;
+  grid-template-columns: 1fr auto auto auto 1fr;
+  grid-template-rows: 1fr auto;
+  .flickity-viewport {
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+  }
+  .previous {
+    grid-column: 2;
+    left: 0;
+    top: 0;
+  }
+  .next {
+    grid-column: 4;
+    right: 0;
+    top: 0;
+  }
+  .flickity-page-dots {
+    grid-column: 3;
+  }
+  .flickity-prev-next-button {
+    transform: none;
+  }
 
-.flickity-page-dot:active {
-  background: #19f;
-}
+  .flickity-button,
+  .flickity-page-dots {
+    position: relative;
+    grid-row: 3;
+    @include mq(medium) {
+      margin-bottom: calc(1em + 63%);
+      grid-row: 2;
+    }
+  }
+  /* ---- page dots ---- */
+  .flickity-page-dots {
+    position: relative;
+    width: 2.6em;
+    height: 1em;
+    top: 0.5em;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    color: var(--black);
+    @include mq(medium) {
+      color: var(--white);
+    }
 
-.flickity-page-dot.is-selected {
-  background: hsl(0, 0%, 20%);
+    font-family: var(--ff-sans-bold);
+    grid-template-columns: auto;
+    justify-content: flex-start;
+    &:before {
+      content: "/";
+      grid-column: 2;
+      grid-row: 1;
+      width: max-content;
+      position: absolute;
+      right: 1.1rem;
+    }
+
+    .dot,
+    .dot:before,
+    .dot:after {
+      text-align: center;
+      display: inline-block;
+      width: 1rem;
+      height: 1.1rem;
+    }
+    .dot {
+      counter-increment: carousel-cell;
+      margin: 0;
+      opacity: 1;
+      grid-row: 1;
+      grid-column: 1;
+
+      &.is-selected {
+        &:before {
+          opacity: 1;
+        }
+      }
+
+      &:before {
+        content: counter(carousel-cell);
+        text-align: right;
+        opacity: 0;
+      }
+
+      &:last-child:after {
+        content: counter(carousel-cell);
+        position: absolute;
+        top: 0;
+        right: 0;
+        text-align: left;
+      }
+      &::marker {
+        display: none;
+        color: transparent;
+        font-size: 0px;
+      }
+    }
+  }
 }
