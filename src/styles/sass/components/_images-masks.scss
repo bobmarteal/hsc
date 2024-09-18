@@ -27,25 +27,27 @@
     }
   }
 }
-
-.light-dark-fade {
-  position: relative;
-  &:after {
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-    content: "";
-    background-image: linear-gradient(rgb(0, 0, 0) 25% 0%, rgb(0, 0, 0) 50%);
-    @include mq(medium) {
-      z-index: 2;
-      background-image: linear-gradient(
-        rgba(0, 0, 0, 0.102) 25% 0%,
-        rgba(0, 0, 0, 0.71) 70%
-      );
+/* Light to dark fades on medium + */
+@include mq(medium) {
+  .light-dark-fade {
+    position: relative;
+    &:after {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      content: "";
+      background-image: linear-gradient(rgb(0, 0, 0) 25% 0%, rgb(0, 0, 0) 50%);
+      @include mq(medium) {
+        z-index: 2;
+        background-image: linear-gradient(
+          rgba(0, 0, 0, 0.102) 25% 0%,
+          rgba(0, 0, 0, 0.71) 70%
+        );
+      }
+      background-repeat: no-repeat;
+      background-position: bottom;
+      background-size: cover;
     }
-    background-repeat: no-repeat;
-    background-position: bottom;
-    background-size: cover;
   }
 }
 

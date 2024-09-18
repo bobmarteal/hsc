@@ -197,15 +197,26 @@ select[multiple] {
   width: calc(100% - 1.5em);
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
+  @include mq(small) {
+    flex-direction: row;
+  }
   input {
     width: 15em;
     min-width: 0;
+    margin-bottom: 0.5em;
+    @include mq(small) {
+      margin-bottom: 0;
+    }
   }
   button {
     overflow: visible;
     width: auto;
     background: var(--red-500);
-    width: 1.75em;
+    @include mq(small) {
+      width: 1.75em;
+    }
+
     height: 1.75em;
     border-radius: 1em;
     color: var(--white);

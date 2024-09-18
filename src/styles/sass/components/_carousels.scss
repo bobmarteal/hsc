@@ -151,6 +151,7 @@
 .carousel-feature {
   grid-column: bleed;
   display: grid;
+  row-gap: 1em;
   grid-template-columns: 1fr auto auto auto 1fr;
   grid-template-rows: 1fr auto;
   .flickity-viewport {
