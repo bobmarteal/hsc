@@ -1,5 +1,4 @@
 ---
-
 // import components
 import Heading from "../../components/ui/Heading.astro";
 import Link from "@ui/Link.astro";
@@ -12,45 +11,55 @@ import { Image } from "astro:assets";
 import crestFeature1Data from "../../data/crest-feature-1.json";
 // console.log(crestFeature1Data);
 ---
-<!-- single crest feature -->
-<!-- <div class="full-width text-centered-image crest-overlay crest-transparent">
+
+<!-- single crest feature --><!-- <div class="full-width text-centered-image crest-overlay crest-transparent">
 	<Image src={Football} alt="" class="full-width"></Image>
 	<div class="text">
 		<Heading tagName="h2" size="base6" weight="regular" family="serif"  classes="text-shadow" id="top">Forming good men & good citizens since 1775.</Heading>	
 		<Link style="primary" href="/text"  classes="button button--primary inline-center" text="Why Hampden-Sydney?" icon={{name:"arrow-right", side:"right"}}></Link>
 	</div>	
 </div> -->
-<script is:inline src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<script is:inline src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"
+></script>
 
 <section class="full-width">
-	
-	<div class="carousel-feature ">
-		{
-			crestFeature1Data.map(slide => 
-				<div class="text-centered-image crest-overlay crest-transparent">
-					<Image src={Football} alt="" class="full-width"></Image>
-					<div class="text">
-
-						<Heading tagName="h2" size="base5" weight="black" family="serif"  classes="align-center" id="top">{slide.title}</Heading>	
-						<p class="align-center inline-center">
-							{
-								slide.link.map( link => 
-									<Link style="primary" href={link.url}  classes="button button--primary inline-center" text={link.text} icon={{name:"arrow-right", side:"right"}}></Link>
-								
-								)
-							}
-						</p>
-					</div>
-				</div>
-			)
-		}
-   </div>
+  <div class="carousel-feature">
+    {
+      crestFeature1Data.map((slide) => (
+        <div class="text-centered-image crest-overlay crest-transparent">
+          <Image src={Football} alt="" class="full-width" />
+          <div class="text">
+            <Heading
+              tagName="h2"
+              size="base5"
+              weight="black"
+              family="serif"
+              classes="align-center"
+              id="top"
+            >
+              {slide.title}
+            </Heading>
+            <p class="align-center inline-center">
+              {slide.link.map((link) => (
+                <Link
+                  style="primary"
+                  href={link.url}
+                  classes="button button--primary inline-center"
+                  text={link.text}
+                  icon={{ name: "arrow-right", side: "right" }}
+                />
+              ))}
+            </p>
+          </div>
+        </div>
+      ))
+    }
+  </div>
 </section>
 
-
 <script is:inline>
-var flktyFeature = new Flickity( '.carousel-feature', {
+  var flktyFeature = new Flickity(".carousel-feature", {
     wrapAround: true,
     imagesLoaded: true,
-});
+  });
 </script>

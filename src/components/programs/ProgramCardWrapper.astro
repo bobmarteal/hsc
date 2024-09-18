@@ -1,5 +1,4 @@
 ---
-
 // import Program Card data
 
 import programCardData from "../../data/program-cards.json";
@@ -7,17 +6,20 @@ import ProgramCard from "./ProgramCard.astro";
 
 // set up card type
 export type programCard = {
-    name: string,
-    introText: string,
-    linkText: string,
-    image: string,
+  name: string;
+  introText: string;
+  linkText: string;
+  image: string;
 };
 ---
 
+<!-- Grid with two equal columns -->
 <section class="m-bottom-3">
-    <div class="grid one-one">
-    {programCardData.map((programCard: programCard) => 
-        <ProgramCard {...programCard}></ProgramCard>
-    )}          
-    </div>
+  <div class="grid one-one">
+    {
+      programCardData.map((programCard: programCard) => (
+        <ProgramCard {...programCard} />
+      ))
+    }
+  </div>
 </section>

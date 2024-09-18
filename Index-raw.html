@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content="Astro v4.12.2" />
+    <title></title>
+    <meta name="description" />
+
+    <link rel="stylesheet" href="/_astro/index.DVnFxfXT.css" />
+  </head>
+  <span class="offscreen" aria-hidden="true">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+    ></svg>
+  </span>
+  <body>
+    <!-- 
+
+            - CTA/Black bar at top
+
+            - cta links
+                - search
+            - header 
+                - logo
+                - main nav
+        -->
+    <header class="primary-layout siteHeader" id="siteHeader">
+      <div id="skip-to-nav" class="skipNav full-width">
+        <div class="skipLinks">
+          <a href="">Main nav</a><a href="">Content</a>
+        </div>
+      </div>
+      <div class="logoActions">
+        <a href="" class="hsc-logo">
+          <img
+            src="/images/theme/hsc-logo-two-line.png"
+            class="logo logo--small"
+            alt="Hampden Sydney College"
+          />
+          <img
+            src="/images/theme/hsc-logo.png"
+            class="logo logo--large"
+            alt="Hampden Sydney College"
+          /><span class="sr-only">Hampden Sydney College</span>
+        </a>
+        <div class="actions">
+          <a
+            href="#"
+            id="searchToggle"
+            class="searchToggle"
+            arial-label="show search field"
+          ></a>
+          <span></span>
+          <div class="cta">
+            <a href="">visit</a>
+            <a href="">apply</a>
+            <a href="">give</a>
+          </div>
+          <span></span>
+          <a
+            href="#"
+            id="mainNavToggle"
+            class="menuTrigger"
+            aria-label="Open main navigation"
+            >Menu <span></span><span></span><span></span><span></span
+          ></a>
+        </div>
+      </div>
+    </header>
+    <!-- start main-nav-wrapper - this is all the dropdown -->
+    <div class="mainNavWrapper primary-layout">
+      <nav class="mainNav content" id="mainNav">
+        <section class="academics">
+          <p class="header">Academics</p>
+          <ul>
+            <li><a href="#">Majors & Minors</a></li>
+            <li><a href="#">Academic Opportunities</a></li>
+            <li><a href="#">Rhetoric Program</a></li>
+            <li><a href="#">Student Research</a></li>
+            <li><a href="#">Global Education</a></li>
+            <li><a href="#">Career Center</a></li>
+            <li><a href="#">Academic Services</a></li>
+          </ul>
+        </section>
+        <section class="admission-aid">
+          <p class="header">Admission & Financial Aid</p>
+          <ul>
+            <li><a href="#">Apply</a></li>
+            <li><a href="#">Request Information</a></li>
+            <li><a href="#">Schedule Visit</a></li>
+            <li><a href="#">Financial Aid</a></li>
+            <li><a href="#">Accepted Students</a></li>
+            <li><a href="#">Tuition & Fees</a></li>
+          </ul>
+        </section>
+        <section class="studentLife">
+          <p class="header">Student Life</p>
+          <ul>
+            <li><a href="#">Campus Living</a></li>
+            <li><a href="#">Honor & Conduct</a></li>
+            <li><a href="#">What to Do</a></li>
+            <li><a href="#">Campus Resources</a></li>
+            <li><a href="#">Campus Culture</a></li>
+            <li><a href="#">Civic Engagement</a></li>
+          </ul>
+        </section>
+        <section class="about">
+          <p class="header">About H-SC</p>
+          <ul>
+            <li><a href="#">Why H-SC</a></li>
+            <li><a href="#">Facts & Figures</a></li>
+            <li><a href="#">History</a></li>
+            <li><a href="#">Offices & Services</a></li>
+            <li><a href="#">Administration</a></li>
+            <li><a href="#">Visit H-SC</a></li>
+          </ul>
+        </section>
+        <section class="quickLinks">
+          <p class="header">Quick Links</p>
+          <ul>
+            <li><a href="#">Alumni</a></li>
+            <li><a href="#">Current Students</a></li>
+            <li><a href="#">Faculty & Staff</a></li>
+            <li><a href="#">Parents & Family</a></li>
+            <li><a href="#">Atheletics</a></li>
+            <li><a href="#">College Events</a></li>
+            <li><a href="#">Compass Program</a></li>
+          </ul>
+        </section>
+
+        <section class="feature">
+          <p class="header">The best alumni network ever</p>
+          <p>
+            WeD're ranked the #3 alumni network for a reason. When yougraduate
+            from here, you'll experience why. Time & time again.
+          </p>
+          <p><a href="#">Learn more</a></p>
+        </section>
+      </nav>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
+    <!-- end main-nav-wrapper -->
+
+    <!-- main-nav-wrapper animation -->
+    <script>
+      $("#mainNavToggle").on({
+        click: function () {
+          var _this = $(this);
+          var _navWrapper = $(".mainNavWrapper");
+          var _mainNav = $(".mainNav");
+          _navWrapper.toggleClass("expanded");
+          _this.toggleClass("close");
+          return false;
+        },
+      });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+    <script>
+      /* When the user scrolls down, logo changes to smaller layout, text size is smaller, reverse on scroll back in */
+      let mm = gsap.matchMedia();
+
+      mm.add("(min-width: 800px)", () => {
+        gsap.defaults({ ease: "none", duration: 0.15 });
+        gsap
+          .timeline({
+            scrollTrigger: {
+              trigger: ".siteHeader",
+              start: "10px -100px",
+              end: "bottom top",
+              // scrub: true,
+              // markers: true,
+              toggleActions: "play none reverse none",
+            },
+          })
+          .to(".logo--large", { height: "0px" })
+          .to(".logo--small", { height: "auto" })
+          .to(".logoActions", { fontSize: "16px" }, 0);
+      });
+    </script>
+    <main class="primary-layout">
+      <!-- single crest feature --><!-- <div class="full-width text-centered-image crest-overlay crest-transparent">
+	<Image src={Football} alt="" class="full-width"></Image>
+	<div class="text">
+		<Heading tagName="h2" size="base6" weight="regular" family="serif"  classes="text-shadow" id="top">Forming good men & good citizens since 1775.</Heading>	
+		<Link style="primary" href="/text"  classes="button button--primary inline-center" text="Why Hampden-Sydney?" icon={{name:"arrow-right", side:"right"}}></Link>
+	</div>	
+</div> -->
+      <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+      <section class="full-width">
+        <div class="carousel-feature">
+          <div class="text-centered-image crest-overlay crest-transparent">
+            <img
+              src="/_astro/Football-player.AI8IGKXX_1REhui.webp"
+              alt=""
+              class="full-width"
+              width="1900"
+              height="1068"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="text">
+              <h2 id="top" class="fs-5 fw-black ff-serif align-center">
+                Welcome to Hampden Sydney
+              </h2>
+              <p class="align-center inline-center">
+                <a
+                  href="somepage.html"
+                  class="link button button--primary inline-center primary filled"
+                >
+                  <span> Why Hampden-Sydney? </span>
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 37 26"
+                    data-icon="arrow-right"
+                  >
+                    <symbol id="ai:local:arrow-right">
+                      <g fill="none" stroke="currentcolor" stroke-width="3">
+                        <path d="M22.64 24.463 34.102 13 22.64 1.538" />
+                        <path stroke-linejoin="round" d="M.204 13h34" />
+                      </g>
+                    </symbol>
+                    <use xlink:href="#ai:local:arrow-right"></use>
+                  </svg>
+                </a>
+              </p>
+            </div>
+          </div>
+          <div class="text-centered-image crest-overlay crest-transparent">
+            <img
+              src="/_astro/Football-player.AI8IGKXX_1REhui.webp"
+              alt=""
+              class="full-width"
+              width="1900"
+              height="1068"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="text">
+              <h2 id="top" class="fs-5 fw-black ff-serif align-center">
+                A foundational brotherhood
+              </h2>
+              <p class="align-center inline-center">
+                <a
+                  href="brotherhood.html"
+                  class="link button button--primary inline-center primary filled"
+                >
+                  <span> What does it mean to you? </span>
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 37 26"
+                    data-icon="arrow-right"
+                  >
+                    <use xlink:href="#ai:local:arrow-right"></use>
+                  </svg>
+                </a>
+              </p>
+            </div>
+          </div>
+          <div class="text-centered-image crest-overlay crest-transparent">
+            <img
+              src="/_astro/Football-player.AI8IGKXX_1REhui.webp"
+              alt=""
+              class="full-width"
+              width="1900"
+              height="1068"
+              loading="lazy"
+              decoding="async"
+            />
+            <div class="text">
+              <h2 id="top" class="fs-5 fw-black ff-serif align-center">
+                Forming good men &amp; good citizens since 1775
+              </h2>
+              <p class="align-center inline-center">
+                <a
+                  href="brotherhood.html"
+                  class="link button button--primary inline-center primary filled"
+                >
+                  <span> Great tacos and fishing. </span>
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 37 26"
+                    data-icon="arrow-right"
+                  >
+                    <use xlink:href="#ai:local:arrow-right"></use>
+                  </svg>
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <script>
+        var flktyFeature = new Flickity(".carousel-feature", {
+          wrapAround: true,
+          imagesLoaded: true,
+        });
+      </script>
+      <!-- start form-wrapper -->
+      <div class="form-wrapper">
+        <div class="sideline"></div>
+        <form action="" class="form form--simple inline-center with-lines">
+          <label for="search-majors" class="sr-only"
+            >What would you like to study?</label
+          >
+          <input
+            type="search"
+            id="search-majors"
+            size="25"
+            placeholder="What would you like to study?"
+          />
+          <button type="submit">
+            <svg
+              width="1em"
+              height="1em"
+              viewBox="0 0 24 24"
+              data-icon="Search"
+            >
+              <symbol id="ai:local:Search">
+                <mask
+                  id="a"
+                  width="20"
+                  height="20"
+                  x="0"
+                  y="0"
+                  maskUnits="userSpaceOnUse"
+                  style="mask-type: luminance"
+                >
+                  <path
+                    fill="#fff"
+                    fill-rule="evenodd"
+                    d="M0 0h19.477v19.477H0z"
+                    clip-rule="evenodd"
+                  />
+                </mask>
+                <mask
+                  id="b"
+                  width="9"
+                  height="9"
+                  x="15"
+                  y="15"
+                  maskUnits="userSpaceOnUse"
+                  style="mask-type: luminance"
+                >
+                  <path
+                    fill="#fff"
+                    fill-rule="evenodd"
+                    d="M15.24 15.707h8.308V24H15.24z"
+                    clip-rule="evenodd"
+                  />
+                </mask>
+                <g fill="none">
+                  <g mask="url(#a)">
+                    <path
+                      fill="#fff"
+                      fill-rule="evenodd"
+                      d="M9.739 1.5c-4.543 0-8.24 3.695-8.24 8.238s3.697 8.239 8.24 8.239c4.542 0 8.238-3.696 8.238-8.239S14.28 1.5 9.739 1.5m0 17.977c-5.37 0-9.74-4.369-9.74-9.739S4.37 0 9.74 0s9.738 4.368 9.738 9.738-4.368 9.739-9.738 9.739"
+                      clip-rule="evenodd"
+                    />
+                  </g>
+                  <g mask="url(#b)">
+                    <path
+                      fill="#fff"
+                      fill-rule="evenodd"
+                      d="M22.309 24a1.24 1.24 0 0 1-.877-.362l-5.828-5.811a1.24 1.24 0 0 1 1.753-1.758l5.828 5.813c.485.484.486 1.268.002 1.752a1.23 1.23 0 0 1-.879.366"
+                      clip-rule="evenodd"
+                    />
+                  </g>
+                </g>
+              </symbol>
+              <use xlink:href="#ai:local:Search"></use>
+            </svg>
+          </button>
+        </form>
+        <div class="sideline"></div>
+      </div>
+
+      <!-- end form-wrapper -->
+
+      <h3 class="align-center fs-6 fw-regular ff-serif">Scholarly Pursuits</h3>
+      <!-- Grid with two equal columns -->
+      <section class="m-bottom-3">
+        <div class="grid one-one">
+          <div class="card programCard">
+            <div class="image">
+              <img
+                src="/images/baseball-field.jpg"
+                alt=""
+                width="900"
+                height="600"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="cardContent">
+              <h3 class="fs-2 fw-regular ff-serif">Majors and Minors</h3>
+              <p class="description">
+                27 majors, 26 minors, 4 remarkable years.
+              </p>
+              <a
+                href="/text"
+                class="link button button--tertiary primary filled"
+              >
+                <span> Learn more </span>
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 37 26"
+                  data-icon="arrow-right"
+                >
+                  <use xlink:href="#ai:local:arrow-right"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="card programCard">
+            <div class="image">
+              <img
+                src="/images/baseball-field.jpg"
+                alt=""
+                width="900"
+                height="600"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="cardContent">
+              <h3 class="fs-2 fw-regular ff-serif">The Rhetoric Program</h3>
+              <p class="description">
+                Learn how to effectively commuicate. For life.
+              </p>
+              <a
+                href="/text"
+                class="link button button--tertiary primary filled"
+              >
+                <span> Learn more </span>
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 37 26"
+                  data-icon="arrow-right"
+                >
+                  <use xlink:href="#ai:local:arrow-right"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="card programCard">
+            <div class="image">
+              <img
+                src="/images/baseball-field.jpg"
+                alt=""
+                width="900"
+                height="600"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="cardContent">
+              <h3 class="fs-2 fw-regular ff-serif">Beyond the Classroom</h3>
+              <p class="description">
+                You&#39;ll learn outside of the box. And Farmville
+              </p>
+              <a
+                href="/text"
+                class="link button button--tertiary primary filled"
+              >
+                <span> Learn more </span>
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 37 26"
+                  data-icon="arrow-right"
+                >
+                  <use xlink:href="#ai:local:arrow-right"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="card programCard">
+            <div class="image">
+              <img
+                src="/images/baseball-field.jpg"
+                alt=""
+                width="900"
+                height="600"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="cardContent">
+              <h3 class="fs-2 fw-regular ff-serif">Help along the way</h3>
+              <p class="description">
+                You&#39;re here to grow. Our advisers are here to help with
+                that.
+              </p>
+              <a
+                href="/text"
+                class="link button button--tertiary primary filled"
+              >
+                <span> Learn more </span>
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 37 26"
+                  data-icon="arrow-right"
+                >
+                  <use xlink:href="#ai:local:arrow-right"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="full-width gray-bg m-bottom-3">
+        <div class="text-links v-center grid three-one">
+          <p>
+            <img
+              src="/_astro/hsc-logo-large.5_HvFkCp_J4T60.webp"
+              alt=""
+              width="700"
+              height="132"
+              loading="lazy"
+              decoding="async"
+            />
+          </p>
+          <ul class="buttons">
+            <li>
+              <a
+                href="/text"
+                class="link button button--primary primary filled"
+              >
+                <span> Apply to H-SC </span>
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 37 26"
+                  data-icon="arrow-right"
+                >
+                  <use xlink:href="#ai:local:arrow-right"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a
+                href="/text"
+                class="link button button--primary primary filled"
+              >
+                <span> Schedule a visit </span>
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 37 26"
+                  data-icon="arrow-right"
+                >
+                  <use xlink:href="#ai:local:arrow-right"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a
+                href="/text"
+                class="link button button--primary primary filled"
+              >
+                <span> Contact us </span>
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 37 26"
+                  data-icon="arrow-right"
+                >
+                  <use xlink:href="#ai:local:arrow-right"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="full-width text-bottom-image m-block-3 black-bg">
+        <div class="image full-width light-dark-fade">
+          <img
+            src="/_astro/Football-player.AI8IGKXX_zYeLU.webp"
+            alt=""
+            class="full-width"
+            width="1600"
+            height="899"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+        <div class="text grid three-one m-bottom-3">
+          <div>
+            <h2 class="fs-4 fw-regular ff-serif">
+              You made it this far. We’ll make you go further.
+            </h2>
+            <p><strong>STUDENT LIFE THAT LASTS A LIFETIME</strong></p>
+            <p>
+              At H-SC, you’ll get more than a degree. You’ll experience
+              brotherhood—a deep feeling of connection with other future
+              leaders. You’ll get small classrooms to focus and 1,300 acres to
+              roam free. And in the end you’ll gain confidence, character and
+              the capability to achieve success.
+            </p>
+          </div>
+          <ul class="buttons">
+            <li>
+              <a
+                href="/text"
+                class="link button button--secondary primary filled"
+              >
+                <span> Apply to H-SC </span>
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 37 26"
+                  data-icon="arrow-right"
+                >
+                  <use xlink:href="#ai:local:arrow-right"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a
+                href="/text"
+                class="link button button--secondary primary filled"
+              >
+                <span> Schedule a visit </span>
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 37 26"
+                  data-icon="arrow-right"
+                >
+                  <use xlink:href="#ai:local:arrow-right"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a
+                href="/text"
+                class="link button button--secondary primary filled"
+              >
+                <span> Contact us </span>
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 37 26"
+                  data-icon="arrow-right"
+                >
+                  <use xlink:href="#ai:local:arrow-right"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <div class="quote-wrapper">
+        <div class="quote grid one-one m-bottom-3">
+          <img
+            src="/_astro/playing-pool.QGKZZoLP_Z1R80WV.webp"
+            alt=""
+            width="1600"
+            height="1038"
+            loading="lazy"
+            decoding="async"
+          />
+          <div class="quote-content">
+            <p class="quote-text fs-5 ff-serif">
+              <em
+                >"When i first set foot on campus i knew that this was the place
+                for me."</em
+              >
+            </p>
+            <p class="citation">
+              <span class="caps">Jordan Bates</span><br />
+              Class of '25
+            </p>
+          </div>
+        </div>
+      </div>
+      <section class="full-width gray-bg">
+        <div class="stat-wrapper">
+          <div class="stat">
+            <span class="number fs-6 ff-serif">9:1</span
+            ><span class="text fs--3">Student-faculty ratio</span>
+          </div>
+          <div class="stat">
+            <span class="number fs-6 ff-serif">10</span
+            ><span class="text fs--3">NCAA division III athletic teams</span>
+          </div>
+          <div class="stat">
+            <span class="number fs-6 ff-serif">50+</span
+            ><span class="text fs--3">Majors and minors to choose from</span>
+          </div>
+          <div class="stat">
+            <span class="number fs-6 ff-serif">1.3K</span
+            ><span class="text fs--3">Acres of beautiful, rural campus</span>
+          </div>
+          <div class="stat">
+            <span class="number fs-6 ff-serif">1</span
+            ><span class="text fs--3">Brotherhood</span>
+          </div>
+        </div>
+      </section>
+      <div class="full-width red-bg">
+        <div class="image-grid m-block-4">
+          <div>
+            <img
+              src="/_astro/playing-pool.QGKZZoLP_2qm2Wi.webp"
+              alt=""
+              width="400"
+              height="400"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div class="hashtag">
+            <span class="tag"><strong>#HSC</strong>1776</span
+            ><span class="shield"></span>
+          </div>
+          <div>
+            <img
+              src="/_astro/playing-pool.QGKZZoLP_2qm2Wi.webp"
+              alt=""
+              width="400"
+              height="400"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div>
+            <img
+              src="/_astro/playing-pool.QGKZZoLP_2qm2Wi.webp"
+              alt=""
+              width="400"
+              height="400"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div>
+            <img
+              src="/_astro/playing-pool.QGKZZoLP_2qm2Wi.webp"
+              alt=""
+              width="400"
+              height="400"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div>
+            <img
+              src="/_astro/playing-pool.QGKZZoLP_2qm2Wi.webp"
+              alt=""
+              width="400"
+              height="400"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div>
+            <img
+              src="/_astro/playing-pool.QGKZZoLP_2qm2Wi.webp"
+              alt=""
+              width="400"
+              height="400"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+          <div>
+            <img
+              src="/_astro/playing-pool.QGKZZoLP_2qm2Wi.webp"
+              alt=""
+              width="400"
+              height="400"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="full-width crest-overlay text-centered-image">
+        <img
+          src="/_astro/Football-player.AI8IGKXX_zYeLU.webp"
+          alt=""
+          class="full-width"
+          width="1600"
+          height="899"
+          loading="lazy"
+          decoding="async"
+        />
+        <div class="text">
+          <h3 class="fs-6 fw-regular ff-serif text-shadow caps">Athletics</h3>
+        </div>
+      </div>
+      <div class="full-width gray-bg m-bottom-3">
+        <div class="narrow centered-text align-center m-block-4 white-tiger">
+          <h2 class="fs-4 fw-regular ff-serif">
+            Forming Good Men & Good Sportsmen
+          </h2>
+          <p>
+            At other schools, athletics can be an exclusive pursuit, reserved
+            for the elite. And while we pride ourselves on the 56 Conference
+            Championships and 185 All-Americans we’ve produced, we’re also proud
+            of how many of our students don’t just spectate, they participate.
+            Over a third of our student body is part of intercollegiate sports,
+            intramurals and clubs. Enjoy competition, camaraderie and grow in
+            your sportsmanship at H-SC.
+          </p>
+          <p>
+            <a
+              href="/text"
+              class="link button button--primary inline-center primary filled"
+            >
+              <span> Hampden-Sydney Athletics </span>
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 37 26"
+                data-icon="arrow-right"
+              >
+                <use xlink:href="#ai:local:arrow-right"></use>
+              </svg>
+            </a>
+          </p>
+        </div>
+      </div>
+      <section class="content m-bottom-3">
+        <h3 class="align-center centered-text fs-6 fw-regular ff-serif">
+          News
+        </h3>
+        <div
+          class="article-card-carousel carousel-standard carousel m-bottom-3"
+        >
+          <article class="article-card">
+            <img src="/images/baseball-field.jpg" alt="" />
+            <span class="pub-date"> 08/22/2024 </span>
+            <h2 class="fs-0 fw-regular ff-sans">
+              <a href="#">Ethics and the environment</a>
+            </h2>
+          </article>
+          <article class="article-card">
+            <img src="/images/baseball-field.jpg" alt="" />
+            <span class="pub-date"> 08/22/2024 </span>
+            <h2 class="fs-0 fw-regular ff-sans">
+              <a href="#">Ethics and the environment</a>
+            </h2>
+          </article>
+          <article class="article-card">
+            <img src="/images/baseball-field.jpg" alt="" />
+            <span class="pub-date"> 08/22/2024 </span>
+            <h2 class="fs-0 fw-regular ff-sans">
+              <a href="#">Ethics and the environment</a>
+            </h2>
+          </article>
+          <article class="article-card">
+            <img src="/images/baseball-field.jpg" alt="" />
+            <span class="pub-date"> 08/22/2024 </span>
+            <h2 class="fs-0 fw-regular ff-sans">
+              <a href="#">Ethics and the environment</a>
+            </h2>
+          </article>
+          <article class="article-card">
+            <img src="/images/baseball-field.jpg" alt="" />
+            <span class="pub-date"> 08/22/2024 </span>
+            <h2 class="fs-0 fw-regular ff-sans">
+              <a href="#">Ethics and the environment</a>
+            </h2>
+          </article>
+          <article class="article-card">
+            <img src="/images/baseball-field.jpg" alt="" />
+            <span class="pub-date"> 08/22/2024 </span>
+            <h2 class="fs-0 fw-regular ff-sans">
+              <a href="#">Ethics and the environment</a>
+            </h2>
+          </article>
+        </div>
+        <a
+          href="/text"
+          class="link button button--primary inline-center primary filled"
+        >
+          <span> H-SC News in full </span>
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 37 26"
+            data-icon="arrow-right"
+          >
+            <use xlink:href="#ai:local:arrow-right"></use>
+          </svg>
+        </a>
+      </section>
+
+      <script src=" https://cdn.jsdelivr.net/npm/flickity@3.0.0/dist/flickity.pkgd.min.js "></script>
+
+      <script>
+        var flktyArticles = new Flickity(".carousel-standard", {
+          // options
+          wrapAround: true,
+          imagesLoaded: true,
+          pageDots: false,
+        });
+      </script>
+      <section class="full-width black-bg m-bottom-3">
+        <div class="content event-card-wrapper m-block-3">
+          <h3 class="align-center centered-text fs-6 fw-regular ff-serif">
+            Events
+          </h3>
+          <div class="event-card-carousel carousel m-bottom-3">
+            <div class="event-card">
+              <span class="month">September</span>
+              <span class="date m-block-2">30</span>
+              <h2 class="fs-0 fw-light ff-sans">
+                <a href="">Ice Cream Social</a>
+              </h2>
+            </div>
+            <div class="event-card">
+              <span class="month">September</span>
+              <span class="date m-block-2">30</span>
+              <h2 class="fs-0 fw-light ff-sans">
+                <a href="">Ice Cream Social</a>
+              </h2>
+            </div>
+            <div class="event-card">
+              <span class="month">September</span>
+              <span class="date m-block-2">30</span>
+              <h2 class="fs-0 fw-light ff-sans">
+                <a href="">Ice Cream Social</a>
+              </h2>
+            </div>
+            <div class="event-card">
+              <span class="month">September</span>
+              <span class="date m-block-2">30</span>
+              <h2 class="fs-0 fw-light ff-sans">
+                <a href="">Ice Cream Social</a>
+              </h2>
+            </div>
+            <div class="event-card">
+              <span class="month">September</span>
+              <span class="date m-block-2">30</span>
+              <h2 class="fs-0 fw-light ff-sans">
+                <a href="">Ice Cream Social</a>
+              </h2>
+            </div>
+            <div class="event-card">
+              <span class="month">September</span>
+              <span class="date m-block-2">30</span>
+              <h2 class="fs-0 fw-light ff-sans">
+                <a href="">Ice Cream Social</a>
+              </h2>
+            </div>
+            <div class="event-card">
+              <span class="month">September</span>
+              <span class="date m-block-2">30</span>
+              <h2 class="fs-0 fw-light ff-sans">
+                <a href="">Ice Cream Social</a>
+              </h2>
+            </div>
+          </div>
+          <a
+            href="/text"
+            class="link button button--primary inline-center primary filled"
+          >
+            <span> H-SC News in full </span>
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 37 26"
+              data-icon="arrow-right"
+            >
+              <use xlink:href="#ai:local:arrow-right"></use>
+            </svg>
+          </a>
+        </div>
+      </section>
+
+      <script src=" https://cdn.jsdelivr.net/npm/flickity@3.0.0/dist/flickity.pkgd.min.js "></script>
+
+      <script>
+        var flktyEvents = new Flickity(".event-card-carousel", {
+          // options
+          wrapAround: true,
+          imagesLoaded: true,
+          pageDots: false,
+        });
+      </script>
+      <!-- Section - full width background image with text block aligned to the bottom -->
+      <section class="full-width text-bottom-image m-bottom-3">
+        <div class="image light-dark-fade">
+          <img
+            src="/_astro/playing-pool.QGKZZoLP_Z1R80WV.webp"
+            alt=""
+            class=""
+            width="1600"
+            height="1038"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+
+        <div class="text grid m-bottom-3 narrow centered-text align-center">
+          <div>
+            <h2 class="fs-5 fw-regular ff-serif">Brothers Forever</h2>
+            <p>
+              We’re ranked the #3 alumni network for a reason. And when you
+              graduate from here, you’ll experience why. Time and time again.
+            </p>
+          </div>
+          <ul class="buttons flat centered-list">
+            <li>
+              <a
+                href="/text"
+                class="link button button--secondary primary filled"
+              >
+                <span> Alumni </span>
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 37 26"
+                  data-icon="arrow-right"
+                >
+                  <use xlink:href="#ai:local:arrow-right"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a
+                href="/text"
+                class="link button button--secondary primary filled"
+              >
+                <span> Hire a Tiger </span>
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 37 26"
+                  data-icon="arrow-right"
+                >
+                  <use xlink:href="#ai:local:arrow-right"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a
+                href="/text"
+                class="link button button--secondary primary filled"
+              >
+                <span> Support H-SC </span>
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 37 26"
+                  data-icon="arrow-right"
+                >
+                  <use xlink:href="#ai:local:arrow-right"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a
+                href="/text"
+                class="link button button--secondary primary filled"
+              >
+                <span> Volunteering </span>
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 37 26"
+                  data-icon="arrow-right"
+                >
+                  <use xlink:href="#ai:local:arrow-right"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="section-tag">Alumni <br />Network</div>
+      </section>
+      <section class="m-bottom-2 align-center">
+        <h2 class="fs-5 fw-regular ff-serif m-bottom-1">
+          Choose your own adventure
+        </h2>
+        <p class="centered-text">
+          Your life's most fulfilling experience starts here.
+        </p>
+        <ul class="buttons flat centered-list">
+          <li>
+            <a href="/text" class="link button button--primary primary filled">
+              <span> Apply to H-SC </span>
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 37 26"
+                data-icon="arrow-right"
+              >
+                <use xlink:href="#ai:local:arrow-right"></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="/text" class="link button button--primary primary filled">
+              <span> Schedule a visit </span>
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 37 26"
+                data-icon="arrow-right"
+              >
+                <use xlink:href="#ai:local:arrow-right"></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="/text" class="link button button--primary primary filled">
+              <span> Contact us </span>
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 37 26"
+                data-icon="arrow-right"
+              >
+                <use xlink:href="#ai:local:arrow-right"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <section class="site-footer primary-layout">
+      <footer class="bleed">
+        <ul class="footer-audience">
+          <li><a href="">Current Students</a></li>
+          <li><a href="">Faculty & Staff</a></li>
+          <li><a href="">Parents & Families</a></li>
+          <li><a href="">Prospective Students</a></li>
+          <li><a href="">Alumni</a></li>
+        </ul>
+        <ul class="footer-cta buttons">
+          <li>
+            <a
+              href="/text"
+              class="link button button--secondary primary filled"
+            >
+              <span> Alumni </span>
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 37 26"
+                data-icon="arrow-right"
+              >
+                <use xlink:href="#ai:local:arrow-right"></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/text"
+              class="link button button--secondary primary filled"
+            >
+              <span> Hire a Tiger </span>
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 37 26"
+                data-icon="arrow-right"
+              >
+                <use xlink:href="#ai:local:arrow-right"></use>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/text"
+              class="link button button--secondary primary filled"
+            >
+              <span> Support H-SC </span>
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 37 26"
+                data-icon="arrow-right"
+              >
+                <use xlink:href="#ai:local:arrow-right"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <ul class="social-media">
+          <li><a href="">Facebook</a></li>
+          <li><a href="">Instagram</a></li>
+          <li><a href="">Linkedin</a></li>
+          <li><a href="">Youtube</a></li>
+          <li><a href="">X</a></li>
+        </ul>
+        <img src="/images/theme/hsc-logo.png" />
+        <p class="footer-address">
+          <span> Hampden-Sydney College</span><br />
+          Hampden-Sydney, VA 23943<br />
+          (434) 223-6000
+        </p>
+        <ul class="footer-resources">
+          <li><a href="">Campus Map</a></li>
+          <li><a href="">Academic Calendar</a></li>
+          <li><a href="">Campus Store</a></li>
+          <li><a href="">Library</a></li>
+          <li><a href="">Tiger Web</a></li>
+        </ul>
+        <p class="footer-copyright">
+          &copy;2024 Hampden-Sydney College <a href="">Policies</a>
+          <a href="">Emergencies</a>
+        </p>
+      </footer>
+    </section>
+  </body>
+</html>

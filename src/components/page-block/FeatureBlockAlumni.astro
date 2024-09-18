@@ -8,28 +8,62 @@ import { Image } from "astro:assets";
 // images
 import PlayingPool from "../../assets/playing-pool.jpg";
 import Heading from "../ui/Heading.astro";
-
 ---
+
 <!-- Section - full width background image with text block aligned to the bottom -->
 <section class="full-width text-bottom-image m-bottom-3">
-	<div class="image light-dark-fade">
-		<Image src={PlayingPool} width={1600} alt="" class=" "></Image>	
-	</div>
-	
-    <div class="text grid m-bottom-3 narrow centered-text align-center">
-		
-        <div>
-			<Heading tagName="h2" size="base5" family="serif">Brothers Forever</Heading>
-			<p>We’re ranked the #3 alumni network for a reason. And when you graduate from here, you’ll experience why. Time and time again.</p>	
-		</div>
-		<ul class="buttons flat centered-list">
-			<li><Link style="primary" href="/text"  classes="button button--secondary" text="Alumni" icon={{name:"arrow-right", side:"right"}}></Link></li>
-			<li><Link style="primary" href="/text"  classes="button button--secondary" text="Hire a Tiger" icon={{name:"arrow-right", side:"right"}}></Link></li>
-			<li><Link style="primary" href="/text"  classes="button button--secondary" text="Support H-SC" icon={{name:"arrow-right", side:"right"}}></Link></li>
-			<li><Link style="primary" href="/text"  classes="button button--secondary" text="Volunteering" icon={{name:"arrow-right", side:"right"}}></Link></li>
-			
-		</ul>
-    </div>
-	<div class="section-tag">Alumni <br />Network</div>
-</section>
+  <div class="image light-dark-fade">
+    <Image src={PlayingPool} width={1600} alt="" class="" />
+  </div>
 
+  <div class="text grid m-bottom-3 narrow centered-text align-center">
+    <div>
+      <Heading tagName="h2" size="base5" family="serif"
+        >Brothers Forever</Heading
+      >
+      <p>
+        We’re ranked the #3 alumni network for a reason. And when you graduate
+        from here, you’ll experience why. Time and time again.
+      </p>
+    </div>
+    <ul class="buttons flat centered-list">
+      <li>
+        <Link
+          style="primary"
+          href="/text"
+          classes="button button--secondary"
+          text="Alumni"
+          icon={{ name: "arrow-right", side: "right" }}
+        />
+      </li>
+      <li>
+        <Link
+          style="primary"
+          href="/text"
+          classes="button button--secondary"
+          text="Hire a Tiger"
+          icon={{ name: "arrow-right", side: "right" }}
+        />
+      </li>
+      <li>
+        <Link
+          style="primary"
+          href="/text"
+          classes="button button--secondary"
+          text="Support H-SC"
+          icon={{ name: "arrow-right", side: "right" }}
+        />
+      </li>
+      <li>
+        <Link
+          style="primary"
+          href="/text"
+          classes="button button--secondary"
+          text="Volunteering"
+          icon={{ name: "arrow-right", side: "right" }}
+        />
+      </li>
+    </ul>
+  </div>
+  <div class="section-tag">Alumni <br />Network</div>
+</section>
