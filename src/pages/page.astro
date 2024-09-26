@@ -15,16 +15,18 @@ import MainPageWrapper from "@/layouts/MainPageWrapper.astro";
         > > <a href=""> Programs & Centers</a> > <a href="">Honors Program</a>
       </p>
     </div>
-    <nav>
-      <ul>
-        <li>
+    <nav class="sidebar-nav">
+      <ul class="l-1">
+        <li class="has-sub">
           <a href="">Academics</a>
-          <ul>
+          <button class="subnav-toggle">X</button>
+          <ul class="l-2">
             <li><a href="">Majors & Minors</a></li>
             <li><a href="">Academcics</a></li>
-            <li>
+            <li class="has-sub">
               <a href="">Programs and Centers</a>
-              <ul>
+              <button class="subnav-toggle">X</button>
+              <ul class="l-3">
                 <li>
                   <a href="">Center for the Study of Political Economy</a>
                 </li>
@@ -37,6 +39,24 @@ import MainPageWrapper from "@/layouts/MainPageWrapper.astro";
                 <li><a href="">Student Research</a></li>
               </ul>
             </li>
+          </ul>
+        </li>
+        <li class="has-sub">
+          <a href="">Admissions and Finanical Aid</a><button
+            class="subnav-toggle">X</button
+          >
+          <ul class="l-2">
+            <li><a href="">some text link</a></li>
+            <li><a href="">some text link</a></li>
+            <li><a href="">some text link</a></li>
+          </ul>
+        </li>
+        <li class="has-sub">
+          <a href="">Student Life</a><button class="subnav-toggle">X</button>
+          <ul class="l-2">
+            <li><a href="">some text link</a></li>
+            <li><a href="">some text link</a></li>
+            <li><a href="">some text link</a></li>
           </ul>
         </li>
       </ul>
@@ -53,3 +73,41 @@ import MainPageWrapper from "@/layouts/MainPageWrapper.astro";
     </div>
   </div>
 </MainPageWrapper>
+
+<script is:inline>
+  (function ($) {
+    // Add aria-haspopup true to links with popups
+    $(".nav--main-opener").prev().attr("aria-haspopup", "true");
+
+    $(".subNav a").attr("tabindex", -1);
+
+    // if a menu-button is clicked...
+    $(".subnav-toggle").click(function (e) {
+      // the button
+      var _this = $(this);
+      // the LI
+      var parent = $(_this.parent());
+      // the preceding <a>
+      //   var linkContent = $(_this.prev());
+      // rotate the button
+      $(this).toggleClass("rotated");
+      // the child list
+      var next = $(_this.next());
+
+      // console.log(linkContent);
+
+      if (!next.hasClass("expanded")) {
+        $(next).addClass("expanded");
+        $(parent).addClass("expanded");
+
+        _this.next().find("a").removeAttr("tabindex", -1);
+
+        // remove sub-expaneded
+      } else {
+        $(next).removeClass("expanded");
+        $(parent).removeClass("expanded");
+        _this.next().find("a").attr("tabindex", -1);
+      }
+    });
+  })(jQuery);
+</script>
