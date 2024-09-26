@@ -5,7 +5,6 @@
 
 */
 .sidebar-nav {
-  font-size: var(--step--1);
   font-family: var(--ff-sans);
   a {
     color: var(--gray-800);
@@ -23,13 +22,22 @@
         display: grid;
         grid-template-columns: auto auto;
         justify-content: space-between;
+        align-items: center;
+        column-gap: 1em;
         > a {
           grid-column: 1 / -1;
           grid-row: 1;
+          padding-right: 2em; // to make room for the caret
         }
         > button {
           grid-column: 2;
           grid-row: 1;
+          padding: 0.5em;
+          transition: transform 0.125s;
+          &.rotated {
+            transform: rotate(180deg);
+            transform-origin: center;
+          }
         }
         > ul {
           grid-column: 1 / -1;
@@ -46,20 +54,37 @@
       color: var(--white);
       border-radius: var(--border-radius-small);
     }
+    svg {
+      fill: var(--white);
+    }
   }
   //   first nested
   .l-2 {
     background-color: var(--gray-100);
+    svg {
+      fill: var(--black);
+    }
+    li.expanded > a {
+      text-decoration: none;
+      font-weight: var(--fw-800);
+      color: var(--red-500);
+    }
   }
-  // second nexted{
+  // second nexted
   .l-3 {
-    background: var(--gray-500);
+    background: var(--gray-300);
   }
   // hide the children for quickie
   :is(.l-2, .l-3) {
     display: none;
+    font-size: var(--step--1);
     &.expanded {
       display: grid;
     }
+  }
+  // overall svg
+  svg {
+    width: 1em;
+    height: 1em;
   }
 }
