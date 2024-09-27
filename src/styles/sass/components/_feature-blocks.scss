@@ -41,3 +41,30 @@
     }
   }
 }
+
+.full-width-breakout {
+  position: relative;
+  &:after {
+    position: absolute;
+    content: "";
+    width: 150vw;
+    height: 100%;
+    left: -50vw;
+    top: 0;
+    // background: red;
+    z-index: -1;
+  }
+  > div {
+    padding: 3rem 0;
+  }
+  &.red {
+    &:after {
+      background: var(--red-500);
+    }
+  }
+  &.gray {
+    &::after {
+      background: var(--gray-300);
+    }
+  }
+}
