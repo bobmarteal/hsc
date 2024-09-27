@@ -76,10 +76,14 @@
   }
   // hide the children for quickie
   :is(.l-2, .l-3) {
-    display: none;
+    // display: none;
+    height: 0px;
     font-size: var(--step--1);
+    overflow: hidden;
+    transition: height 0.25s;
     &.expanded {
-      display: grid;
+      //   display: grid;
+      height: auto;
     }
   }
   // overall svg
