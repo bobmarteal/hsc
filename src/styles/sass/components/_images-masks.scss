@@ -8,7 +8,7 @@
 
 */
 @use "../_mixins.scss" as *;
-.crest-overlay {
+.crest-overlay-with-fade {
   position: relative;
   &:after {
     position: absolute;
@@ -21,10 +21,13 @@
     background-position: bottom, bottom;
     background-size: contain, cover;
   }
-  &.crest-transparent {
-    &:after {
-      opacity: 0.6;
-    }
+  img {
+    margin: 0 !important; // will NEVER have a margin in an overlay
+  }
+}
+.crest-transparent {
+  &:after {
+    opacity: 0.6;
   }
 }
 /* Light to dark fades on medium + */
@@ -67,5 +70,17 @@
     background-position: bottom;
     background-size: contain;
     opacity: 0.6;
+  }
+}
+
+/*
+  target universal styles in page-content
+*/
+.page-content {
+  .crest-overlay-with-fade,
+  img {
+    border-radius: var(--border-radius-medium);
+    overflow: hidden;
+    margin-bottom: 1.5rem;
   }
 }

@@ -1,0 +1,36 @@
+---
+import Heading from "../ui/Heading.astro";
+
+// InContentFeatureBlock
+// class
+
+const { classes } = Astro.props;
+---
+
+<div class={classes}>
+  <Heading tagName="h2" size="base4" family="serif">Application</Heading>
+  <p>
+    Students applying to H-SC with a 3.8+ weighted GPA are invited to apply to
+    the College’s Honors Program.
+  </p>
+  <p>
+    <strong class="caps">To apply, complete the following two steps:</strong>
+  </p>
+  <ul>
+    <li>Complete your application to Hampden-Sydney College.</li>
+    <li>
+      Complete the Honors Program application, and write a short essay in
+      response to one of three prompts on the application.
+    </li>
+  </ul>
+  <p><strong class="caps">Priority deadline:</strong> February 13</p>
+  <p>
+    <strong class="caps">Final deadline:</strong> March 11 for remaining spaces in
+    the program
+  </p>
+  <p>
+    After submission, the Director of the Honors Program Dr. Frusetta-Ulfhrafn
+    will contact you to schedule an interview. On-campus interviews are
+    preferred, but virtual interviews may be available.
+  </p>
+</div>

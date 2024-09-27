@@ -1,6 +1,11 @@
 ---
 import Heading from "@/components/ui/Heading.astro";
 import MainPageWrapper from "@/layouts/MainPageWrapper.astro";
+import { Image } from "astro:assets";
+
+//images
+import PlayingPool from "../assets/playing-pool.jpg";
+import InContentFeatureBlock from "@/components/page-block/InContentFeatureBlock.astro";
 ---
 
 <MainPageWrapper>
@@ -78,6 +83,9 @@ import MainPageWrapper from "@/layouts/MainPageWrapper.astro";
       </ul>
     </nav>
     <div class="page-content">
+      <div class="crest-overlay-with-fade crest-transparent">
+        <Image src={PlayingPool} width={1200} alt="" class="crest-overlay" />
+      </div>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. In eos,
         quisquam non excepturi exercitationem, nesciunt iure eligendi nisi
@@ -86,6 +94,15 @@ import MainPageWrapper from "@/layouts/MainPageWrapper.astro";
         delectus sint? Totam laborum minus debitis dolor culpa ea reiciendis
         repellendus sunt esse.
       </p>
+      <InContentFeatureBlock
+        classes="red content-feature with-logo m-bottom-2"
+      />
+      <InContentFeatureBlock
+        classes="black content-feature with-logo m-bottom-2"
+      />
+      <InContentFeatureBlock
+        classes="red content-feature with-logo m-bottom-2"
+      />
     </div>
   </div>
 </MainPageWrapper>

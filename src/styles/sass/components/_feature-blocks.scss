@@ -1,0 +1,43 @@
+/*
+    in-conent feature blocks
+    - background color choices
+    - with logo or without
+*/
+@use "../_mixins.scss" as *;
+.content-feature {
+  border-radius: var(--border-radius-large);
+  padding: 1em;
+  overflow: hidden;
+  &.red {
+    background: var(--red-500);
+    color: var(--white);
+  }
+  &.black {
+    background: var(--black);
+    color: var(--white);
+  }
+  &.gray {
+    background: var(--gray);
+  }
+
+  @include mq(medium) {
+    &.with-logo {
+      width: calc(100% + 10em);
+      margin-left: -10em;
+      padding-left: 10em;
+      position: relative;
+      &::after {
+        position: absolute;
+        content: "";
+        background: var(--gray-300) url(/images/theme/shield-white.svg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: 4em;
+        height: 100%;
+        width: calc(10em - 1rem);
+        left: 0;
+        top: 0;
+      }
+    }
+  }
+}
