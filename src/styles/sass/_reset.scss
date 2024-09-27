@@ -41,6 +41,10 @@ video {
   height: auto;
 }
 
+figure {
+  margin: 0;
+}
+
 /* a11y resets */
 @media (prefers-reduced-motion: no-preference) {
   html {

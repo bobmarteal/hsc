@@ -1,13 +1,39 @@
 /*
-    Images and masks
+    Images and masks and other weird background images
     1. basic image styles
-    2. set mask base properties
+    2. figure styles
+    3. set mask base properties
 
     disticnt masks
-    1. crest bottom
+    1. crest with black fade background
+    2. vertical light/trans to dark/opaque
+
+    weird stuff
+    1. tiger
 
 */
 @use "../_mixins.scss" as *;
+figure {
+  display: grid;
+  margin-bottom: 1rem; // default can be overwritten with adding m-bottom-x
+  border-radius: var(--border-radius-large);
+  overflow: hidden;
+  img {
+    grid-row: 1;
+    grid-column: 1;
+  }
+  figcaption {
+    grid-row: 1;
+    grid-column: 1;
+    background: var(--black);
+    color: var(--white);
+    height: max-content;
+    align-self: flex-end;
+    padding: 1em;
+    font-size: var(--step--2);
+  }
+}
+
 .crest-overlay-with-fade {
   position: relative;
   &:after {
