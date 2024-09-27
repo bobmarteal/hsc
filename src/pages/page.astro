@@ -2,6 +2,8 @@
 import Heading from "@/components/ui/Heading.astro";
 import MainPageWrapper from "@/layouts/MainPageWrapper.astro";
 import { Image } from "astro:assets";
+//ui
+import Link from "@ui/Link.astro";
 
 //images
 import PlayingPool from "../assets/playing-pool.jpg";
@@ -158,6 +160,51 @@ import InContentFeatureBlock from "@/components/page-block/InContentFeatureBlock
           </figure>
         </div>
       </div>
+      <Heading tagName="h2" size="base-4" family="serif">
+        Capstone Project
+      </Heading>
+      <ul class="buttons flat m-bottom-2">
+        <li>
+          <Link
+            style="primary"
+            href="/text"
+            classes="button button--primary"
+            text="Apply to H-SC"
+            icon={{ name: "arrow-right", side: "right" }}
+          />
+        </li>
+        <li>
+          <Link
+            style="primary"
+            href="/text"
+            classes="button button--primary"
+            text="Schedule a visit"
+            icon={{ name: "arrow-right", side: "right" }}
+          />
+        </li>
+        <li>
+          <Link
+            style="primary"
+            href="/text"
+            classes="button button--primary"
+            text="Contact us"
+            icon={{ name: "arrow-right", side: "right" }}
+          />
+        </li>
+      </ul>
+      <Heading tagName="h2" size="base-4" family="serif">
+        Capstone Project
+      </Heading>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut harum
+        earum dolores alias ullam neque soluta reprehenderit nisi, sit veniam
+        modi error quod maiores perspiciatis fugit nam in assumenda, suscipit
+        dolore? Sed quidem quisquam iure doloremque modi nulla cum. Nulla fuga
+        voluptas vero accusantium hic suscipit placeat provident! Eveniet, sint
+        rerum unde vel amet exercitationem ab provident nemo similique debitis
+        dolores accusamus necessitatibus earum quia, reprehenderit error
+        consequatur architecto et tempore, suscipit ipsam quae fugiat.
+      </p>
     </div>
   </div>
 </MainPageWrapper>

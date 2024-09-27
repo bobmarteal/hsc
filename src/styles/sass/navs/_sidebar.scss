@@ -69,6 +69,11 @@
       font-weight: var(--fw-800);
       color: var(--red-500);
     }
+    a.selected {
+      background: var(--gray-500);
+      color: var(--red-500);
+      font-weight: var(--fw-800);
+    }
   }
   // second nexted
   .l-3 {
