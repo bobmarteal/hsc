@@ -20,8 +20,9 @@
 
 // navs
 @use "navs/_main-menu.scss";
-@use "navs/breadcrumbs.scss";
-@use "navs/sidebar.scss";
+@use "navs/_breadcrumbs.scss";
+@use "navs/_sidebar.scss";
+@use "navs/_otpnav.scss";
 //content types
 @use "content-types/article/_article.scss";
 @use "content-types/article/article-cards.scss";

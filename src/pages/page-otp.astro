@@ -6,17 +6,16 @@ import { Image } from "astro:assets";
 import Link from "@ui/Link.astro";
 
 //images
-import BaseballField from "../assets/baseball-field.jpg";
 import PlayingPool from "../assets/playing-pool.jpg";
 import InContentFeatureBlock from "@/components/page-block/InContentFeatureBlock.astro";
 import SidebarNav from "@/components/navigations/SidebarNav.astro";
 ---
 
 <MainPageWrapper>
-  <div class="basic-page-layout">
+  <div class="basic-page-otp-layout">
     <div class="title">
       <Heading tagName="h1" size="base5" family="serif"
-        >Honors Program - Basic page</Heading
+        >Honors Program - with OTP nav</Heading
       >
     </div>
     <div class="breadcrumbs">
@@ -29,7 +28,7 @@ import SidebarNav from "@/components/navigations/SidebarNav.astro";
     <SidebarNav />
     <div class="page-content">
       <div class="crest-overlay-with-fade crest-transparent">
-        <Image src={BaseballField} width={1200} alt="" class="crest-overlay" />
+        <Image src={PlayingPool} width={1200} alt="" class="crest-overlay" />
       </div>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. In eos,
@@ -39,6 +38,9 @@ import SidebarNav from "@/components/navigations/SidebarNav.astro";
         delectus sint? Totam laborum minus debitis dolor culpa ea reiciendis
         repellendus sunt esse.
       </p>
+      <Heading tagName="h2" size="base4" family="serif" id="application">
+        Application
+      </Heading>
       <InContentFeatureBlock
         classes="red content-feature with-logo m-bottom-2"
       />
@@ -48,6 +50,9 @@ import SidebarNav from "@/components/navigations/SidebarNav.astro";
       <InContentFeatureBlock
         classes="red content-feature with-logo m-bottom-2"
       />
+      <Heading tagName="h2" size="base4" family="serif" id="benefits">
+        Benefits
+      </Heading>
       <p>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est, maxime
         velit? Nobis deleniti accusantium modi pariatur nesciunt, recusandae
@@ -71,6 +76,9 @@ import SidebarNav from "@/components/navigations/SidebarNav.astro";
           environments to engage in advanced research in their chosen field.
         </figcaption>
       </figure>
+      <Heading tagName="h2" size="base4" family="serif" id="requirements">
+        Requirements
+      </Heading>
       <div class="full-width-breakout red m-bottom-2">
         <div>
           <figure class="m-bottom-0">
@@ -103,8 +111,8 @@ import SidebarNav from "@/components/navigations/SidebarNav.astro";
           </figure>
         </div>
       </div>
-      <Heading tagName="h2" size="base4" family="serif">
-        Capstone Project
+      <Heading tagName="h2" size="base4" family="serif" id="courses">
+        Capstone Project Courses
       </Heading>
       <ul class="buttons flat m-bottom-2">
         <li>
@@ -149,6 +157,17 @@ import SidebarNav from "@/components/navigations/SidebarNav.astro";
         consequatur architecto et tempore, suscipit ipsam quae fugiat.
       </p>
     </div>
+    <aside>
+      <div class="otp-nav">
+        <p><strong class="caps">On this page:</strong></p>
+        <ul>
+          <li><a href="#application">Application</a></li>
+          <li><a href="#benefits">Benefits</a></li>
+          <li><a href="#requirements">Requirements</a></li>
+          <li><a href="#courses">Courses</a></li>
+        </ul>
+      </div>
+    </aside>
   </div>
 </MainPageWrapper>
 

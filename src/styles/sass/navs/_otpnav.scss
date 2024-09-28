@@ -1,0 +1,24 @@
+/*
+
+    opt == On This Page nav
+
+*/
+
+.otp-nav {
+  background: var(--gray-100);
+  font-size: var(--step--2);
+  border-radius: var(--border-radius-medium);
+  position: sticky;
+  top: 100px;
+  ul {
+    list-style-type: none;
+    padding: 0 1em 1em;
+  }
+  a {
+    color: var(--gray-800);
+  }
+  p {
+    padding: 1em 1em 0 1em;
+    margin-bottom: 0.5em;
+  }
+}

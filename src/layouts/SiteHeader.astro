@@ -1,10 +1,8 @@
 ---
-
-
 import MainNav from "@/components/navigations/MainNav.astro";
-
 ---
-        <!-- 
+
+<!-- 
 
             - CTA/Black bar at top
 
@@ -14,54 +12,78 @@ import MainNav from "@/components/navigations/MainNav.astro";
                 - logo
                 - main nav
         -->
-        <header class="primary-layout siteHeader" id="siteHeader">
-            <div id="skip-to-nav" class="skipNav full-width">
-                <div class="skipLinks">
-                <a href="">Main nav</a><a href="">Content</a>
-                </div>
-            </div>                
-            <div class="logoActions">
-                <a href="" class="hsc-logo">
-                    <img src="/images/theme/hsc-logo-two-line.png" class="logo logo--small" alt="Hampden Sydney College"/>
-                    <img src="/images/theme/hsc-logo.png"  class="logo logo--large" alt="Hampden Sydney College"/><span class="sr-only">Hampden Sydney College</span>
-                </a>
-                <div class="actions">
-                    <a href="#" id="searchToggle" class="searchToggle" arial-label="show search field"></a>
-                    <span></span>
-                    <div class="cta">
-                        <a href="">visit</a>
-                        <a href="">apply</a>
-                        <a href="">give</a> 
-                    </div>
-                    <span></span>
-                    <a href="#" id="mainNavToggle" class="menuTrigger" aria-label="Open main navigation">Menu <span></span><span></span><span></span><span></span></a>
-                </div> 
-            </div>
-          
-        </header>
-        <MainNav></MainNav>
-        
+<header class="primary-layout siteHeader" id="siteHeader">
+  <div id="skip-to-nav" class="skipNav full-width">
+    <div class="skipLinks">
+      <a href="">Main nav</a><a href="">Content</a>
+    </div>
+  </div>
+  <div class="logoActions">
+    <a href="/" class="hsc-logo">
+      <img
+        src="/images/theme/hsc-logo-two-line.png"
+        class="logo logo--small"
+        alt="Hampden Sydney College"
+      />
+      <img
+        src="/images/theme/hsc-logo.png"
+        class="logo logo--large"
+        alt="Hampden Sydney College"
+      /><span class="sr-only">Hampden Sydney College</span>
+    </a>
+    <div class="actions">
+      <a
+        href="#"
+        id="searchToggle"
+        class="searchToggle"
+        arial-label="show search field"></a>
+      <span></span>
+      <div class="cta">
+        <a href="/page">visit</a>
+        <a href="/page-otp">apply</a>
+        <a href="">give</a>
+      </div>
+      <span></span>
+      <a
+        href="#"
+        id="mainNavToggle"
+        class="menuTrigger"
+        aria-label="Open main navigation"
+        >Menu <span></span><span></span><span></span><span></span></a
+      >
+    </div>
+  </div>
+</header>
+<MainNav />
 
-        <script is:inline src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script
+  is:inline
+  src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 
-        <script is:inline  src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script
+  is:inline
+  src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"
+></script>
 
-        <script is:inline>
-        /* When the user scrolls down, logo changes to smaller layout, text size is smaller, reverse on scroll back in */
-            let mm = gsap.matchMedia();
+<script is:inline>
+  /* When the user scrolls down, logo changes to smaller layout, text size is smaller, reverse on scroll back in */
+  let mm = gsap.matchMedia();
 
-            mm.add("(min-width: 800px)", () => {
-                gsap.defaults({ease: "none", duration: 0.15})
-                gsap.timeline({scrollTrigger:{
-                trigger: ".siteHeader",
-                start: "10px -100px",
-                end: "bottom top",
-                // scrub: true,
-                // markers: true,
-                toggleActions: "play none reverse none"
-            }})
-            .to('.logo--large', {height: "0px"})
-            .to('.logo--small', {height: "auto"})
-            .to('.logoActions', {fontSize: "16px"}, 0)
-            });
-        </script>
+  mm.add("(min-width: 800px)", () => {
+    gsap.defaults({ ease: "none", duration: 0.15 });
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: ".siteHeader",
+          start: "10px -100px",
+          end: "bottom top",
+          // scrub: true,
+          // markers: true,
+          toggleActions: "play none reverse none",
+        },
+      })
+      .to(".logo--large", { height: "0px" })
+      .to(".logo--small", { height: "auto" })
+      .to(".logoActions", { fontSize: "16px" }, 0);
+  });
+</script>
