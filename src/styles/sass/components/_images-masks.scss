@@ -33,7 +33,22 @@ figure {
     font-size: var(--step--2);
   }
 }
-
+.crest-overlay {
+  position: relative;
+  &:after {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    content: "";
+    background-image: url(/images/theme/crest-main-1.svg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: contain;
+  }
+  img {
+    margin: 0 !important; // will NEVER have a margin in an overlay
+  }
+}
 .crest-overlay-with-fade {
   position: relative;
   &:after {
