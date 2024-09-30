@@ -25,7 +25,7 @@
 @use "navs/_otpnav.scss";
 //content types
 @use "content-types/article/_article.scss";
-@use "content-types/article/article-cards.scss";
+@use "content-types/article/_article-cards.scss";
 @use "content-types/event/_event-cards.scss";
 
 // components
@@ -33,13 +33,14 @@
 @use "forms/_forms.scss";
 @use "forms/_searches-and-forms.scss";
 @use "components/_program-card.scss";
-@use "components/quote-block.scss";
-@use "components/stats.scss";
-@use "components/image-grid.scss";
-@use "components/text-over-image-blocks.scss";
+@use "components/_quote-block.scss";
+@use "components/_stats.scss";
+@use "components/_image-grid.scss";
+@use "components/_text-over-image-blocks.scss";
 @use "components/_text-links.scss";
 @use "components/_carousels.scss";
-@use "components/feature-blocks.scss";
+@use "components/_feature-blocks.scss";
+@use "components/_tabs.scss";
 
 //utilities
 @use "_utilities.scss";

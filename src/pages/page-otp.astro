@@ -9,6 +9,7 @@ import Link from "@ui/Link.astro";
 import PlayingPool from "../assets/playing-pool.jpg";
 import InContentFeatureBlock from "@/components/page-block/InContentFeatureBlock.astro";
 import SidebarNav from "@/components/navigations/SidebarNav.astro";
+import Tabs from "@/components/ui/Tabs.astro";
 ---
 
 <MainPageWrapper>
@@ -27,6 +28,7 @@ import SidebarNav from "@/components/navigations/SidebarNav.astro";
     </div>
     <SidebarNav />
     <div class="page-content">
+      <Tabs />
       <div class="crest-overlay-with-fade crest-transparent">
         <Image src={PlayingPool} width={1200} alt="" class="crest-overlay" />
       </div>
@@ -170,41 +172,3 @@ import SidebarNav from "@/components/navigations/SidebarNav.astro";
     </aside>
   </div>
 </MainPageWrapper>
-
-<script is:inline>
-  (function ($) {
-    // Add aria-haspopup true to links with popups
-    $(".nav--main-opener").prev().attr("aria-haspopup", "true");
-
-    $(".subNav a").attr("tabindex", -1);
-
-    // if a menu-button is clicked...
-    $(".subnav-toggle").click(function (e) {
-      // the button
-      var _this = $(this);
-      // the LI
-      var parent = $(_this.parent());
-      // the preceding <a>
-      var linkContent = $(_this.prev());
-      // rotate the button
-      $(this).toggleClass("rotated");
-      // the child list
-      var next = $(_this.next());
-
-      // console.log(linkContent);
-
-      if (!next.hasClass("expanded")) {
-        $(next).addClass("expanded");
-        $(parent).addClass("expanded");
-
-        _this.next().find("a").removeAttr("tabindex", -1);
-
-        // remove sub-expaneded
-      } else {
-        $(next).removeClass("expanded");
-        $(parent).removeClass("expanded");
-        _this.next().find("a").attr("tabindex", -1);
-      }
-    });
-  })(jQuery);
-</script>

@@ -6,6 +6,7 @@
 */
 .sidebar-nav {
   font-family: var(--ff-sans);
+  z-index: 8;
   a {
     color: var(--gray-800);
     display: flex;
