@@ -10,6 +10,7 @@ import PlayingPool from "../assets/playing-pool.jpg";
 import InContentFeatureBlock from "@/components/page-block/InContentFeatureBlock.astro";
 import SidebarNav from "@/components/navigations/SidebarNav.astro";
 import Tabs from "@/components/ui/Tabs.astro";
+import Accordion from "@/components/ui/Accordion.astro";
 ---
 
 <MainPageWrapper>
@@ -28,6 +29,7 @@ import Tabs from "@/components/ui/Tabs.astro";
     </div>
     <SidebarNav />
     <div class="page-content">
+      <Accordion />
       <Tabs />
       <div class="crest-overlay-with-fade crest-transparent">
         <Image src={PlayingPool} width={1200} alt="" class="crest-overlay" />

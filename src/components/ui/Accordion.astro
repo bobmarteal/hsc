@@ -1,0 +1,98 @@
+---
+// Accordion for FAQs
+---
+
+<h2>Accordion</h2>
+<div id="accordionGroup" class="accordion m-bottom-3">
+  <div class="accordion-item">
+    <h4 class="accordion-toggle">
+      <button
+        type="button"
+        aria-expanded="true"
+        aria-controls="sect1"
+        id="accordion1id"
+      >
+        <span class="accordion-title">
+          Generally these are used for an FAQ type situtation
+        </span>
+      </button><span class="accordion-icon"></span>
+    </h4>
+    <div
+      id="sect1"
+      role="region"
+      aria-labelledby="accordion1id"
+      class="accordion-panel"
+    >
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis iure
+        voluptatem quod. Inventore aliquid, saepe eaque repellat quo ut ab?
+      </p>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h4 class="accordion-toggle">
+      <button
+        type="button"
+        aria-expanded="false"
+        aria-controls="sect2"
+        id="accordion2id"
+      >
+        <span class="accordion-title">
+          Generally these are used for an FAQ type situtation
+        </span>
+      </button><span class="accordion-icon"></span>
+    </h4>
+    <div
+      id="sect2"
+      role="region"
+      aria-labelledby="accordion2id"
+      class="accordion-panel"
+      hidden=""
+    >
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis iure
+        voluptatem quod. Inventore aliquid, saepe eaque repellat quo ut ab?
+      </p>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h4 class="accordion-toggle">
+      <button
+        type="button"
+        aria-expanded="false"
+        aria-controls="sect3"
+        id="accordion3id"
+      >
+        <span class="accordion-title">
+          Generally these are used for an FAQ type situtation
+        </span>
+      </button><span class="accordion-icon"></span>
+    </h4>
+    <div
+      id="sect3"
+      role="region"
+      aria-labelledby="accordion3id"
+      class="accordion-panel"
+      hidden=""
+    >
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis iure
+        voluptatem quod. Inventore aliquid, saepe eaque repellat quo ut ab?
+      </p>
+    </div>
+  </div>
+</div>
+
+<script>
+  const accordionToggles = document.querySelectorAll(".accordion-toggle");
+  Array.prototype.forEach.call(accordionToggles, (accordionToggle) => {
+    let target = accordionToggle.nextElementSibling;
+    console.log(target);
+    accordionToggle.onclick = () => {
+      let expanded =
+        accordionToggle.getAttribute("aria-expanded") === "true" || false;
+      accordionToggle.setAttribute("aria-expanded", !expanded);
+      target.classList.toggle("shown");
+    };
+  });
+</script>
