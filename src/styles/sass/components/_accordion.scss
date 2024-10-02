@@ -3,11 +3,7 @@
     Accordion/FAQ section
 
 */
-.accordion {
-  h3 {
-    margin: 0;
-  }
-}
+
 .accordion-item {
   margin-bottom: 0.25em;
 }
@@ -52,6 +48,7 @@
   background: var(--blue-500);
   border-radius: 50%;
   position: relative;
+  transition: transform 0.125s;
   &:before,
   &:after {
     position: absolute;
@@ -65,25 +62,6 @@
   &:after {
     rotate: 90deg;
   }
-}
-
-.accordion > *:first-child .accordion-trigger,
-.accordion > *:first-child {
-  //   border-radius: 5px 5px 0 0;
-}
-
-.accordion > *:last-child .accordion-trigger,
-.accordion > *:last-child {
-  //   border-radius: 0 0 5px 5px;
-}
-
-.accordion button::-moz-focus-inner {
-  border: 0;
-}
-
-.accordion-trigger:focus .accordion-icon,
-.accordion-trigger:hover .accordion-icon {
-  //   border-color: hsl(216deg 94% 43%);
 }
 
 .accordion-panel {

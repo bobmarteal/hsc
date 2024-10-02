@@ -21,6 +21,7 @@ figure {
   img {
     grid-row: 1;
     grid-column: 1;
+    margin-bottom: 0px !important; // will NEVER have a margin bottom in a figure
   }
   figcaption {
     grid-row: 1;
@@ -31,6 +32,7 @@ figure {
     align-self: flex-end;
     padding: 1em;
     font-size: var(--step--2);
+    z-index: 1;
   }
 }
 .crest-overlay {
@@ -124,4 +126,12 @@ figure {
     overflow: hidden;
     margin-bottom: 1.5rem;
   }
+}
+
+/*
+  Circle image style
+*/
+.circle-image {
+  aspect-ratio: 1 / 1;
+  border-radius: 50% !important; // a circle image will always have a 50% radius
 }

@@ -1,0 +1,24 @@
+---
+// person grid
+import personCardData from "../../data/people.json";
+import PersonCard from "./PersonCard.astro";
+
+export type personCard = {
+  name: string;
+  title: string;
+  department: string;
+  building: string;
+  email: string;
+  phone: string;
+};
+---
+
+<section>
+  <div class="grid auto-300-a m-bottom-3">
+    {
+      personCardData.map((personCard: personCard) => (
+        <PersonCard {...personCard} />
+      ))
+    }
+  </div>
+</section>

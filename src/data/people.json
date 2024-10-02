@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Dylan Domel-White",
+    "title": "Assistant Professor",
+    "department": "Mathematics and Computer Science",
+    "building": "Pauley, 119",
+    "email": "ddomelwhite@hsc.edu",
+    "phone": "(434) 223-6202"
+  },
+  {
+    "name": "Dr. Sarah Loeb",
+    "title": "Associate Professor",
+    "department": "Mathematics and Computer Science",
+    "building": "Pauley, 300",
+    "email": "sloeb@hsc.edu",
+    "phone": " (434) 223-6886 "
+  },
+  {
+    "name": "Anthony M. Carilli",
+    "title": "Professor",
+    "department": "Economics and Business",
+    "building": "Morton Hall, 221",
+    "email": "tcarilli@hsc.edu",
+    "phone": "(434) 223-6314"
+  },
+  {
+    "name": "Dr. Michael T. Dale",
+    "title": "Assistant Professor",
+    "department": "Philosophy",
+    "building": "Morton Hall, 019",
+    "email": "mdale@hsc.edu",
+    "phone": "(434) 223-6470"
+  },
+  {
+    "name": "Dr. Carrie Cifers",
+    "title": "Assistant Professor",
+    "department": "Religion",
+    "building": "Maples, 022",
+    "email": "ccifers@hsc.edu",
+    "phone": "(434) 223-6249"
+  },
+  {
+    "name": "Dr. Claire E. Deal",
+    "title": "Professor",
+    "department": "Rhetoric",
+    "building": "Pannill, 100 D",
+    "email": "cdeal@hsc.edu",
+    "phone": "(434) 223-6988"
+  }
+]

@@ -1,0 +1,25 @@
+---
+import Heading from "../ui/Heading.astro";
+// images
+import Football from "../../assets/Football-player.jpg";
+import { Image } from "astro:assets";
+
+// fields
+const { name, title, department, building, email, phone } = Astro.props;
+---
+
+<div class="person-card">
+  <Image src={Football} width={800} alt="" class="circle-image" />
+  <div class="name-title">
+    <Heading tagName="h3" size="base3" family="serif" classes="m-bottom-0"
+      >{name}</Heading
+    >
+    <p class="caps">{title}</p>
+  </div>
+  <p class="person-department"><strong>{department}</strong></p>
+  <p class="person-address">
+    {building}<br />
+    <a href="mailto:email">{email}</a><br />
+    {phone}
+  </p>
+</div>

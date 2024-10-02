@@ -15,4 +15,7 @@
       grid-template-columns: 3fr 1fr;
     }
   }
+  &.auto-300-a {
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+  }
 }
