@@ -134,4 +134,5 @@ figure {
 .circle-image {
   aspect-ratio: 1 / 1;
   border-radius: 50% !important; // a circle image will always have a 50% radius
+  object-fit: cover;
 }

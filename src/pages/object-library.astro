@@ -1,0 +1,165 @@
+---
+import Heading from "@/components/ui/Heading.astro";
+import MainPageWrapper from "@/layouts/MainPageWrapper.astro";
+import { Image } from "astro:assets";
+//ui
+import Link from "@ui/Link.astro";
+
+//images
+import PlayingPool from "../assets/playing-pool.jpg";
+import InContentFeatureBlock from "@/components/page-block/InContentFeatureBlock.astro";
+import SidebarNav from "@/components/navigations/SidebarNav.astro";
+import Tabs from "@/components/ui/Tabs.astro";
+import Accordion from "@/components/ui/Accordion.astro";
+import PersonGrid from "@/components/people/PersonGrid.astro";
+---
+
+<MainPageWrapper>
+  <div class="basic-page-otp-layout">
+    <div class="title">
+      <Heading tagName="h1" size="base5" family="serif">Object Library</Heading>
+    </div>
+    <div class="breadcrumbs">
+      <p>
+        <span class="caps"><strong>You are here:</strong> </span><a href=""
+          >Academics</a
+        > > <a href=""> Programs & Centers</a> > <a href="">Honors Program</a>
+      </p>
+    </div>
+    <SidebarNav />
+    <div class="page-content">
+      <Heading tagName="h2" size="base4" family="serif" id="personGrid"
+        >Person Grid</Heading
+      >
+      <PersonGrid />
+      <Heading tagName="h2" size="base4" family="serif" id="accordion"
+        >Accordion</Heading
+      >
+      <Accordion />
+      <Heading tagName="h2" size="base4" family="serif" id="tabs">Tabs</Heading>
+      <Tabs />
+      <Heading tagName="h2" size="base4" family="serif" id="imageStyles"
+        >Image styles</Heading
+      >
+      <div class="crest-overlay-with-fade crest-transparent">
+        <Image src={PlayingPool} width={1200} alt="" class="crest-overlay" />
+      </div>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. In eos,
+        quisquam non excepturi exercitationem, nesciunt iure eligendi nisi
+        ducimus sint est nostrum mollitia tenetur ipsam veniam consequatur
+        voluptatum ad quidem tempora illo sit saepe. Reprehenderit sunt quisquam
+        delectus sint? Totam laborum minus debitis dolor culpa ea reiciendis
+        repellendus sunt esse.
+      </p>
+      <Heading tagName="h2" size="base4" family="serif" id="featureBlocks">
+        Feature Blocks
+      </Heading>
+      <InContentFeatureBlock
+        classes="red content-feature with-logo m-bottom-2"
+      />
+      <InContentFeatureBlock
+        classes="black content-feature with-logo m-bottom-2"
+      />
+      <InContentFeatureBlock
+        classes="red content-feature with-logo m-bottom-2"
+      />
+      <Heading
+        tagName="h2"
+        size="base4"
+        family="serif"
+        id="benefits"
+        id="figures"
+      >
+        Figures
+      </Heading>
+
+      <figure class="m-bottom-3">
+        <Image src={PlayingPool} width={1200} alt="" class="crest-overlay" />
+        <figcaption>
+          Honors students gain unique access to accelerated learning
+          environments to engage in advanced research in their chosen field.
+        </figcaption>
+      </figure>
+
+      <div class="full-width-breakout red m-bottom-2">
+        <div>
+          <figure class="m-bottom-0">
+            <Image
+              src={PlayingPool}
+              width={1200}
+              alt=""
+              class="crest-overlay"
+            />
+            <figcaption>
+              Honors students gain unique access to accelerated learning
+              environments to engage in advanced research in their chosen field.
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+      <div class="full-width-breakout gray m-bottom-2">
+        <div>
+          <figure class="m-bottom-0">
+            <Image
+              src={PlayingPool}
+              width={1200}
+              alt=""
+              class="crest-overlay"
+            />
+            <figcaption>
+              Honors students gain unique access to accelerated learning
+              environments to engage in advanced research in their chosen field.
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+      <Heading tagName="h2" size="base4" family="serif" id="links">
+        Links
+      </Heading>
+      <ul class="buttons flat m-bottom-2">
+        <li>
+          <Link
+            style="primary"
+            href="/text"
+            classes="button button--primary"
+            text="Apply to H-SC"
+            icon={{ name: "arrow-right", side: "right" }}
+          />
+        </li>
+        <li>
+          <Link
+            style="primary"
+            href="/text"
+            classes="button button--primary"
+            text="Schedule a visit"
+            icon={{ name: "arrow-right", side: "right" }}
+          />
+        </li>
+        <li>
+          <Link
+            style="primary"
+            href="/text"
+            classes="button button--primary"
+            text="Contact us"
+            icon={{ name: "arrow-right", side: "right" }}
+          />
+        </li>
+      </ul>
+    </div>
+    <aside>
+      <div class="otp-nav">
+        <p><strong class="caps">On this page:</strong></p>
+        <ul>
+          <li><a href="#personGrid">Person Grid</a></li>
+          <li><a href="#accordion">Accordion</a></li>
+          <li><a href="#tabs">Tabs</a></li>
+          <li><a href="#imageStyles">Image Styles</a></li>
+          <li><a href="#featureBlocks">Feature Blocks</a></li>
+          <li><a href="#figures">Figures</a></li>
+          <li><a href="#links">Links</a></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+</MainPageWrapper>
