@@ -34,6 +34,10 @@ ol {
 .centered-list {
   justify-content: center;
 }
+.plain {
+  list-style-type: none;
+  padding: 0;
+}
 
 // for lists of buttons
 .buttons {

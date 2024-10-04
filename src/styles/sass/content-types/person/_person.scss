@@ -16,3 +16,23 @@
     margin-block-end: 1em;
   }
 }
+
+/*
+full person page layout
+*/
+.person-layout {
+  grid-column: full-width;
+  padding-top: 3rem;
+}
+.person-hero {
+  padding: 2rem 0;
+  .name-title {
+    border-bottom: 3px solid var(--white);
+    margin-block-end: 1em;
+  }
+  p {
+    margin-bottom: 0.5em;
+  }
+}
+.person-content {
+}
