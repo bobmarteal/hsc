@@ -1,0 +1,95 @@
+---
+import { Icon } from "astro-icon/components";
+const { id, label, classes, sidelines, ...rest } = Astro.props;
+---
+
+<!-- start form-wrapper -->
+<div class="">
+  <form action="" class:list={["form", "major-minor-form", classes]} {...rest}>
+    <div class="text-input">
+      <label for={id} class="sr-only">{label}</label>
+      <input type="search" id={id} size="25" placeholder={label} />
+      <button type="submit"><Icon name="Search" /></button>
+    </div>
+    <div class="options">
+      <label>
+        <input type="checkbox" id="Major" name="interest" value="Major" />
+        Major
+      </label>
+      <label>
+        <input type="checkbox" id="Minor" name="interest" value="Minor" />
+        Minor
+      </label>
+      <label>
+        <input type="checkbox" id="Program" name="interest" value="Program" />
+        Program
+      </label>
+      <label>
+        <input type="checkbox" id="All" name="interest" value="All" />
+        All
+      </label>
+    </div>
+    <div class="view">
+      <button class="view-toggle show-grid selected"
+        ><svg
+          width="48"
+          height="48"
+          viewBox="0 0 48 48"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <rect x="9" y="10" width="12" height="12" rx="1" stroke-width="3"
+          ></rect>
+          <rect x="9" y="26" width="12" height="12" rx="1" stroke-width="3"
+          ></rect>
+          <rect x="26" y="10" width="12" height="12" rx="1" stroke-width="3"
+          ></rect>
+          <rect x="26" y="26" width="12" height="12" rx="1" stroke-width="3"
+          ></rect>
+        </svg>
+
+        <div class="sr-only">show grid</div>
+      </button>
+      <button class="view-toggle show-list">
+        <svg
+          width="48"
+          height="48"
+          viewBox="0 0 48 48"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path d="M8 17H37" stroke-width="3" stroke-linecap="round"></path>
+          <path d="M8 25H31" stroke-width="3" stroke-linecap="round"></path>
+          <path d="M8 33H25" stroke-width="3" stroke-linecap="round"></path>
+        </svg>
+        <div class="sr-only">show list</div>
+      </button>
+    </div>
+  </form>
+</div>
+
+<!-- end form-wrapper -->
+<script is:inline>
+  $(".show-list").on({
+    click: function () {
+      var _this = $(this);
+      var _showGrid = $(".show-grid");
+      var _majorsMinorsList = $(".majors-minors-list");
+      _majorsMinorsList.removeClass("grid").addClass("list");
+      _showGrid.removeClass("selected");
+      _this.addClass("selected");
+      return false;
+    },
+  });
+  $(".show-grid").on({
+    click: function () {
+      var _this = $(this);
+      var _showList = $(".show-list");
+      var _majorsMinorsList = $(".majors-minors-list");
+      _majorsMinorsList.removeClass("list").addClass("grid auto-300-a");
+      _showList.removeClass("selected");
+      _this.addClass("selected");
+      return false;
+    },
+  });
+</script>

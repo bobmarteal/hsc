@@ -1,0 +1,130 @@
+[
+  {
+    "name": "Applied Mathematics",
+    "introText": "One of the most lorem ipsum dolor sit amet popular majors at Hampden-Sydney, the lorem ipsum program provides lorem ipsum dolor sit amet students with extensive training in lorem ipsum dolor sit amet.",
+    "image": "/images/baseball-field.jpg",
+
+    "major": false,
+    "minor": true
+  },
+  {
+    "name": "Asian Studies",
+    "introText": "One of the most lorem ipsum dolor sit amet popular majors at Hampden-Sydney, the lorem ipsum program provides lorem ipsum dolor sit amet students with extensive training in lorem ipsum dolor sit amet.",
+    "image": "/images/baseball-field.jpg",
+
+    "minor": true,
+    "major": false
+  },
+  {
+    "name": "Astronomy",
+    "introText": "One of the most lorem ipsum dolor sit amet popular majors at Hampden-Sydney, the lorem ipsum program provides lorem ipsum dolor sit amet students with extensive training in lorem ipsum dolor sit amet.",
+    "image": "/images/baseball-field.jpg",
+
+    "minor": true,
+    "major": false
+  },
+  {
+    "name": "Biochemistry & Molecular Biology",
+    "introText": "One of the most lorem ipsum dolor sit amet popular majors at Hampden-Sydney, the lorem ipsum program provides lorem ipsum dolor sit amet students with extensive training in lorem ipsum dolor sit amet.",
+    "image": "/images/baseball-field.jpg",
+
+    "major": true,
+    "minor": false
+  },
+  {
+    "name": "Biology",
+    "introText": "One of the most lorem ipsum dolor sit amet popular majors at Hampden-Sydney, the lorem ipsum program provides lorem ipsum dolor sit amet students with extensive training in lorem ipsum dolor sit amet.",
+    "image": "/images/baseball-field.jpg",
+
+    "major": true,
+    "minor": true
+  },
+  {
+    "name": "Chemistry",
+    "introText": "One of the most lorem ipsum dolor sit amet popular majors at Hampden-Sydney, the lorem ipsum program provides lorem ipsum dolor sit amet students with extensive training in lorem ipsum dolor sit amet.",
+    "image": "/images/baseball-field.jpg",
+
+    "minor": true,
+    "major": false
+  },
+  {
+    "name": "Astronomy",
+    "introText": "One of the most lorem ipsum dolor sit amet popular majors at Hampden-Sydney, the lorem ipsum program provides lorem ipsum dolor sit amet students with extensive training in lorem ipsum dolor sit amet.",
+    "image": "/images/baseball-field.jpg",
+
+    "minor": true,
+    "major": false
+  },
+  {
+    "name": "Classical Studies",
+    "introText": "One of the most lorem ipsum dolor sit amet popular majors at Hampden-Sydney, the lorem ipsum program provides lorem ipsum dolor sit amet students with extensive training in lorem ipsum dolor sit amet.",
+    "image": "/images/baseball-field.jpg",
+
+    "major": true,
+    "minor": false
+  },
+  {
+    "name": "Computer Science",
+    "introText": "One of the most lorem ipsum dolor sit amet popular majors at Hampden-Sydney, the lorem ipsum program provides lorem ipsum dolor sit amet students with extensive training in lorem ipsum dolor sit amet.",
+    "image": "/images/baseball-field.jpg",
+
+    "major": true,
+    "minor": true
+  },
+  {
+    "name": "Creative Writing",
+    "introText": "One of the most lorem ipsum dolor sit amet popular majors at Hampden-Sydney, the lorem ipsum program provides lorem ipsum dolor sit amet students with extensive training in lorem ipsum dolor sit amet.",
+    "image": "/images/baseball-field.jpg",
+
+    "minor": true,
+    "major": true
+  },
+  {
+    "name": "Environmental Studies",
+    "introText": "One of the most lorem ipsum dolor sit amet popular majors at Hampden-Sydney, the lorem ipsum program provides lorem ipsum dolor sit amet students with extensive training in lorem ipsum dolor sit amet.",
+    "image": "/images/baseball-field.jpg",
+
+    "minor": true,
+    "major": false
+  },
+  {
+    "name": "Economics",
+    "introText": "One of the most lorem ipsum dolor sit amet popular majors at Hampden-Sydney, the lorem ipsum program provides lorem ipsum dolor sit amet students with extensive training in lorem ipsum dolor sit amet.",
+    "image": "/images/baseball-field.jpg",
+
+    "major": true,
+    "minor": true
+  },
+  {
+    "name": "Economics & Business",
+    "introText": "One of the most lorem ipsum dolor sit amet popular majors at Hampden-Sydney, the lorem ipsum program provides lorem ipsum dolor sit amet students with extensive training in lorem ipsum dolor sit amet.",
+    "image": "/images/baseball-field.jpg",
+
+    "major": true,
+    "minor": true
+  },
+  {
+    "name": "Engineering Physics",
+    "introText": "One of the most lorem ipsum dolor sit amet popular majors at Hampden-Sydney, the lorem ipsum program provides lorem ipsum dolor sit amet students with extensive training in lorem ipsum dolor sit amet.",
+    "image": "/images/baseball-field.jpg",
+
+    "minor": true,
+    "major": false
+  },
+  {
+    "name": "English",
+    "introText": "One of the most lorem ipsum dolor sit amet popular majors at Hampden-Sydney, the lorem ipsum program provides lorem ipsum dolor sit amet students with extensive training in lorem ipsum dolor sit amet.",
+    "image": "/images/baseball-field.jpg",
+
+    "minor": true,
+    "major": false
+  },
+  {
+    "name": "Foreign Affairs",
+    "introText": "One of the most lorem ipsum dolor sit amet popular majors at Hampden-Sydney, the lorem ipsum program provides lorem ipsum dolor sit amet students with extensive training in lorem ipsum dolor sit amet.",
+    "image": "/images/baseball-field.jpg",
+
+    "major": true,
+    "minor": true
+  }
+]

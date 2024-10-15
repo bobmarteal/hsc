@@ -1,0 +1,43 @@
+/*
+
+    Sytles for major/minor
+    -cards
+    -list
+    -full page
+
+*/
+
+.card--major-minor {
+  a {
+    text-transform: uppercase;
+    font-family: var(--ff-sans-bold);
+    color: var(--red-500);
+    text-decoration: none;
+  }
+  .levels {
+    font-family: var(--ff-sans-bold);
+  }
+}
+:is(.grid) > .card--major-minor {
+  .levels {
+    display: flex;
+    // gap: 0.25em;
+  }
+}
+:is(.list) > .card--major-minor {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em 0;
+  border-bottom: 1px solid var(--gray-500);
+  img {
+    display: none;
+  }
+  .major,
+  .minor {
+    display: inline-block;
+    width: 5em;
+  }
+  .separator {
+    display: none;
+  }
+}

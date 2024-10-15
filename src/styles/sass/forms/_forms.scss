@@ -189,8 +189,12 @@ select[multiple] {
     }
   }
 }
+/*
+  the rounded field with an included magnifying glass
 
-.form--simple {
+*/
+.form--simple,
+.text-input {
   background: var(--gray-100);
   border-radius: 2em;
   padding: 0.5em 0.5em 0.5em 1em;
@@ -202,7 +206,8 @@ select[multiple] {
     flex-direction: row;
   }
   input {
-    width: 15em;
+    // width: 15em;
+    flex-grow: 1;
     min-width: 0;
     margin-bottom: 0.5em;
     @include mq(small) {
@@ -223,5 +228,36 @@ select[multiple] {
   }
   svg {
     margin: 0 auto;
+  }
+}
+
+/*
+  Major and minor form 
+*/
+.major-minor-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: space-between;
+  .text-input {
+    flex: 1 1 auto;
+  }
+  button {
+    width: 2em;
+    height: 2em;
+    border: 3px solid var(--white);
+    border-radius: 50%;
+    cursor: pointer;
+    color: var(--white);
+    svg {
+      stroke: var(--white);
+    }
+    &.selected {
+      background: var(--white);
+      color: var(--blue-500);
+      svg {
+        stroke: var(--blue-500);
+      }
+    }
   }
 }

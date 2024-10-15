@@ -1,0 +1,31 @@
+---
+import MajorMinorForm from "@/components/forms/MajorMinorForm.astro";
+import Breadcrumbs from "@/components/ui/Breadcrumbs.astro";
+import Heading from "@/components/ui/Heading.astro";
+import LandingPageWrapper from "@/layouts/LandingPageWrapper.astro";
+import MajorMinorList from "@/components/majors-minors/MajorMinorList.astro";
+
+// majors and minors
+// form with text, checkboxes, grid/list toggle
+// same html changing class list/grid
+---
+
+<LandingPageWrapper>
+  <div class="full-width">
+    <Heading tagName="h1" size="base5" family="serif" classes=""
+      >Majors & Minors</Heading
+    >
+    <Breadcrumbs />
+    <div class="red-bg full-width m-bottom-3">
+      <div class="grid one-two center-align m-block-2">
+        <Heading tagName="h3" size="base4" family="serif" classes="m-bottom-0"
+          >What would you like to study?</Heading
+        >
+        <div>
+          <MajorMinorForm />
+        </div>
+      </div>
+    </div>
+    <MajorMinorList />
+  </div>
+</LandingPageWrapper>

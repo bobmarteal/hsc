@@ -1,0 +1,26 @@
+---
+// images
+import Football from "../../assets/Football-player.jpg";
+import { Image } from "astro:assets";
+const { name, introText, major, minor } = Astro.props;
+---
+
+<div class="card card--major-minor">
+  <Image src={Football} width={800} alt="" class="thumbnail-image m-bottom-1" />
+  <p class="title m-bottom-0"><a href="">{name}</a></p>
+  <!-- <p class="fs--1">{introText}</p> -->
+  <span class="levels">
+    <span class="major">
+      {major && "Major"}
+    </span>
+    <div class="separator">
+      {major & minor ? " / " : null}
+    </div>
+
+    <span class="minor">
+      {minor && "Minor"}
+    </span>
+  </span>
+
+  <!--  -->
+</div>

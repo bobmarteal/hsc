@@ -1,0 +1,21 @@
+---
+// list of majors and minors will have a class that changes to change up the layouts
+
+import majorMinorCardData from "../../data/major-minors.json";
+import MajorMinorCard from "./MajorMinorCard.astro";
+
+export type mmCard = {
+  name: string;
+  introText: string;
+  image: string;
+  major: boolean;
+  minor: boolean;
+};
+---
+
+<section>
+  <!-- <div class="majors-minors-list grid auto-300-a"> -->
+  <div class="majors-minors-list grid auto-300-a">
+    {majorMinorCardData.map((mmCard: mmCard) => <MajorMinorCard {...mmCard} />)}
+  </div>
+</section>
