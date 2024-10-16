@@ -12,20 +12,38 @@ const { id, label, classes, sidelines, ...rest } = Astro.props;
       <button type="submit"><Icon name="Search" /></button>
     </div>
     <div class="options">
-      <label>
+      <label class="form-control">
         <input type="checkbox" id="Major" name="interest" value="Major" />
         Major
       </label>
-      <label>
+      <label class="form-control">
         <input type="checkbox" id="Minor" name="interest" value="Minor" />
         Minor
       </label>
-      <label>
+      <label class="form-control">
         <input type="checkbox" id="Program" name="interest" value="Program" />
         Program
       </label>
-      <label>
+      <label class="form-control">
         <input type="checkbox" id="All" name="interest" value="All" />
+        All
+      </label>
+    </div>
+    <div class="options">
+      <label class="form-control">
+        <input type="radio" id="Major" name="interest" value="Major" />
+        Major
+      </label>
+      <label class="form-control">
+        <input type="radio" id="Minor" name="interest" value="Minor" />
+        Minor
+      </label>
+      <label class="form-control">
+        <input type="radio" id="Program" name="interest" value="Program" />
+        Program
+      </label>
+      <label class="form-control">
+        <input type="radio" id="All" name="interest" value="All" />
         All
       </label>
     </div>

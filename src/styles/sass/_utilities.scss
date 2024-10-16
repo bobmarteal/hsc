@@ -4,6 +4,8 @@
     2. centering
     3. background colors
     4. margins
+    5. border-radiuses
+    
 */
 .inline-center {
   margin-inline: auto;
@@ -58,6 +60,9 @@
 }
 
 // margin-block-end classes give margin bottom
+.m-bottom-05 {
+  margin-block-end: 0.5em;
+}
 .m-bottom-0 {
   margin-block-end: 0;
 }
@@ -86,4 +91,18 @@
 }
 .m-block-4 {
   margin-block: 4rem;
+}
+
+// put border radius on items
+.border-radius-small {
+  border-radius: var(--border-radius-small);
+  overflow: clip;
+}
+.border-radius-medium {
+  border-radius: var(--border-radius-medium);
+  overflow: clip;
+}
+.border-radius-large {
+  border-radius: var(--border-radius-large);
+  overflow: clip;
 }

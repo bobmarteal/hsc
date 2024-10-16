@@ -7,16 +7,45 @@ import { Image } from "astro:assets";
 
 // images
 import HSCLarge from "../../assets/hsc-logo-large.png";
-
 ---
-<section class="full-width gray-bg m-bottom-3">
-    <div class="text-links v-center grid three-one">
-        <p><Image src={HSCLarge} width={700} alt=""></Image></p>
-		<ul class="buttons">
-			<li><Link style="primary" href="/text"  classes="button button--primary" text="Apply to H-SC" icon={{name:"arrow-right", side:"right"}}></Link></li>
-			<li><Link style="primary" href="/text"  classes="button button--primary" text="Schedule a visit" icon={{name:"arrow-right", side:"right"}}></Link></li>
-			<li><Link style="primary" href="/text"  classes="button button--primary" text="Contact us" icon={{name:"arrow-right", side:"right"}}></Link></li>
-		</ul>
-    </div>
-</section>
 
+<!-- 
+	- .full-width to extend to edges, 
+	- .gray-bg for the bg color, 
+	- margin bottom 
+	- simple two 3/1 two column grid
+-->
+<section class="full-width gray-bg m-bottom-3">
+  <div class="text-links center-align grid three-one">
+    <Image src={HSCLarge} width={700} alt="" />
+    <ul class="buttons">
+      <li>
+        <Link
+          style="primary"
+          href="/text"
+          classes="button button--primary"
+          text="Apply to H-SC"
+          icon={{ name: "arrow-right", side: "right" }}
+        />
+      </li>
+      <li>
+        <Link
+          style="primary"
+          href="/text"
+          classes="button button--primary"
+          text="Schedule a visit"
+          icon={{ name: "arrow-right", side: "right" }}
+        />
+      </li>
+      <li>
+        <Link
+          style="primary"
+          href="/text"
+          classes="button button--primary"
+          text="Contact us"
+          icon={{ name: "arrow-right", side: "right" }}
+        />
+      </li>
+    </ul>
+  </div>
+</section>

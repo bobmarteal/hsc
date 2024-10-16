@@ -9,6 +9,12 @@ import { Image } from "astro:assets";
 import Football from "../../assets/Football-player.jpg";
 ---
 
+<!-- 
+  - sets text-centered-image overlay grid
+  - adds the shaded crest
+  - set full-width gray section with...
+  - a narrow div.
+-->
 <div class="full-width crest-overlay text-centered-image">
   <Image src={Football} width={1600} alt="" class="full-width" />
   <div class="text">
@@ -22,8 +28,14 @@ import Football from "../../assets/Football-player.jpg";
   </div>
 </div>
 <div class="full-width gray-bg m-bottom-3">
+  <!-- 
+    - sets the container to take up the narrow column
+    - centers all text
+    - centers the text block in the column
+    - adds the "white-tiger" (rawr)
+  -->
   <div class="narrow centered-text align-center m-block-4 white-tiger">
-    <Heading tagName="h2" size="base4" family="serif"
+    <Heading tagName="h2" size="base6" family="serif" class="fc-red"
       >Forming Good Men & Good Sportsmen</Heading
     >
     <p>

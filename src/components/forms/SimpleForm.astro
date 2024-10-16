@@ -2,25 +2,20 @@
 import { Icon } from "astro-icon/components";
 const { id, label, classes, sidelines, ...rest } = Astro.props;
 ---
-<!-- start form-wrapper -->
 
+<!-- This is the little one line search field that is currenlty on the homepage -->
 <div class="form-wrapper">
-    { sidelines && <div class="sideline"></div>}
-    <form 
-        action="" 
-        class:list={[
-            "form",
-            "form--simple",
-            "inline-center",
-            classes
-        ]}
-        {...rest}
-    >
-        <label for={id} class="sr-only">{label}</label>
-        <input type="search" id={id} size="25" placeholder={label}>
-        <button type="submit"><Icon name="Search"></Icon></button>
-    </form>    
-    { sidelines && <div class="sideline"></div>}
+  {sidelines && <div class="sideline" />}
+  <form
+    action=""
+    class:list={["form", "form--simple", "inline-center", classes]}
+    {...rest}
+  >
+    <label for={id} class="sr-only">{label}</label>
+    <input type="search" id={id} size="25" placeholder={label} />
+    <button type="submit"><Icon name="Search" /></button>
+  </form>
+  {sidelines && <div class="sideline" />}
 </div>
 
-<!-- end form-wrapper -->
+<!-- end simple form -->

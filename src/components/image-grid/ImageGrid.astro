@@ -1,18 +1,84 @@
 ---
 import { Image } from "astro:assets";
 
-import PlayingPool from "../../assets/playing-pool.jpg"
+import PlayingPool from "../../assets/playing-pool.jpg";
 ---
 
+<!-- 
+    - simple grid of images now 'cause i don't know what they will actually be.
+    - full-width red section
+    - grid is a little special with the gap
+    - each <img> is giving a thumbnail style
+    - special hashtags card thing.
+-->
 <div class="full-width red-bg">
-    <div class="image-grid  m-block-4">
-        <div><Image src={PlayingPool} width={400} height={400} alt=""></Image></div>
-        <div class="hashtag"><span class="tag"><strong>#HSC</strong>1776</span><span class="shield"></span></div>
-        <div><Image src={PlayingPool} width={400} height={400} alt=""></Image></div>
-        <div><Image src={PlayingPool} width={400} height={400} alt=""></Image></div>
-        <div><Image src={PlayingPool} width={400} height={400} alt=""></Image></div>
-        <div><Image src={PlayingPool} width={400} height={400} alt=""></Image></div>
-        <div><Image src={PlayingPool} width={400} height={400} alt=""></Image></div>
-        <div><Image src={PlayingPool} width={400} height={400} alt=""></Image></div>
-    </div>   
+  <div class="image-grid m-block-4">
+    <div>
+      <Image
+        src={PlayingPool}
+        width={400}
+        height={400}
+        alt=""
+        class="thumbnail-image border-radius-large"
+      />
+    </div>
+    <div class="hashtag">
+      <span class="tag"><strong>#HSC</strong>1776</span><span class="shield"
+      ></span>
+    </div>
+    <div>
+      <Image
+        src={PlayingPool}
+        width={400}
+        height={400}
+        alt=""
+        class="thumbnail-image border-radius-large"
+      />
+    </div>
+    <div>
+      <Image
+        src={PlayingPool}
+        width={400}
+        height={400}
+        alt=""
+        class="thumbnail-image border-radius-large"
+      />
+    </div>
+    <div>
+      <Image
+        src={PlayingPool}
+        width={400}
+        height={400}
+        alt=""
+        class="thumbnail-image border-radius-large"
+      />
+    </div>
+    <div>
+      <Image
+        src={PlayingPool}
+        width={400}
+        height={400}
+        alt=""
+        class="thumbnail-image border-radius-large"
+      />
+    </div>
+    <div>
+      <Image
+        src={PlayingPool}
+        width={400}
+        height={400}
+        alt=""
+        class="thumbnail-image border-radius-large"
+      />
+    </div>
+    <div>
+      <Image
+        src={PlayingPool}
+        width={400}
+        height={400}
+        alt=""
+        class="thumbnail-image border-radius-large"
+      />
+    </div>
+  </div>
 </div>

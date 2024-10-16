@@ -1,20 +1,47 @@
 ---
 import Heading from "../ui/Heading.astro";
 import Link from "@ui/Link.astro";
-
-
 ---
 
+<!-- 
+    in .primary-layout anything that is a direct decendant gets grid-column:content
+    - Center text
+    - ul -- buttons - flat == a horizontal list, -centered-list == items center justified.
+-->
 <section class="m-bottom-2 align-center">
-    <Heading tagName="h2" size="base5" family="serif" classes="m-bottom-1">Choose your own adventure</Heading>
-    <p class="centered-text">
-       Your life's most fulfilling experience starts here.
-    </p>	
-    <ul class="buttons flat centered-list">
-    <li><Link style="primary" href="/text"  classes="button button--primary" text="Apply to H-SC" icon={{name:"arrow-right", side:"right"}}></Link></li>
-    <li><Link style="primary" href="/text"  classes="button button--primary" text="Schedule a visit" icon={{name:"arrow-right", side:"right"}}></Link></li>
-    <li><Link style="primary" href="/text"  classes="button button--primary" text="Contact us" icon={{name:"arrow-right", side:"right"}}></Link></li>
-  
-
-    </ul>
+  <Heading tagName="h2" size="base5" family="serif" classes="m-bottom-1"
+    >Choose your own adventure</Heading
+  >
+  <p class="centered-text">
+    Your life's most fulfilling experience starts here.
+  </p>
+  <ul class="buttons flat centered-list">
+    <li>
+      <Link
+        style="primary"
+        href="/text"
+        classes="button button--primary"
+        text="Apply to H-SC"
+        icon={{ name: "arrow-right", side: "right" }}
+      />
+    </li>
+    <li>
+      <Link
+        style="primary"
+        href="/text"
+        classes="button button--primary"
+        text="Schedule a visit"
+        icon={{ name: "arrow-right", side: "right" }}
+      />
+    </li>
+    <li>
+      <Link
+        style="primary"
+        href="/text"
+        classes="button button--primary"
+        text="Contact us"
+        icon={{ name: "arrow-right", side: "right" }}
+      />
+    </li>
+  </ul>
 </section>

@@ -1,0 +1,169 @@
+---
+// layout
+import Breadcrumbs from "@/components/ui/Breadcrumbs.astro";
+import LandingPageWrapper from "../layouts/LandingPageWrapper.astro";
+
+// components
+
+//ui items
+import Heading from "@/components/ui/Heading.astro";
+
+// images
+import Football from "../assets/Football-player.jpg";
+import { Image } from "astro:assets";
+---
+
+<LandingPageWrapper>
+  <div class="bleed">
+    <Heading tagName="h3" size="base5" family="serif" classes="m-bottom-2"
+      >Biology</Heading
+    >
+    <Breadcrumbs />
+    <div
+      class="crest-overlay crest-transparent m-bottom-2 border-radius-medium"
+    >
+      <Image src={Football} alt="football" class="" />
+    </div>
+
+    <div class="grid three-one">
+      <div class="text">
+        <Heading tagName="h3" size="base3" family="serif" id="research-overview"
+          >Research overview</Heading
+        >
+        <p>
+          Research interests: specifically, structure & function of marine
+          mammals, especially feeding in toothed and baleen whales; biomechanics
+          & materials science of biological tissues; 3D printing of biological
+          structures or biological analogues; basic fluid dynamics and effects
+          of flow on organisms; fossils & paleontology Potential topics for
+          students: marine biology & oceanography; anatomy & physiology;
+          anything related to evolution (human and otherwise); science &
+          religion; philosophy of science; bioethics; environmental issues
+        </p>
+        <Heading tagName="h3" size="base3" family="serif" id="academic-record"
+          >Academic record</Heading
+        >
+        <ul>
+          <li>Chair of Biology Department</li>
+          <li>Director of Honors Program and Chair of Honors Council</li>
+          <li>
+            Health Science Advisory Committee and faculty advisor to PreHealth
+          </li>
+          <li>
+            Society Organizer of “Know Thyself: Human Genome Project” Symposium
+          </li>
+          <li>Chair, Institutional Animal Care and Use Committee</li>
+          <li>President, Campus chapter of Phi Beta Kappa</li>
+          <li>President, Longwood/Hampden-Sydney chapter of Sigma Xi</li>
+          <li>
+            Faculty rep, Duke Marine Laboratory/Marine Sciences Educational
+            Consortium
+          </li>
+          <li>
+            Service on numerous other College committees (Faculty rep to Board
+            of Trustees, President’s Council, etc.)
+          </li>
+          <li>
+            Chair, Promotion & Tenure Committee Chair, Academic Affairs
+            Committee
+          </li>
+          <li>Faculty Affairs Committee</li>
+          <li>
+            Faculty oversight committee of Center for Entrepreneurship and
+            Political Economy, and Wilson Center for Leadership in the Public
+            Interest
+          </li>
+        </ul>
+        <Heading tagName="h3" size="base3" family="serif" id="affiliations"
+          >Affiliations</Heading
+        >
+        <ul>
+          <li>Sigma Xi (Scientific Research Society)</li>
+          <li>
+            National Association of Biolgoy Teachers, Virginia Association of
+            Biology Teachers
+          </li>
+          <li>
+            National Collegiate Honors Council, Southern Regional Honors
+            Council, Virginia Collegiate Honors Council
+          </li>
+          <li>Society for Integrative and Comparative Biology</li>
+          <li>Society for Marine Mammalogy</li>
+          <li>International Society of Vertebrate Morphology</li>
+          <li>Society for the Study of Mammalian Evolution</li>
+          <li>Virginia Natural History Society</li>
+          <li>Reviewer for NSF and 20 journals</li>
+        </ul>
+        <Heading tagName="h3" size="base3" family="serif" id="publications"
+          >Publications</Heading
+        >
+        <p>
+          Werth, A.J., and J. Potvin. 2024. Dynamic filtration in baleen whales:
+          recent discoveries and emerging trends. Frontiers in Marine Science,
+          section Marine Ecosystem Ecology 11:1347497,
+          <a href="">https://doi:10.3389/fmars.2024.1347497</a>
+        </p>
+        <p>
+          Werth, A.J., Kahane-Rapport, S., Potvin, J., Goldbogen, J.A., and M.S.
+          Savoca. 2024. Baleen-plastic interactions reveal high risk to all
+          filter-feeding whales from clogging, ingestion, and entanglement.
+          Oceans 5(1):48-70, <a href="">https://doi.org/10.3390/oceans5010004</a
+          >
+        </p>
+        <p>
+          Potvin, J., and A.J. Werth. 2024. Suffused: baleen fringe mat porosity
+          and hydrodynamics in balaenid and balaenopterid whales. Biological
+          Journal of the Linnean Society xx:1-18,
+          <a href="">https://doi.org/10.1093/biolinnean/blae030</a>
+        </p>
+        <p>
+          Stevenson, A., and A.J. Werth. 2024. Humpback whales inflate throat
+          pleats to rub against the seafloor for skin maintenance. Marine Mammal
+          Science e13127:1-12, https://doi.org/10.1111/mms.13127
+        </p>
+        <p>
+          Maris, A. 2024. A spa session for humpback whales. Nature research
+          highlight https://www.nature.com/articles/d41586-024-01072-x
+        </p>
+        <p>
+          Werth, A.J., and B.L. Beatty. 2023. Osteological correlates of
+          evolutionary transitions in cetacean feeding and related oropharyngeal
+          functions. Frontiers in Ecology and Evolution, section Paleontology
+          11:1179804. doi:10.3389/fevo.2023.1179804
+        </p>
+        <p>
+          Loch, C., Fordyce, R.E., and A.J. Werth. 2023. Skulls, teeth, and sex.
+          In Sex in Cetaceans: Morphology, Behavior, and the Evolution of Sexual
+          Strategies, ed. B. Würsig and D.N. Orbach, pp 51-64. Cham,
+          Switzerland: Springer.
+        </p>
+        <p>
+          Werth, A.J., and C.D. Marshall. 2023. Convergent evolution of
+          secondarily aquatic feeding in mammals. In Convergent Evolution, ed.
+          V. Bels and P. Legreneur, pp 183-220. Cham, Switzerland: Springer.
+        </p>
+        <p>
+          Werth, A.J. 2022. Invited review of Thinking About Evolution: 25
+          Questions Christians Want Answered (2020) by Anjeanette Roberts,
+          Fazale Rana, Sue Dykes, and Mark Perez. Perspectives: Journal of the
+          American Scientific Affiliation 74(2): 112-113.
+        </p>
+        <p>
+          Werth, A.J., and J.E. Corbett. 2021. The brain limit. eLife
+          2021;10:e74096. Werth, A.J. 2021. Natural selection as absence of
+          change: twin paradoxes of normalizing (optimizing) selection. American
+          International Journal of Biology 9(2):1-7.
+        </p>
+      </div>
+      <div class="otp-nav">
+        <p><strong class="caps">On this page:</strong></p>
+        <ul>
+          <li><a href="#research-overview">Research overview</a></li>
+          <li><a href="#academic-record">Academic record</a></li>
+          <li><a href="#affiliations">Affiliations</a></li>
+          <li><a href="#publications">Publications</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</LandingPageWrapper>

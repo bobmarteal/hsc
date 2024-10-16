@@ -86,7 +86,9 @@ The base stylesheet for all site text styles
   //   --step-6: clamp(1.5rem, 2.8691rem + 2.4507vi, 4.2684rem);
   // }
 }
-
+/*
+  Font sizes
+*/
 .fs--3 {
   font-size: var(--step--3);
 }
@@ -181,10 +183,6 @@ h6 {
 }
 
 /*
-    Font-weights
-*/
-
-/*
     Font-family
 */
 
@@ -216,4 +214,11 @@ em {
 }
 .caps {
   text-transform: uppercase;
+}
+
+/*
+  Font color utility classes
+*/
+.fc-red {
+  color: var(--red-500);
 }

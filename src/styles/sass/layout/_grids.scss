@@ -2,9 +2,16 @@
     Main grids
 */
 @use "../_mixins.scss" as *;
+
+/*
+  base grid
+*/
 .grid {
   display: grid;
   gap: 2em;
+  /*
+    main layout grids
+  */
   &.one-one {
     @include mq(medium) {
       grid-template-columns: 1fr 1fr;
@@ -25,9 +32,18 @@
       grid-template-columns: 1fr 3fr;
     }
   }
+  /*
+    flexible layout grids
+  */
+  &.auto-220-a {
+    grid-template-columns: repeat(auto-fit, minmax(220px, auto));
+  }
   &.auto-300-a {
     grid-template-columns: repeat(auto-fit, minmax(300px, auto));
   }
+  /*
+    grid alignment utilities
+  */
   &.top-align {
     align-items: flex-start;
   }

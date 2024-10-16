@@ -10,22 +10,21 @@ import BaseballField from "../assets/baseball-field.jpg";
 import PlayingPool from "../assets/playing-pool.jpg";
 import InContentFeatureBlock from "@/components/page-block/InContentFeatureBlock.astro";
 import SidebarNav from "@/components/navigations/SidebarNav.astro";
+import Breadcrumbs from "@/components/ui/Breadcrumbs.astro";
 ---
 
 <MainPageWrapper>
+  <!-- 
+    - basic-page sets grid to place primary elements
+    - elements == .title, .breadcrumbs, .sidebar-nav, .page-content
+  -->
   <div class="basic-page-layout">
     <div class="title">
       <Heading tagName="h1" size="base5" family="serif"
         >Honors Program - Basic page</Heading
       >
     </div>
-    <div class="breadcrumbs">
-      <p>
-        <span class="caps"><strong>You are here:</strong> </span><a href=""
-          >Academics</a
-        > > <a href=""> Programs & Centers</a> > <a href="">Honors Program</a>
-      </p>
-    </div>
+    <Breadcrumbs />
     <SidebarNav />
     <div class="page-content">
       <div class="crest-overlay-with-fade crest-transparent">

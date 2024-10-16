@@ -10,31 +10,54 @@ import Link from "@ui/Link.astro";
 //data
 import articleCardData from "../../data/article-cards.json";
 
-
 // typesetting
 export type articleCard = {
-    headline: string,
-    date: string,
-    imageSrc: string
+  headline: string;
+  date: string;
+  imageSrc: string;
 };
 ---
-<section class="content  m-bottom-3">
-    <Heading tagName="h3" size="base6" family="serif" class="align-center centered-text">News</Heading>
-    <div class="article-card-carousel carousel-standard carousel m-bottom-3">
-        {articleCardData.map((articleCard:articleCard) => <ArticleCard {...articleCard}></ArticleCard>
-        )} 
-    </div>
-    <Link style="primary" href="/text"  classes="button button--primary inline-center" text="H-SC News in full" icon={{name:"arrow-right", side:"right"}}></Link>
-    
-</section>
 
-<script is:inline src=" https://cdn.jsdelivr.net/npm/flickity@3.0.0/dist/flickity.pkgd.min.js "></script>
+<section class="content m-bottom-3">
+  <Heading
+    tagName="h3"
+    size="base6"
+    family="serif"
+    class="align-center m-bottom-3">News</Heading
+  >
+  <!-- 
+    - sets up the container that Flickity will chew on.
+    - adds .carousel-standard just to keep the cards small
+  -->
+  <div class="article-card-carousel carousel-standard carousel m-bottom-3">
+    {
+      articleCardData.map((articleCard: articleCard) => (
+        <ArticleCard {...articleCard} />
+      ))
+    }
+  </div>
+  <Link
+    style="primary"
+    href="/text"
+    classes="button button--primary inline-center"
+    text="H-SC News in full"
+    icon={{ name: "arrow-right", side: "right" }}
+  />
+</section>
+<!-- 
+    - go get flickity from CDN
+    - do flickity on .article-card-carousel to keep it different from any other carousels
+-->
+<script
+  is:inline
+  src=" https://cdn.jsdelivr.net/npm/flickity@3.0.0/dist/flickity.pkgd.min.js "
+></script>
 
 <script is:inline>
-var flktyArticles = new Flickity( '.carousel-standard', {
-  // options
-  wrapAround: true,
-  imagesLoaded: true,
-  pageDots: false,
-});
+  var flktyArticles = new Flickity(".article-card-carousel", {
+    // options
+    wrapAround: true,
+    imagesLoaded: true,
+    pageDots: false,
+  });
 </script>

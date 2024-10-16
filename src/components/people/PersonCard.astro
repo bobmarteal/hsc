@@ -9,11 +9,13 @@ const { name, title, department, building, email, phone } = Astro.props;
 ---
 
 <div class="person-card">
-  <Image src={Football} width={800} alt="" class="circle-image" />
+  <Image src={Football} width={800} alt="" class="circle-image m-bottom-1" />
+  <!-- <img src="blah.jpg" class="circle-image m0bottom-1"/> -->
   <div class="name-title">
-    <Heading tagName="h3" size="base3" family="serif" classes="m-bottom-0"
-      >{name}</Heading
+    <Heading tagName="h3" size="base2" family="serif" classes="m-bottom-05"
+      ><a href="/person">{name}</a></Heading
     >
+    <!-- <h3 class="fs-3 fw-regular ff-serif m-bottom-0">Anthony M. Carilli</h3>  -->
     <p class="caps">{title}</p>
   </div>
   <p class="person-department"><strong>{department}</strong></p>

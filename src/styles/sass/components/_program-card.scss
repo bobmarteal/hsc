@@ -1,13 +1,12 @@
 /*
     Program cards - specific for bigger cards.
 */
-.programCard {
+.program-card {
   img {
     border-radius: var(--border-radius-large);
     margin-bottom: 1.25rem;
   }
   h3 {
     margin-bottom: 0.25em;
-    color: var(--red-500);
   }
 }

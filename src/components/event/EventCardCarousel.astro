@@ -10,34 +10,56 @@ import Link from "@ui/Link.astro";
 //data
 import eventCardData from "../../data/event-cards.json";
 
-
 // typesetting
 export type eventCard = {
-    title: string,
-    month: string,
-    date: string
+  title: string;
+  month: string;
+  date: string;
 };
 ---
+
+<!-- 
+    - full-width black bg
+    - .content just makes a content column-width in the big black background
+-->
 <section class="full-width black-bg m-bottom-3">
-    <div class="content event-card-wrapper m-block-3">
-     <Heading tagName="h3" size="base6" family="serif" class="align-center centered-text">Events</Heading>
+  <div class="content event-card-wrapper m-block-3">
+    <Heading
+      tagName="h3"
+      size="base6"
+      family="serif"
+      class="align-center centered-text">Events</Heading
+    >
     <div class="event-card-carousel carousel m-bottom-3">
-        {eventCardData.map((eventCard:eventCard) => <EventCard {...eventCard}></EventCard>
-        )} 
+      {
+        eventCardData.map((eventCard: eventCard) => (
+          <EventCard {...eventCard} />
+        ))
+      }
     </div>
-    <Link style="primary" href="/text"  classes="button button--primary inline-center" text="H-SC News in full" icon={{name:"arrow-right", side:"right"}}></Link>       
-    </div>
-
-    
+    <Link
+      style="primary"
+      href="/text"
+      classes="button button--primary inline-center"
+      text="H-SC News in full"
+      icon={{ name: "arrow-right", side: "right" }}
+    />
+  </div>
 </section>
-
-<script is:inline src=" https://cdn.jsdelivr.net/npm/flickity@3.0.0/dist/flickity.pkgd.min.js "></script>
+<!-- 
+    - call flickity from cdn
+    - do flicity on .event-card-carousel to keep it unique
+-->
+<script
+  is:inline
+  src=" https://cdn.jsdelivr.net/npm/flickity@3.0.0/dist/flickity.pkgd.min.js "
+></script>
 
 <script is:inline>
-var flktyEvents = new Flickity( '.event-card-carousel', {
-  // options
-  wrapAround: true,
-  imagesLoaded: true,
-  pageDots: false,
-});
+  var flktyEvents = new Flickity(".event-card-carousel", {
+    // options
+    wrapAround: true,
+    imagesLoaded: true,
+    pageDots: false,
+  });
 </script>

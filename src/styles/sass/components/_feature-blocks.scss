@@ -22,8 +22,8 @@
 
   @include mq(medium) {
     &.with-logo {
-      width: calc(100% + 10em);
-      margin-left: -10em;
+      // width: calc(100% + 10em);
+      // margin-left: -10em;
       padding-left: 10em;
       position: relative;
       &::after {

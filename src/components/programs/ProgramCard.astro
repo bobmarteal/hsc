@@ -5,15 +5,37 @@ import Heading from "../../components/ui/Heading.astro";
 import Link from "@ui/Link.astro";
 
 // pricingCard props
-const{name, introText, linkText, image} = Astro.props;
+const { name, introText, linkText, image } = Astro.props;
 ---
-<div class="card programCard">
-    <div class="image">
-        <Image src={image} alt="" width={900} height={600}></Image>
-    </div>
-    <div class="cardContent">
-        <Heading tagName="h3" size="base2" family="serif">{name}</Heading>
-        <p class="description">{introText}</p>
-        <Link style="primary" href="/text"  classes="button button--tertiary" text={linkText} icon={{name:"arrow-right", side:"right"}}></Link>
-    </div>
+
+<!-- becasue these are grid items of the wrapper they don't really need any special classes for layout. the ".program-card" is simply to sytle the interior items. -->
+<div class="card program-card">
+  <div class="image">
+    <Image
+      src={image}
+      alt=""
+      width={900}
+      height={600}
+      class="border-radius-large"
+    />
+  </div>
+  <div class="cardContent">
+    <Heading tagName="h3" size="base2" family="serif" class="fc-red"
+      >{name}</Heading
+    >
+    <p class="description">{introText}</p>
+    <Link
+      style="primary"
+      href="/text"
+      classes="button button--tertiary"
+      text={linkText}
+      icon={{ name: "arrow-right", side: "right" }}
+    />
+    <!-- link as a button example <a href="/text" class="link button button--tertiary primary filled">
+      <span> Learn more </span>
+      <svg width="24" height="24" viewBox="0 0 37 26" data-icon="arrow-right">
+        <use xlink:href="#ai:local:arrow-right"></use>
+      </svg>
+    </a> -->
+  </div>
 </div>

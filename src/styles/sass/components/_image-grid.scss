@@ -9,12 +9,8 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(10em, 1fr));
   gap: 0.5em;
-  img {
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
-    border-radius: var(--border-radius-large);
-  }
 }
+
 .hashtag {
   background: var(--gray-300);
   border-radius: var(--border-radius-large);
