@@ -66,28 +66,42 @@
     <section class="feature">
       <p class="header">The best alumni network ever</p>
       <p>
-        WeD're ranked the #3 alumni network for a reason. When yougraduate from
+        We're ranked the #3 alumni network for a reason. When yougraduate from
         here, you'll experience why. Time & time again.
       </p>
       <p><a href="#">Learn more</a></p>
     </section>
   </nav>
 </div>
-<script
-  is:inline
-  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
+
 <!-- end main-nav-wrapper -->
 
 <!-- main-nav-wrapper animation -->
-<script is:inline>
-  $("#mainNavToggle").on({
-    click: function () {
+<script>
+  // @ts-nocheck
+  // console.log("higy");
+  (function ($) {
+    $(".mainNav a").attr("tabindex", -1);
+    $("#mainNavToggle").click(function () {
+      // console.log($(this));
       var _this = $(this);
+
       var _navWrapper = $(".mainNavWrapper");
       var _mainNav = $(".mainNav");
+      var _links = _mainNav.find("a");
+      _links.toArray();
+      const _linksArray = Array.from(_links);
+      // console.log(_linksArray);
+      _linksArray.forEach((link) => {
+        // console.log(link);
+        var thisLink: any = link;
+        thisLink.getAttribute("tabIndex") === "-1"
+          ? thisLink.setAttribute("tabIndex", "0")
+          : thisLink.setAttribute("tabIndex", "-1");
+      });
       _navWrapper.toggleClass("expanded");
       _this.toggleClass("close");
       return false;
-    },
-  });
+    });
+  })(jQuery);
 </script>

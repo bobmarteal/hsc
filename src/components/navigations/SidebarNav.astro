@@ -63,6 +63,7 @@
 
 <script is:inline>
   (function ($) {
+    console.log("sidebarNav");
     // Add aria-haspopup true to links with popups
     $(".nav--main-opener").prev().attr("aria-haspopup", "true");
 
@@ -71,6 +72,7 @@
     // if a menu-button is clicked...
     $(".subnav-toggle").click(function (e) {
       // the button
+      console.log("hiya");
       var _this = $(this);
       // the LI
       var parent = $(_this.parent());

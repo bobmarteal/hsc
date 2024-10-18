@@ -17,6 +17,11 @@ import LandingPageWrapper from "@/layouts/LandingPageWrapper.astro";
 ---
 
 <LandingPageWrapper>
+  <!-- 
+    - Just using .bleed because there are no full width elements
+    - Simple 3/1 grid for .content and aside
+    - 
+  -->
   <div class="bleed">
     <Heading tagName="h1" size="base5" family="serif">Object Library</Heading>
 
@@ -81,7 +86,9 @@ import LandingPageWrapper from "@/layouts/LandingPageWrapper.astro";
             environments to engage in advanced research in their chosen field.
           </figcaption>
         </figure>
-
+        <!-- 
+          Full-width-break out sections get a :before element that gets the background color of the class
+        -->
         <div class="full-width-breakout red m-bottom-2">
           <div>
             <figure class="m-bottom-0">
@@ -119,6 +126,11 @@ import LandingPageWrapper from "@/layouts/LandingPageWrapper.astro";
         <Heading tagName="h2" size="base4" family="serif" id="links">
           Links
         </Heading>
+        <!-- 
+          ul 
+            - .buttons some spacing issues
+            - .flat - displaty flex with a wrap
+        -->
         <ul class="buttons flat m-bottom-2">
           <li>
             <Link
@@ -150,6 +162,9 @@ import LandingPageWrapper from "@/layouts/LandingPageWrapper.astro";
         </ul>
       </div>
       <aside>
+        <!-- 
+          really the .otp-nav can go in an <aside> or a standalone <div>a
+        -->
         <div class="otp-nav">
           <p><strong class="caps">On this page:</strong></p>
           <ul>

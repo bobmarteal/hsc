@@ -65,8 +65,9 @@ import MainNav from "@/components/navigations/MainNav.astro";
   src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"
 ></script>
 
-<script is:inline>
+<script>
   /* When the user scrolls down, logo changes to smaller layout, text size is smaller, reverse on scroll back in */
+  // @ts-nocheck
   let mm = gsap.matchMedia();
 
   mm.add("(min-width: 800px)", () => {

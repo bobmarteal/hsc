@@ -3,40 +3,164 @@ import Link from "@ui/Link.astro";
 ---
 
 <section class="site-footer primary-layout">
-    <footer class="bleed">
-
-        <ul class="footer-audience">
-            <li><a href="">Current Students</a></li>
-            <li><a href="">Faculty & Staff</a></li>
-            <li><a href="">Parents & Families</a></li>
-            <li><a href="">Prospective Students</a></li>
-            <li><a href="">Alumni</a></li>
-        </ul>             
-        <ul class="footer-cta buttons">
-            <li><Link style="primary" href="/text"  classes="button button--secondary" text="Alumni" icon={{name:"arrow-right", side:"right"}}></Link></li>
-            <li><Link style="primary" href="/text"  classes="button button--secondary" text="Hire a Tiger" icon={{name:"arrow-right", side:"right"}}></Link></li>
-            <li><Link style="primary" href="/text"  classes="button button--secondary" text="Support H-SC" icon={{name:"arrow-right", side:"right"}}></Link></li>
-        </ul>
-        <ul class="social-media">
-            <li><a href="">Facebook</a></li>
-            <li><a href="">Instagram</a></li>
-            <li><a href="">Linkedin</a></li>
-            <li><a href="">Youtube</a></li>
-            <li><a href="">X</a></li>
-        </ul>
-        <img src="/images/theme/hsc-logo.png"/>
-        <p class="footer-address">
-           <span> Hampden-Sydney College</span><br />
-            Hampden-Sydney, VA 23943<br />
-            (434) 223-6000
-        </p>           
-        <ul class="footer-resources">
-            <li><a href="">Campus Map</a></li>
-            <li><a href="">Academic Calendar</a></li>
-            <li><a href="">Campus Store</a></li>
-            <li><a href="">Library</a></li>
-            <li><a href="">Tiger Web</a></li>
-        </ul>        
-        <p class="footer-copyright">&copy;2024 Hampden-Sydney College <a href="">Policies</a> <a href="">Emergencies</a></p>
-    </footer>
+  <footer class="bleed">
+    <ul class="footer-audience">
+      <li>
+        <a href="">Current Students</a>
+      </li>
+      <li><a href="">Faculty & Staff</a></li>
+      <li><a href="">Parents & Families</a></li>
+      <li><a href="">Prospective Students</a></li>
+      <li><a href="">Alumni</a></li>
+    </ul>
+    <ul class="footer-cta buttons">
+      <li>
+        <Link
+          style="primary"
+          href="/text"
+          classes="button button--dark"
+          text="Alumni"
+          icon={{ name: "arrow-right", side: "right" }}
+        />
+      </li>
+      <li>
+        <Link
+          style="primary"
+          href="/text"
+          classes="button button--dark"
+          text="Hire a Tiger"
+          icon={{ name: "arrow-right", side: "right" }}
+        />
+      </li>
+      <li>
+        <Link
+          style="primary"
+          href="/text"
+          classes="button button--dark"
+          text="Support H-SC"
+          icon={{ name: "arrow-right", side: "right" }}
+        />
+      </li>
+    </ul>
+    <ul class="social-media">
+      <li>
+        <a href=""
+          ><span class="sr-only">Facebook</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            width="66.962"
+            height="66.961"
+            viewBox="0 0 66.962 66.961"
+          >
+            <path
+              id="Facebook"
+              data-name="facebook"
+              class="cls-1"
+              d="M59.522,0H7.44A7.438,7.438,0,0,0,0,7.44V59.522a7.438,7.438,0,0,0,7.44,7.44H35.791v-25.9H27.075V30.929h8.716V23.47c0-8.646,5.286-13.359,13-13.359a74.413,74.413,0,0,1,7.782.391v9.04H51.263c-4.2,0-5.022,1.987-5.022,4.918v6.454H56.285L54.979,41.051h-8.8V66.962h13.34a7.438,7.438,0,0,0,7.44-7.44V7.44A7.439,7.439,0,0,0,59.522,0"
+              transform="translate(0 0)"></path>
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a href=""
+          ><span class="sr-only">Instagram</span><svg
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            width="38.421"
+            height="38.422"
+            viewBox="0 0 38.421 38.422"
+          >
+            <g id="Instagram" data-name="instagram" class="cls-2">
+              <path
+                id="Path_2331"
+                data-name="Path 2331"
+                class="cls-1"
+                d="M10.672,0A10.674,10.674,0,0,0,0,10.672V27.749A10.674,10.674,0,0,0,10.672,38.421H27.748A10.674,10.674,0,0,0,38.421,27.749V10.672A10.674,10.674,0,0,0,27.748,0ZM32.017,4.269A2.135,2.135,0,1,1,29.883,6.4a2.135,2.135,0,0,1,2.135-2.135M19.21,8.538A10.673,10.673,0,1,1,8.538,19.21,10.673,10.673,0,0,1,19.21,8.538m0,4.269a6.4,6.4,0,1,0,6.4,6.4,6.4,6.4,0,0,0-6.4-6.4"
+              ></path>
+            </g>
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a href=""
+          ><span class="sr-only">Linkedin</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            width="38.952"
+            height="38.953"
+            viewBox="0 0 38.952 38.953"
+          >
+            <g id="Linkedin" data-name="Linkedin" class="cls-2">
+              <path
+                id="Path_2332"
+                data-name="Path 2332"
+                class="cls-1"
+                d="M34.625,0H4.328A4.327,4.327,0,0,0,0,4.328v30.3a4.327,4.327,0,0,0,4.328,4.328h30.3a4.327,4.327,0,0,0,4.328-4.328V4.328A4.327,4.327,0,0,0,34.625,0M12.984,30.3H7.524V15.148h5.46ZM10.158,12.372a2.586,2.586,0,0,1-2.783-2.6c0-1.485,1.112-2.6,2.967-2.6a2.586,2.586,0,0,1,2.783,2.6c0,1.484-1.112,2.6-2.967,2.6M32.46,30.3H27.176V22.017c0-2.29-1.409-2.818-1.937-2.818s-2.289.353-2.289,2.818V30.3H17.49V15.148h5.46v2.114c.7-1.234,2.112-2.114,4.754-2.114s4.757,2.114,4.757,6.869Z"
+                transform="translate(0 0)"></path>
+            </g>
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a href=""
+          ><span class="sr-only">Youtube</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            width="38.494"
+            height="30.795"
+            viewBox="0 0 38.494 30.795"
+          >
+            <g id="YouTube" data-name="YouTube" class="cls-2">
+              <path
+                id="Path_2329"
+                data-name="Path 2329"
+                class="cls-1"
+                d="M37.69,4.207a4.824,4.824,0,0,0-3.4-3.4c-3-.8-15.039-.8-15.039-.8S7.21,0,4.207.8a4.824,4.824,0,0,0-3.4,3.4C0,7.21,0,15.4,0,15.4s0,8.188.8,11.19a4.824,4.824,0,0,0,3.4,3.4c3,.8,15.04.8,15.04.8s12.037,0,15.039-.8a4.821,4.821,0,0,0,3.4-3.4c.8-3,.8-11.19.8-11.19s0-8.188-.8-11.19M15.4,22.065V8.73L26.946,15.4Z"
+                transform="translate(0 0)"></path>
+            </g>
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a href=""
+          ><span class="sr-only">X</span><svg
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            width="38.672"
+            height="38.672"
+            viewBox="0 0 38.672 38.672"
+          >
+            <g id="x" data-name="x" class="cls-2">
+              <path
+                id="Path_2327"
+                data-name="Path 2327"
+                class="cls-1"
+                d="M15.092,10.673l12.049,17.17h-3.2L11.91,10.673ZM38.516,6.419V32.1A6.419,6.419,0,0,1,32.1,38.516H6.419A6.419,6.419,0,0,1,0,32.1V6.419A6.419,6.419,0,0,1,6.419,0H32.1a6.419,6.419,0,0,1,6.419,6.419M31.108,29.957,22.151,17.14l7.322-8.581H26.668l-5.786,6.762L16.16,8.559H7.922l8.433,12.054-8,9.345H11.21l6.422-7.524,5.26,7.524Z"
+                transform="translate(0 0.156)"></path>
+            </g>
+          </svg>
+        </a>
+      </li>
+    </ul>
+    <img src="/images/theme/hsc-logo.png" />
+    <p class="footer-address">
+      <span> Hampden-Sydney College</span><br />
+      Hampden-Sydney, VA 23943<br />
+      (434) 223-6000
+    </p>
+    <ul class="footer-resources">
+      <li><a href="">Campus Map</a></li>
+      <li><a href="">Academic Calendar</a></li>
+      <li><a href="">Campus Store</a></li>
+      <li><a href="">Library</a></li>
+      <li><a href="">Tiger Web</a></li>
+    </ul>
+    <p class="footer-copyright caps">
+      &copy;2024 Hampden-Sydney College <a href="">Policies</a>
+      <a href="">Emergencies</a>
+    </p>
+  </footer>
 </section>
