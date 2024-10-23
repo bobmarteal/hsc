@@ -1,4 +1,5 @@
 ---
+import SiteSearch from "@/components/forms/SiteSearch.astro";
 import Head from "@/layouts/Head.astro";
 import SiteFooter from "@/layouts/SiteFooter.astro";
 import SiteHeader from "@/layouts/SiteHeader.astro";
@@ -8,6 +9,7 @@ import SiteHeader from "@/layouts/SiteHeader.astro";
   <Head {...Astro.props} />
   <body>
     <SiteHeader />
+    <SiteSearch />
     <main class="primary-layout">
       <slot />
     </main>

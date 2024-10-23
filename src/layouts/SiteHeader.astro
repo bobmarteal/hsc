@@ -32,25 +32,46 @@ import MainNav from "@/components/navigations/MainNav.astro";
       /><span class="sr-only">Hampden Sydney College</span>
     </a>
     <div class="actions">
-      <a
-        href="#"
-        id="searchToggle"
-        class="searchToggle"
-        arial-label="show search field"></a>
-      <span></span>
       <div class="cta">
         <a href="/page">page</a>
         <a href="/object-library">library</a>
         <a href="/person">person</a>
       </div>
-      <span></span>
+      <span class="divider"></span>
       <a
         href="#"
         id="mainNavToggle"
         class="menuTrigger"
         aria-label="Open main navigation"
-        >Menu <span></span><span></span><span></span><span></span></a
+        ><span class="sr-only">Menu</span>
+        <span></span><span></span><span></span><span></span></a
       >
+      <!-- <span></span> -->
+      <a
+        href="#"
+        id="searchToggle"
+        class="search-toggle"
+        arial-label="show search field"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          width="22.009"
+          height="22.015"
+          viewBox="0 0 22.009 22.015"
+        >
+          <g id="Group_965" data-name="Group 965" class="cls-2">
+            <path
+              id="Path_3088"
+              data-name="Path 3088"
+              class="cls-1"
+              d="M19.72,17.862l-4.261-4.286a8.659,8.659,0,1,0-1.883,1.858l4.85,4.85a1.277,1.277,0,0,0,.93.392,1.24,1.24,0,0,0,.93-.392,1.313,1.313,0,0,0,0-1.859ZM2.642,8.537a5.9,5.9,0,1,1,5.895,5.92,5.9,5.9,0,0,1-5.895-5.92Z"
+              transform="translate(0 0)"></path>
+          </g>
+        </svg>
+        <span class="sr-only">Show search</span>
+        <span></span><span></span>
+      </a>
     </div>
   </div>
 </header>
@@ -86,5 +107,10 @@ import MainNav from "@/components/navigations/MainNav.astro";
       .to(".logo--large", { height: "0px" })
       .to(".logo--small", { height: "auto" })
       .to(".logoActions", { fontSize: "16px" }, 0);
+  });
+  $(".search-toggle").click(function () {
+    $(".site-search").toggleClass("expanded");
+    $(this).toggleClass("close");
+    return false;
   });
 </script>

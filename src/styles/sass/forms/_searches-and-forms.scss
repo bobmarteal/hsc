@@ -7,13 +7,67 @@
     4. Faculty filters
 */
 
-// site-header searh form
-.searchToggle {
-  background-image: url("/images/theme/search-white.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-color: unset;
+// site-header searh-toggle
+.search-toggle {
+  height: 2em;
+  width: 2em;
+  background: var(--blue-500);
+  border-radius: 1rem;
   border: none;
-  width: 0.9rem;
-  height: 0.9rem;
+  font-size: var(--step--2);
+  position: relative;
+  svg {
+    // stroke: var(--white);
+    fill: var(--white);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    transition: opacity 0.25s ease-in;
+  }
+  span:not(.sr-only) {
+    display: block;
+    position: absolute;
+    height: 4px;
+    width: 1em;
+    background: var(--white);
+    border-radius: 4px;
+    opacity: 0;
+    // left: 25%;
+
+    transition: all 0.25s ease-in-out;
+    top: 50%;
+    left: 50%;
+    transform: rotate(0deg) translate(-50%, -50%);
+  }
+
+  &.close {
+    svg {
+      opacity: 0;
+    }
+    span:not(.sr-only) {
+      opacity: 1;
+    }
+    span:nth-child(3) {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+    span:nth-child(4) {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+  }
+}
+
+/*
+
+  .site-search AKA the drop down main search
+
+*/
+
+.site-search {
+  height: 0;
+  transition: height 0.25s ease;
+  &.expanded {
+    height: auto;
+  }
 }

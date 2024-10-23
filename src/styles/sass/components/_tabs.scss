@@ -5,6 +5,7 @@
 [role="tablist"] {
   min-width: 100%;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   gap: 0.125em;
 }
