@@ -3,7 +3,7 @@
 ---
 
 <!-- start main-nav-wrapper - this is all the dropdown -->
-<div class="mainNavWrapper primary-layout">
+<div class="main-nav-wrapper primary-layout" id="mainNavWrapper">
   <nav class="mainNav content" id="mainNav">
     <section class="academics">
       <p class="header">Academics</p>
@@ -62,7 +62,6 @@
         <li><a href="#">Compass Program</a></li>
       </ul>
     </section>
-
     <section class="feature">
       <p class="header">The best alumni network ever</p>
       <p>
@@ -78,22 +77,17 @@
 
 <!-- main-nav-wrapper animation -->
 <script>
-  // @ts-nocheck
-  // console.log("higy");
   (function ($) {
     $(".mainNav a").attr("tabindex", -1);
     $("#mainNavToggle").click(function () {
       // console.log($(this));
       var _this = $(this);
-
-      var _navWrapper = $(".mainNavWrapper");
+      var _navWrapper = $(".main-nav-wrapper");
       var _mainNav = $(".mainNav");
       var _links = _mainNav.find("a");
       _links.toArray();
       const _linksArray = Array.from(_links);
-      // console.log(_linksArray);
       _linksArray.forEach((link) => {
-        // console.log(link);
         var thisLink: any = link;
         thisLink.getAttribute("tabIndex") === "-1"
           ? thisLink.setAttribute("tabIndex", "0")
@@ -101,6 +95,12 @@
       });
       _navWrapper.toggleClass("expanded");
       _this.toggleClass("close");
+      $(".site-search").removeClass("expanded");
+      $(this).attr(
+        "aria-expanded",
+        $(this).attr("aria-expanded") === "true" ? "false" : "true"
+      );
+      $(".search-toggle").removeClass("close");
       return false;
     });
   })(jQuery);

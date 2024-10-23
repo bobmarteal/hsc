@@ -5,7 +5,7 @@
 */
 @use "../_mixins.scss" as *;
 // menuTrigger
-.menuTrigger {
+.menu-toggle {
   height: 2em;
   width: 2em;
   background: var(--blue-500);
@@ -54,7 +54,7 @@
 }
 
 // main flyout nav
-.mainNavWrapper {
+.main-nav-wrapper {
   background: var(--black);
   color: var(--gray-100);
   font-size: var(--step--2);

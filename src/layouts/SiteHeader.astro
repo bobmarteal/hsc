@@ -41,9 +41,10 @@ import MainNav from "@/components/navigations/MainNav.astro";
       <a
         href="#"
         id="mainNavToggle"
-        class="menuTrigger"
-        aria-label="Open main navigation"
-        ><span class="sr-only">Menu</span>
+        class="menu-toggle"
+        aria-expanded="false"
+        aria-controls="mainNavWrapper"
+        ><span class="sr-only">Toggle main navigation</span>
         <span></span><span></span><span></span><span></span></a
       >
       <!-- <span></span> -->
@@ -52,6 +53,8 @@ import MainNav from "@/components/navigations/MainNav.astro";
         id="searchToggle"
         class="search-toggle"
         arial-label="show search field"
+        aria-expanded="false"
+        aria-controls="siteSearch"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -69,7 +72,7 @@ import MainNav from "@/components/navigations/MainNav.astro";
               transform="translate(0 0)"></path>
           </g>
         </svg>
-        <span class="sr-only">Show search</span>
+        <span class="sr-only">Toggle site search</span>
         <span></span><span></span>
       </a>
     </div>
@@ -111,6 +114,12 @@ import MainNav from "@/components/navigations/MainNav.astro";
   $(".search-toggle").click(function () {
     $(".site-search").toggleClass("expanded");
     $(this).toggleClass("close");
+    $(this).attr(
+      "aria-expanded",
+      $(this).attr("aria-expanded") === "true" ? "false" : "true"
+    );
+    $(".main-nav-wrapper").removeClass("expanded");
+    $(".menu-toggle").removeClass("close");
     return false;
   });
 </script>
