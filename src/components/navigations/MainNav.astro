@@ -76,32 +76,30 @@
 <!-- end main-nav-wrapper -->
 
 <!-- main-nav-wrapper animation -->
-<script>
-  (function ($) {
-    $(".mainNav a").attr("tabindex", -1);
-    $("#mainNavToggle").click(function () {
-      // console.log($(this));
-      var _this = $(this);
-      var _navWrapper = $(".main-nav-wrapper");
-      var _mainNav = $(".mainNav");
-      var _links = _mainNav.find("a");
-      _links.toArray();
-      const _linksArray = Array.from(_links);
-      _linksArray.forEach((link) => {
-        var thisLink: any = link;
-        thisLink.getAttribute("tabIndex") === "-1"
-          ? thisLink.setAttribute("tabIndex", "0")
-          : thisLink.setAttribute("tabIndex", "-1");
-      });
-      _navWrapper.toggleClass("expanded");
-      _this.toggleClass("close");
-      $(".site-search").removeClass("expanded");
-      $(this).attr(
-        "aria-expanded",
-        $(this).attr("aria-expanded") === "true" ? "false" : "true"
-      );
-      $(".search-toggle").removeClass("close");
-      return false;
+<script is:inline>
+  $(".mainNav a").attr("tabindex", -1);
+  $("#mainNavToggle").click(function () {
+    var _this = $(this);
+    var _navWrapper = $(".main-nav-wrapper");
+    var _mainNav = $(".mainNav");
+    var _links = _mainNav.find("a");
+    _links.toArray();
+    const _linksArray = Array.from(_links);
+    _linksArray.forEach((link) => {
+      var thisLink = link;
+      thisLink.getAttribute("tabIndex") === "-1"
+        ? thisLink.setAttribute("tabIndex", "0")
+        : thisLink.setAttribute("tabIndex", "-1");
     });
-  })(jQuery);
+    _navWrapper.toggleClass("expanded");
+    _this.toggleClass("close");
+    $(".site-search").removeClass("expanded");
+    $(this).attr(
+      "aria-expanded",
+      $(this).attr("aria-expanded") === "true" ? "false" : "true"
+    );
+    $(".search-toggle").removeClass("close");
+    return false;
+  });
+  // })(jQuery);
 </script>

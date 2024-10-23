@@ -62,41 +62,36 @@
 </nav>
 
 <script is:inline>
-  (function ($) {
-    console.log("sidebarNav");
-    // Add aria-haspopup true to links with popups
-    $(".nav--main-opener").prev().attr("aria-haspopup", "true");
+  // (function ($) {
+  // Add aria-haspopup true to links with popups
+  $(".nav--main-opener").prev().attr("aria-haspopup", "true");
 
-    $(".subNav a").attr("tabindex", -1);
+  $(".subNav a").attr("tabindex", -1);
 
-    // if a menu-button is clicked...
-    $(".subnav-toggle").click(function (e) {
-      // the button
-      console.log("hiya");
-      var _this = $(this);
-      // the LI
-      var parent = $(_this.parent());
-      // the preceding <a>
-      var linkContent = $(_this.prev());
-      // rotate the button
-      $(this).toggleClass("rotated");
-      // the child list
-      var next = $(_this.next());
+  // if a menu-button is clicked...
+  $(".subnav-toggle").click(function (e) {
+    // the button
+    var _this = $(this);
+    // the LI
+    var parent = $(_this.parent());
+    // the preceding <a>
+    var linkContent = $(_this.prev());
+    // rotate the button
+    $(this).toggleClass("rotated");
+    // the child list
+    var next = $(_this.next());
 
-      console.log(next);
+    if (!next.hasClass("expanded")) {
+      $(next).addClass("expanded");
+      $(parent).addClass("expanded");
 
-      if (!next.hasClass("expanded")) {
-        $(next).addClass("expanded");
-        $(parent).addClass("expanded");
-
-        _this.next().find("a").removeAttr("tabindex", -1);
-
-        // remove sub-expaneded
-      } else {
-        $(next).removeClass("expanded");
-        $(parent).removeClass("expanded");
-        _this.next().find("a").attr("tabindex", -1);
-      }
-    });
-  })(jQuery);
+      _this.next().find("a").removeAttr("tabindex", -1);
+      // remove sub-expaneded
+    } else {
+      $(next).removeClass("expanded");
+      $(parent).removeClass("expanded");
+      _this.next().find("a").attr("tabindex", -1);
+    }
+  });
+  // })(jQuery);
 </script>
