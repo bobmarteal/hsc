@@ -1,14 +1,15 @@
 ---
 import { Icon } from "astro-icon/components";
-const { id, label, classes, sidelines, ...rest } = Astro.props;
+const { id, label, formClasses, wrapperClasses, sidelines, ...rest } =
+  Astro.props;
 ---
 
 <!-- This is the little one line search field that is currenlty on the homepage -->
-<div class="form-wrapper">
+<div class:list={["form-wrapper", wrapperClasses]}>
   {sidelines && <div class="sideline" />}
   <form
     action=""
-    class:list={["form", "form--simple", "inline-center", classes]}
+    class:list={["form", "form--simple", "inline-center", formClasses]}
     {...rest}
   >
     <label for={id} class="sr-only">{label}</label>

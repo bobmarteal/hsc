@@ -67,7 +67,12 @@
 .site-search {
   height: 0;
   transition: height 0.25s ease;
+  position: fixed;
+  width: 100%;
+  align-items: flex-start;
+  align-content: flex-start;
+  z-index: 10;
   &.expanded {
-    height: auto;
+    height: 100%;
   }
 }
