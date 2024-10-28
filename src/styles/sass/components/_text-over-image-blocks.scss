@@ -26,6 +26,7 @@ for those instances where you need to put a text block over an image
     align-items: center;
     background: var(--black);
     color: var(--white);
+    padding: 1em;
     @include mq(medium) {
       grid-row: 1;
       background: none;

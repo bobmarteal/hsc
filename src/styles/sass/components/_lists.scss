@@ -5,7 +5,7 @@
     4. A plain list with no markers
     5. .buttons - give some better spacing around a list of buttons
 */
-
+@use "../_mixins.scss" as *;
 ul,
 ol {
   padding-inline-start: 1em;
@@ -32,7 +32,14 @@ ol {
 .flat {
   display: flex;
   flex-wrap: wrap;
-  gap: 1em;
+  gap: 0.5em;
+  @include mq(medium) {
+    gap: 1em;
+  }
+}
+.stacked {
+  display: flex;
+  flex-direction: column;
 }
 .centered-list {
   justify-content: center;
