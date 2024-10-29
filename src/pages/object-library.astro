@@ -160,6 +160,60 @@ import LandingPageWrapper from "@/layouts/LandingPageWrapper.astro";
             />
           </li>
         </ul>
+        <Heading tagName="h2" size="base2" weight="bold" id="table"
+          >Very simple table layouts</Heading
+        >
+        <table class="m-bottom-3">
+          <caption
+            >This is the caption hide if you want with class="sr-only"</caption
+          >
+          <thead>
+            <tr>
+              <th>heading one</th>
+              <th>another</th>
+              <th>look at me over here</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>This is cell content</td>
+              <td>This is cell content</td>
+              <td>This is cell content</td>
+            </tr>
+            <tr>
+              <td>This is cell content</td>
+              <td>This is cell content</td>
+              <td>This is cell content</td>
+            </tr>
+            <tr>
+              <td>This is cell content</td>
+              <td>This is cell content</td>
+              <td>This is cell content</td>
+            </tr>
+            <tr>
+              <td>This is cell content</td>
+              <td>This is cell content</td>
+              <td>This is cell content</td>
+            </tr>
+            <tr>
+              <td>This is cell content</td>
+              <td>This is cell content</td>
+              <td>This is cell content</td>
+            </tr>
+          </tbody>
+        </table>
+        <Heading tagName="h2" size="base2" weight="bold" id="video"
+          >Video container</Heading
+        >
+        <div class="video-container">
+          <iframe
+            src="https://www.youtube.com/embed/U3kWbEaRNxg?si=LTOWsteqynOmVnJd"
+            title="You have to have a title for a11y"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen></iframe>
+        </div>
       </div>
       <aside>
         <!-- 
@@ -175,6 +229,8 @@ import LandingPageWrapper from "@/layouts/LandingPageWrapper.astro";
             <li><a href="#featureBlocks">Feature Blocks</a></li>
             <li><a href="#figures">Figures</a></li>
             <li><a href="#links">Links</a></li>
+            <li><a href="#table">Table</a></li>
+            <li><a href="#video">Video</a></li>
           </ul>
         </div>
       </aside>
