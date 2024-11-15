@@ -193,6 +193,9 @@ h6 {
   font-family: var(--ff-serif);
 }
 
+.ff-serif {
+}
+
 /*
   basic links
 */
@@ -207,10 +210,12 @@ a {
 .text-shadow {
   text-shadow: var(--text-shadow);
 }
-strong {
+strong,
+.strong {
   font-family: var(--ff-sans-bold);
 }
-em {
+em,
+.italics {
   font-style: italic;
 }
 .caps {
